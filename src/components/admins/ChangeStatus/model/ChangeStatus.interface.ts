@@ -6,4 +6,6 @@ export interface IChangeStatus {
   processKey: string
   cancelKey: string
   successKey: string
+  notVerifiedEmail?: string
+  notVerifiedYC?: string
 }

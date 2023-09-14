@@ -16,6 +16,8 @@ export const ChangeStatus = (props: IChangeStatus) => {
     successKey,
     processKey,
     cancelKey,
+    notVerifiedYC,
+    notVerifiedEmail,
     id,
     updateData,
     changeStatus,
@@ -64,6 +66,8 @@ export const ChangeStatus = (props: IChangeStatus) => {
         {status === successKey && 'Успешно'}
         {status === processKey && 'В обработке'}
         {status === cancelKey && 'Отменен'}
+        {status === notVerifiedYC && 'Нет запроса'}
+        {status === notVerifiedEmail && 'Нет запроса'}
 
         {status === processKey && (
           <svg

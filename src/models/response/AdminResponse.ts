@@ -57,7 +57,7 @@ export interface IVerification {
   balance: number
   role: string
   status: string
-  verifiedStatus?: string
+  verifiedStatus: string
   files: IFile[]
 }
 

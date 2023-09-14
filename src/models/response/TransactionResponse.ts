@@ -1,6 +1,7 @@
 import { Pageable } from 'models/IPageable'
 
 export interface ITransaction {
+  accountId: number
   transactionId: number
   transactionType: string
   transactionStatus: string

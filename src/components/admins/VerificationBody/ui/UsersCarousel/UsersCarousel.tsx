@@ -12,12 +12,13 @@ export interface IUsersCarousel {
   content: IVerification[]
   fetchPrev: () => Promise<void>
   fetchNext: () => Promise<void>
+  updateData: () => Promise<void>
 }
 
 export const UsersCarousel = (props: IUsersCarousel) => {
-  const { number, totalPages, content, fetchNext, fetchPrev } = props
+  const { number, totalPages, content, fetchNext, fetchPrev, updateData } =
+    props
 
-  console.log('t')
   return (
     <TableComponent
       className={s.table}
@@ -26,7 +27,7 @@ export const UsersCarousel = (props: IUsersCarousel) => {
         { title: 'ФИО Пользователя' },
         { title: 'Username' },
         { title: 'Фото' },
-        { title: 'Дата верификации' },
+        { title: 'Дата верификации', sortField: 'registeredDate' },
         { title: 'Статус' },
       ]}
       currentPage={number}
@@ -35,7 +36,7 @@ export const UsersCarousel = (props: IUsersCarousel) => {
       fetchPrev={fetchPrev}
       tables={content}
       renderComponent={(user) => (
-        <UserTableRow {...user} key={user.accountId} />
+        <UserTableRow {...user} updateData={updateData} key={user.accountId} />
       )}
     />
   )

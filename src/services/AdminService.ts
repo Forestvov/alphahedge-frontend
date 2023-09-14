@@ -101,4 +101,14 @@ export default class AdminService {
   ): Promise<AxiosResponse<VerificationList>> {
     return $api.put<VerificationList>(`/account/page/verification`, data)
   }
+
+  static async updateVerification(
+    accountId: number,
+    verifiedStatus: string,
+  ): Promise<AxiosResponse<VerificationList>> {
+    return $api.put<VerificationList>(`/account/update`, {
+      accountId,
+      verifiedStatus,
+    })
+  }
 }

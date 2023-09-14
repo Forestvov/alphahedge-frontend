@@ -25,15 +25,17 @@
 .data {
   color: #6D6D6D;
   font-size: 16px;
+  display: flex;
+  align-items: center;
 
   span {
     background-color: #6D6D6D;
     border-radius: 50%;
-    display: inline-block;
     width: 3px;
     height: 3px;
-    margin: 0 3px;
-    transform: translateY(-4px);
+    margin: 0 5px;
+    transform: translateY(2px);
+    display: block;
   }
 
   @include utils.media-max-width(900) {

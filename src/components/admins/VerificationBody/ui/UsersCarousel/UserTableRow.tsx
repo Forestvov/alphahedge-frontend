@@ -1,48 +1,69 @@
 import { IVerification } from 'models/response/AdminResponse'
 
+import AdminService from 'services/AdminService'
+
 import { clearDate } from 'helpers/clearDate'
 
 import { TableCell, TableRow } from 'components/shared/table'
 import { TableNameUser } from 'components/admins/TableNameUser'
+import { ChangeStatus } from 'components/admins/ChangeStatus'
+import { Modal } from 'components/shared/Modal'
 
 import s from './UsersCarousel.module.scss'
 
-export const UserTableRow = (props: IVerification) => {
+export interface IUserTableRow extends IVerification {
+  updateData: () => Promise<void>
+}
+
+const { updateVerification } = AdminService
+
+export const UserTableRow = (props: IUserTableRow) => {
   const {
-    status,
     fio,
     verifiedStatus,
-    balance,
-    role,
     userName,
-    email,
     registeredDate,
-    idNumber,
     accountId,
+    files,
+    updateData,
   } = props
 
   return (
     <TableRow className={s.row}>
       <TableNameUser
         className={s.fullName}
-        userId={1}
+        userId={accountId}
         name={fio}
         showType="fullName"
       />
       <TableNameUser
         className={s.username}
-        userId={1}
+        userId={accountId}
         name={userName}
         showType="username"
       />
       <TableCell className={s.photo}>
-        <a href="/" target="_blank">
-          Ссылка
-        </a>
+        {files.map((item) => (
+          <Modal className={s.inner} textButton="Ссылка" key={item.fileId}>
+            <div className={s.body}>
+              <img src={item.file} alt={item.fileType} />
+            </div>
+          </Modal>
+        ))}
       </TableCell>
       <TableCell className={s.date}>{clearDate(registeredDate)}</TableCell>
       <TableCell className={s.status}>
-        {/* <ChangeStatus status="В обработке" /> */}
+        <ChangeStatus
+          id={accountId}
+          status={verifiedStatus}
+          changeStatus={updateVerification}
+          updateData={updateData}
+          processKey="Process"
+          successKey="Verified"
+          cancelKey="Cancel"
+          notVerifiedEmail="Not verified email"
+          notVerifiedYC="Not verified YC"
+        />
       </TableCell>
     </TableRow>
   )

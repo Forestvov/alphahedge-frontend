@@ -57,7 +57,7 @@
   width: 100%;
   border-radius: 9px;
   z-index: 1;
-  max-height: 260px;
+  max-height: 215px;
   overflow-y: auto;
 
   @include utils.customScroll(#000);

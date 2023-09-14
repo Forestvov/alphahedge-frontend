@@ -14,23 +14,23 @@ import { UsersCarousel } from './UsersCarousel/UsersCarousel'
 
 const { getVerificationList } = AdminService
 
-const SIZE = 2
+const SIZE = 7
 
 export const VerificationBody = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const [data, setData] = useState<VerificationList>()
 
   useEffect(() => {
-    fetchUsers(searchParams)
+    fetchUsers()
   }, [searchParams])
 
-  const fetchUsers = async (params: URLSearchParams) => {
-    const qs = queryString.parse(params.toString())
-    const page = params.get('page')
-    const balance = params.get('balance')
+  const fetchUsers = async () => {
+    const qs = queryString.parse(searchParams.toString())
+    const page = searchParams.get('page')
+    const date = searchParams.get('registeredDate')
 
     delete qs.page
-    delete qs.balance
+    delete qs.registeredDate
 
     const criteria: { key: string; value: string }[] = Object.keys(qs).map(
       (key) => ({
@@ -42,8 +42,8 @@ export const VerificationBody = () => {
     try {
       const response = await getVerificationList({
         size: SIZE,
-        sortField: 'balance',
-        sortDir: balance ?? 'DESC',
+        sortField: 'registeredDate',
+        sortDir: date ?? 'DESC',
         page: page ? Number(page) : 0,
         criteria,
       })
@@ -86,6 +86,7 @@ export const VerificationBody = () => {
         <UsersCarousel
           fetchNext={fetchNext}
           fetchPrev={fetchPrev}
+          updateData={fetchUsers}
           number={data.number}
           content={data.content}
           totalPages={data.totalPages}

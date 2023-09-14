@@ -27,6 +27,7 @@ export const UserTableRow = (props: IUserTableRow) => {
     transactionId,
     username,
     currencyToken,
+    accountId,
     transactionType,
     updateData,
   } = props
@@ -35,13 +36,13 @@ export const UserTableRow = (props: IUserTableRow) => {
     <TableRow className={s.row}>
       <TableNameUser
         className={s.fullname}
-        userId={1}
+        userId={accountId}
         name={fio}
         showType="fullName"
       />
       <TableNameUser
         className={s.username}
-        userId={1}
+        userId={accountId}
         name={username}
         showType="username"
       />

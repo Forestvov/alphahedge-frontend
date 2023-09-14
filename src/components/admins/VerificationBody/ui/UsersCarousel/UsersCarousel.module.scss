@@ -63,19 +63,31 @@
 
 }
 
+.inner {
+  padding: 30px;
+}
+
 .photo {
   width: 20%;
 
-  a {
+  button {
     color: #000;
     font-style: normal;
     font-weight: 700;
     text-decoration-line: underline;
+    display: inline-block;
+
+    & + button {
+      margin-left: 10px;
+    }
   }
 }
 
-.date {
+.body {
 
+  img {
+    max-width: 100%;
+  }
 }
 
 .status {
