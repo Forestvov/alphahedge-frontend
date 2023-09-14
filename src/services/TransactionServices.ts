@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios'
 
-import { IToken, ITokenCovert } from 'models/IToken'
+import { IToken, ITokenCovert, TransactionBody } from 'models/IToken'
 import { ISort } from 'models/request/ISort'
 import { ITransactionHistory } from 'models/response/TransactionResponse'
 import { IRequestTransaction } from 'models/request/TransactionRequset'
@@ -30,5 +30,11 @@ export default class TransactionServices {
     return axios.get(
       `https://api.binance.com/api/v3/ticker/price?symbol=${coin.toUpperCase()}USDT`,
     )
+  }
+
+  static async getTransactionBody(
+    id: number,
+  ): Promise<AxiosResponse<TransactionBody>> {
+    return $api.get<TransactionBody>(`/transaction/${id}`)
   }
 }

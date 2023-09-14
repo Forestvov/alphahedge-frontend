@@ -17,7 +17,7 @@ export const AsideBottom = () => {
     localStorage.removeItem('user-type')
 
     navigator('/')
-    setPayload({ isAuth: false, loading: true })
+    setPayload({ isAuth: false, loading: false })
   }
 
   return (

@@ -32,3 +32,10 @@ export { default as Course17 } from './course1/course17.png'
 
 // course 2
 export { default as Course21 } from './course1/course21.png'
+
+// langs
+export { default as DeiIcon } from './langs/deu.jpg'
+export { default as EngIcon } from './langs/eng.jpg'
+
+// finance
+export { default as QrIcon } from './finance/qr.png'
