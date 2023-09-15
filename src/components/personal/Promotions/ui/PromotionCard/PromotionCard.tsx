@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import cn from 'classnames'
 import { Line } from 'react-chartjs-2'
 import {
@@ -25,8 +26,6 @@ import { IActionItem } from 'models/response/ActionResponse'
 import { PromotionCardActions } from './PromotionCardActions'
 
 import s from './PromotionCard.module.scss'
-
-const IS_UP = true
 
 interface IPromotionCard extends IActionItem {
   disable: boolean
@@ -74,6 +73,8 @@ export const PromotionCard = (props: IPromotionCard) => {
 
   const { setData } = useActions()
 
+  const [isUp, setIsUp] = useState(true)
+
   const data = {
     labels: statistics.slice(statistics.length / 2).map((element) => element),
     datasets: [
@@ -86,29 +87,24 @@ export const PromotionCard = (props: IPromotionCard) => {
     ],
   }
 
-  console.log(statistics)
-
   const getPercent = () => {
     const lastValue = statistics[statistics.length - 2]
-    // const result = 100 - (currentPrice * 100) / lastValue
     const result = (currentPrice / lastValue) * 100 - 100
-
-    console.log(result)
 
     if (result > 0) {
       return (
-        <>
+        <div className={cn(s.percent)}>
           <img src={UpIcon} alt="up" />
           {`+${floorPrice(result)} %`}
-        </>
+        </div>
       )
     }
 
     return (
-      <>
+      <div className={cn(s.percent, s.down)}>
         <img src={DownIcon} alt="down" />
         {`${floorPrice(result)} %`}
-      </>
+      </div>
     )
   }
 
@@ -142,9 +138,7 @@ export const PromotionCard = (props: IPromotionCard) => {
       </div>
       <div className={s.change}>
         <div className={s.label}>CHANGED (1D)</div>
-        <div className={cn(s.percent, { [s.down]: !IS_UP })}>
-          {getPercent()}
-        </div>
+        {getPercent()}
       </div>
       <div className={s.diagramma}>
         {/* @ts-ignore */}
