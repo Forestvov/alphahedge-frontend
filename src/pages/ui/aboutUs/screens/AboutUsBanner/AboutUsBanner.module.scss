@@ -1,0 +1,125 @@
+@use 'styles/use/utils';
+
+.banner {
+  position: relative;
+  background: black;
+  z-index: 1;
+}
+
+.content {
+  padding-top: 300px;
+  position: relative;
+
+  @include utils.media-max-width(500) {
+    padding-top: 200px;
+  }
+}
+
+.title {
+  color: #FFF;
+  font-family: var(--font-family-main);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 114.286% */
+
+  max-width: 840px;
+  margin-bottom: 50px;
+
+  @include utils.media-max-width(500) {
+    font-size: 32px;
+    line-height: 40px; /* 114.286% */
+  }
+}
+
+.text {
+  color: #ABABAB;
+  font-family: var(--font-family-main);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34.5px; /* 115% */
+
+  max-width: 767px;
+  margin-bottom: 100px;
+
+  @include utils.media-max-width(500) {
+    font-size: 24px;
+    line-height: 32px; /* 114.286% */
+  }
+}
+
+.button {
+  border-radius: 87px;
+  background: #B050F2;
+  backdrop-filter: blur(30.5px);
+  padding: 27px 41px;
+  margin-bottom: 220px;
+
+  color: #FFF;
+  font-family: var(--font-family-main);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 182.8%; /* 43.872px */
+
+  @include utils.media-max-width(500) {
+    margin-bottom: 100px;
+    padding: 20px 30px;
+  }
+}
+
+.arrow {
+  margin-left: 30px;
+
+  @include utils.media-max-width(500) {
+    margin-left: 15px;
+  }
+}
+
+.img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+
+  @include utils.media-max-width(1500) {
+    width: 500px;
+    height: 500px;
+  }
+
+  @include utils.media-max-width(500) {
+    display: none;
+  }
+}
+
+.border {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  width: 863px;
+  height: 869px;
+  z-index: -2;
+
+  @include utils.media-max-width(1500) {
+    width: 543px;
+    height: 549px;
+  }
+
+  @include utils.media-max-width(500) {
+    display: none;
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: -3;
+}

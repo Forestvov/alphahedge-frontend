@@ -33,6 +33,13 @@ export { default as Course17 } from './course1/course17.png'
 // course 2
 export { default as Course21 } from './course1/course21.png'
 
+// about
+export { default as AboutBannerImg } from './aboutUs/bannerImg.png'
+export { default as AboutBannerBg } from './aboutUs/bg.png'
+export { default as AboutBorder } from './aboutUs/border.png'
+export { default as AboutInvestImg } from './aboutUs/investImg.png'
+export { default as AboutIpoImg } from './aboutUs/ipo.png'
+
 // langs
 export { default as DeiIcon } from './langs/deu.jpg'
 export { default as EngIcon } from './langs/eng.jpg'
