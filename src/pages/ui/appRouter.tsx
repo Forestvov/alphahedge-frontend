@@ -14,6 +14,7 @@ import { HomePage } from './home/HomePage'
 import { ForexPage } from "./forex/ForexPage";
 import { Course1 } from './courses/course1/Course1'
 import { Course2 } from './courses/course2/Course2'
+import { AboutUs } from './aboutUs/AboutUs'
 
 import { DashboardPage } from './personal/DashboardPage/DashboardPage'
 import { InvestmentsPage } from './personal/InvestmentsPage/InvestmentsPage'
@@ -70,6 +71,10 @@ export const appRouter = createBrowserRouter([
       {
         path: '/course2',
         element: <Course2 />,
+      },
+      {
+        path: '/about',
+        element: <AboutUs />,
       },
     ],
   },

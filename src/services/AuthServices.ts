@@ -1,6 +1,6 @@
+import { IAuthResponse } from 'models/response/AuthResponse'
 import $api, { API_URL } from '../http'
 
-import { IAuthResponse } from 'models/response/AuthResponse'
 
 export default class AuthServices {
   static async checkAuth() {
