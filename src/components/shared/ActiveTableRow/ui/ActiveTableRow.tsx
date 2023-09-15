@@ -36,7 +36,7 @@ export const ActiveTableRow = (props: IActiveTableRow) => {
   const [sellCounter, setSellCounter] = useState(1)
   const [isOpen, setIsOpen] = useState(false)
 
-  const notifySuccess = () => toast.success('Вы продали данныую акцию')
+  const notifySuccess = () => toast.success('Вы продали данную акцию')
 
   const updateUser = useGetMainInfo()
 
@@ -70,7 +70,7 @@ export const ActiveTableRow = (props: IActiveTableRow) => {
 
   return (
     <>
-      <TableRow className={cn({ [s.borderHide]: sellCounter })}>
+      <TableRow className={cn({ [s.borderHide]: isOpen })}>
         <TableCell className={cn(s.company, { [s.md]: showButton })}>
           <Company name={code} icon={image} />
         </TableCell>

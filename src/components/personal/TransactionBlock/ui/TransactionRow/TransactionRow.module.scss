@@ -1,8 +1,14 @@
+@use 'styles/use/utils';
+
 .first {
   display: flex;
   align-items: center;
   gap: 24px;
   width: 150px;
+
+  @include utils.media-max-width(600) {
+    width: 230px;
+  }
 }
 
 
@@ -16,6 +22,10 @@
 .type {
   font-size: 18px;
   width: 25%;
+
+  @include utils.media-max-width(600) {
+    width: 150px;
+  }
 }
 
 .data {
@@ -25,6 +35,7 @@
 .status {
   text-align: right;
   text-decoration: underline;
+  white-space: nowrap;
 
   &.success {
     color: #04C100;
@@ -63,12 +74,49 @@
   margin-top: 25px;
 }
 
+.modalWrapper {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 981px;
+  height: 1050px;
+  border-radius: 40px;
+  background: #FFF;
   position: relative;
+
+  @include utils.media-max-width(1280) {
+    width: 600px;
+    height: auto;
+    min-height: 400px;
+  }
+
+  @include utils.media-max-width(700) {
+    min-width: 345px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .close {
   position: absolute;
   top: 50px;
   right: 50px;
+
+  @include utils.media-max-width(1280) {
+    top: 30px;
+    right: 30px;
+  }
+
+  @include utils.media-max-width(700) {
+    top: 20px;
+    right: 20px;
+  }
 }

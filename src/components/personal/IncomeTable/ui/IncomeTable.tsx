@@ -136,7 +136,7 @@ export const IncomeTable = forwardRef((props: IIncomeTableCarousel, ref) => {
         fetchNext={fetchNext}
         tables={data.page.content}
         renderComponent={(item) => (
-          <TableRow key={item.briefcaseId}>
+          <TableRow key={item.briefcaseAccountGainId}>
             <TableCell className={s.price}>
               <span>$ {item.briefcaseAmount}</span>
             </TableCell>

@@ -21,7 +21,7 @@ export const IncomeTableRow = (props: IGainItem) => {
     <TableRow>
       <TableCell className={s.briefName}>
         <div className={s.icon}>
-          <img src={image} alt={briefcaseName} />
+          <img src={image} alt="img" />
         </div>
         <span>{briefcaseName}</span>
       </TableCell>

@@ -22,3 +22,8 @@ export interface TransactionBody {
   username: string
   image: any
 }
+
+export interface TransactionCodeBody {
+  settingCode: string
+  settingValue: string
+}

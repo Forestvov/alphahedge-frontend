@@ -107,6 +107,7 @@ export const TransactionForm = (props: ITransactionForm) => {
       <form className={cn(s.form, className)} onSubmit={handleSubmit(onSubmit)}>
         <div className={s.col}>
           <DropDown
+            className={cn({ [s.dropIn]: type === 'In' })}
             placeholder="Платежная система"
             onSelect={onSelectToken}
             options={
@@ -139,7 +140,7 @@ export const TransactionForm = (props: ITransactionForm) => {
           <div className={s.col}>
             <Input
               className={s.input}
-              placeholder="Укажите TRC Adress"
+              placeholder="Введите адрес кошелька"
               type="text"
               name="contact"
             />

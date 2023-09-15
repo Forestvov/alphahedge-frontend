@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 43px;
+  gap: 10px;
 
   @include utils.media-max-width(900) {
     flex-direction: column;
@@ -29,7 +30,6 @@
     font-size: 20px;
     font-weight: 400;
     text-transform: capitalize;
-    flex: 0 0 auto;
   }
 
   @include utils.media-max-width(900) {
@@ -59,6 +59,7 @@
   width: 188px;
   white-space: nowrap;
   margin-left: 29px;
+  color: #000;
 
   @include utils.media-max-width(900) {
     display: none;
@@ -81,6 +82,7 @@
   gap: 14px;
   font-size: 18px;
   font-weight: 300;
+  color: #000;
 
   img {
     transition: 400ms;

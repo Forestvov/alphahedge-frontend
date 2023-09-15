@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { toast } from 'react-toastify'
+
 import cn from 'classnames'
 
 import { Price } from 'components/shared/Price'
@@ -12,9 +14,13 @@ export const ReferralHeader = (props: IReferalHeader) => {
 
   const [isCopy, setIsCopy] = useState(false)
 
+  const notifySuccess = () =>
+    toast.success('Ссылка была добавлен в буфер обмена')
+
   const copyHandler = (text: string) => {
     navigator.clipboard.writeText(text)
     setIsCopy(true)
+    notifySuccess()
   }
 
   return (

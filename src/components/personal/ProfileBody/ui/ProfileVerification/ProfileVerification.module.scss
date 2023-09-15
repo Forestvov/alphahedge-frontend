@@ -48,6 +48,22 @@
   }
 }
 
+.status {
+
+  &.pending {
+    color: #DEBB00;
+  }
+
+  &.success {
+    color: #04C100;
+  }
+
+  &.cancel {
+    color: #C10000
+  }
+}
+
+
 .open {
   display: block;
   margin: 0 auto;

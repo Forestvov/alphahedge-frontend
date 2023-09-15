@@ -69,14 +69,8 @@ export const options: ChartOptions = {
 const { getActionBalance } = ActionServices
 
 export const PromotionCard = (props: IPromotionCard) => {
-  const {
-    disable,
-    image,
-    actionCode,
-    statistics,
-    actionName,
-    currentPrice,
-  } = props
+  const { disable, image, actionCode, statistics, actionName, currentPrice } =
+    props
 
   const { setData } = useActions()
 
@@ -92,9 +86,14 @@ export const PromotionCard = (props: IPromotionCard) => {
     ],
   }
 
+  console.log(statistics)
+
   const getPercent = () => {
     const lastValue = statistics[statistics.length - 2]
-    const result = 100 - (currentPrice * 100) / lastValue
+    // const result = 100 - (currentPrice * 100) / lastValue
+    const result = (currentPrice / lastValue) * 100 - 100
+
+    console.log(result)
 
     if (result > 0) {
       return (
@@ -108,12 +107,12 @@ export const PromotionCard = (props: IPromotionCard) => {
     return (
       <>
         <img src={DownIcon} alt="down" />
-        {`-${floorPrice(result)} %`}
+        {`${floorPrice(result)} %`}
       </>
     )
   }
 
-  const notifySuccess = () => toast.success('Вы приобрели данныую акцию')
+  const notifySuccess = () => toast.success('Вы приобрели данную акцию')
   const notifyError = () => toast.error('Что-то пошло не так, попробоуй позже')
 
   const fetchData = async () => {

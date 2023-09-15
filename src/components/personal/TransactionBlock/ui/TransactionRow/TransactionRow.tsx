@@ -1,6 +1,8 @@
+import { useRef } from 'react'
 import cn from 'classnames'
 
 import { clearDate } from 'helpers/clearDate'
+import { floorPrice } from 'helpers/floorPrice'
 
 import { ITransaction } from 'models/response/TransactionResponse'
 
@@ -13,14 +15,25 @@ import { TransactionPopup } from '../TransactionPopup/TransactionPopup'
 import s from './TransactionRow.module.scss'
 
 export const TransactionRow = (props: ITransaction) => {
-  const { transactionDate, transactionStatus, currencyToken, fio, amount } =
-    props
+  const {
+    transactionDate,
+    transactionStatus,
+    currencyToken,
+    transactionId,
+    fio,
+    transactionType,
+    amount,
+  } = props
+
+  const closeHandler = useRef<any>()
+
+  console.log(closeHandler)
 
   return (
     <TableRow>
       <TableCell className={s.first}>
         <UserName name={fio} />
-        <span className={s.price}>${amount}</span>
+        <span className={s.price}>${floorPrice(amount)}</span>
       </TableCell>
       <TableCell className={s.type}>
         <span>{currencyToken}</span>
@@ -29,13 +42,18 @@ export const TransactionRow = (props: ITransaction) => {
         <span>{clearDate(transactionDate, true)}</span>
       </TableCell>
       <TableCell>
-        {transactionStatus === 'Process' ? (
+        {transactionStatus === 'Process' && transactionType === 'In' ? (
           <Modal
             classNameButton={cn(s.status, s.pending, s.disable)}
             textButton="В обработке"
+            ref={closeHandler}
           >
             <div className={s.modal}>
-              <button className={s.close} type="button">
+              <button
+                className={s.close}
+                onClick={() => closeHandler.current()}
+                type="button"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
@@ -51,7 +69,7 @@ export const TransactionRow = (props: ITransaction) => {
                   />
                 </svg>
               </button>
-              <TransactionPopup />
+              <TransactionPopup transactionId={transactionId} />
             </div>
           </Modal>
         ) : (
@@ -59,12 +77,14 @@ export const TransactionRow = (props: ITransaction) => {
             className={cn(s.status, {
               [s.success]: transactionStatus === 'Success',
               [s.cancel]: transactionStatus === 'Canceled',
+              [s.pending]: transactionStatus === 'Process',
             })}
-            disabled={transactionStatus !== 'Process'}
+            disabled
             type="button"
           >
             {transactionStatus === 'Success' && 'Успешно'}
             {transactionStatus === 'Canceled' && 'Отменен'}
+            {transactionStatus === 'Process' && 'В обработке'}
           </button>
         )}
       </TableCell>

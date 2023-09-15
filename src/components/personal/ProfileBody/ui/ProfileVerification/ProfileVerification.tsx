@@ -69,8 +69,15 @@ export const ProfileVerification = ({ status }: { status: string }) => (
     <div className={s.info}>
       <div className={s.info__title}>
         СТАТУС :
-        <span>
-          {status === VerificationEnum.NOT_STARTED && 'НЕ НАЧАТА'}
+        <span
+          className={cn(
+            s.status,
+            { [s.pending]: status === VerificationEnum.PENDING },
+            { [s.success]: status === VerificationEnum.SUCCESS },
+            { [s.cancel]: status === VerificationEnum.NOT_STARTED },
+          )}
+        >
+          {status === VerificationEnum.NOT_STARTED && 'НЕ ПРОЙДЕНА'}
           {status === VerificationEnum.PENDING && 'НАЧАТА'}
           {status === VerificationEnum.SUCCESS && 'ЗАВЕРШЕНА'}
         </span>
