@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import { DropArrow } from 'assets/icons'
 
@@ -7,18 +7,26 @@ import s from './Header.module.scss'
 
 export const HeaderNav = () => (
   <nav className={s.navigation}>
-    <Link className={cn(s.link, s.current)} to="/">
+    <NavLink className={cn(s.link, s.current)} to="/">
       Главная
-    </Link>
-    <Link className={s.link} to="/">
+    </NavLink>
+    <NavLink className={`${s.link} ${s.drop}`} to="/">
       InvestingPro
       <img className={s.dropArrow} src={DropArrow} alt="" />
-    </Link>
-    <Link className={s.link} to="/">
+      <div className={s.dropDown}>
+        <NavLink className={`${s.link} ${s.link_black}`} to="/forex">
+          Forex
+        </NavLink>
+        <NavLink className={`${s.link} ${s.link_black}`} to="/about">
+          О нас
+        </NavLink>
+      </div>
+    </NavLink>
+    <NavLink className={s.link} to="/">
       Тренды
-    </Link>
-    <Link className={s.link} to="/">
+    </NavLink>
+    <NavLink className={s.link} to="/">
       Контакты
-    </Link>
+    </NavLink>
   </nav>
 )
