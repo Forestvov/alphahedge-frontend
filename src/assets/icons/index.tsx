@@ -61,3 +61,7 @@ export { default as SystemIcon } from './shared/SystemIcon.svg'
 // forex
 export { default as ArrowIcon } from './forex/arrow.svg'
 export { default as DividerIcon } from './forex/divider.svg'
+
+// about
+export { default as LightningIcon } from './aboutUs/lightning.svg'
+export { default as CheckIcon } from './aboutUs/check.svg'
