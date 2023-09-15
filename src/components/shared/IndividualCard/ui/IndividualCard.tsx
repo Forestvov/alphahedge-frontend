@@ -4,6 +4,7 @@ import { IBriefcaseActive } from 'models/response/BriefcaseResponse'
 
 import { getRemainDays } from 'helpers/getRemainDays'
 import { getNoun } from 'helpers/getNoun'
+import formatPrice from 'helpers/priceFormat'
 
 import { BigLockIcon, BigUnlockIcon } from 'assets/icons'
 
@@ -74,7 +75,7 @@ export const IndividualCard = (props: IIndividualCard) => {
       <div className={s.row}>
         <div className={s.cell}>
           <div className={s.label}>Объем инвестиций</div>
-          <div className={s.price}>{amountMin}</div>
+          <div className={s.price}>$ {formatPrice(amountMin, 'rub')}</div>
         </div>
         <div className={s.cell}>
           <div className={s.label}>Статус</div>

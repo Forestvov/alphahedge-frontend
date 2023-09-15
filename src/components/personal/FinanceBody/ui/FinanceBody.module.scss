@@ -23,16 +23,12 @@
 
 .tbody {
   tr {
-    border: none;
-
     &:first-child {
       th {
-        padding-top: 24px;
       }
     }
 
     th {
-      padding: 15px 0 0;
     }
   }
 }

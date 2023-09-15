@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import cn from 'classnames'
 import { Line } from 'react-chartjs-2'
 import {
@@ -72,8 +71,6 @@ export const PromotionCard = (props: IPromotionCard) => {
     props
 
   const { setData } = useActions()
-
-  const [isUp, setIsUp] = useState(true)
 
   const data = {
     labels: statistics.slice(statistics.length / 2).map((element) => element),
