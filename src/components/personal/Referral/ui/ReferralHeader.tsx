@@ -37,12 +37,10 @@ export const ReferralHeader = (props: IReferalHeader) => {
       </div>
       <div className={cn(s.col, s.ref)}>
         <div className={s.value}>
-          <span>https://alphahedge-holdings.io/22552565edf</span>
+          <span>{referal}</span>
           <button
             className={isCopy ? s.coped : ''}
-            onClick={() =>
-              copyHandler(`https://alphahedge-holdings.io/${referal}`)
-            }
+            onClick={() => copyHandler(`${referal}`)}
             type="button"
           >
             <svg

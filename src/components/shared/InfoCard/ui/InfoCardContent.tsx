@@ -10,7 +10,7 @@ import { FetchStatusType } from 'models/FetchStatusType'
 import { LightningText } from 'components/shared/LightningText'
 import { Button } from 'components/shared/Button'
 
-import { ButtonAccordionIcon, RocketIcon } from 'assets/icons'
+import { ButtonAccordionIcon } from 'assets/icons'
 
 import { IInfoCardContent } from '../model/InfoCard.interface'
 
@@ -31,6 +31,7 @@ export const InfoCardContent = (props: IInfoCardContent) => {
     actionList,
     technologies,
     id,
+    image,
     fetch = () => null,
   } = props
 
@@ -63,7 +64,7 @@ export const InfoCardContent = (props: IInfoCardContent) => {
       <div className={s.header}>
         <div className={s.title}>
           <div className={s.icon}>
-            <img src={RocketIcon} alt="rocket" />
+            <img src={image} alt="rocket" />
           </div>
           <span>{name}</span>
 

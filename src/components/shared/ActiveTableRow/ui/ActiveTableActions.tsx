@@ -31,6 +31,8 @@ interface IActiveTableActions {
   changeCounter: () => void
 }
 
+const SIZE = 8
+
 const { getActionHistory } = ActionServices
 
 export const ActiveTableActions = (props: IActiveTableActions) => {
@@ -51,7 +53,7 @@ export const ActiveTableActions = (props: IActiveTableActions) => {
 
   const fetchData = async () => {
     try {
-      const response = await getActionHistory({ page: 0, size: 8 }, code)
+      const response = await getActionHistory({ page: 0, size: SIZE }, code)
       setData(response.data)
     } catch (e) {
       console.log('Error fetch history action', e)
@@ -64,7 +66,7 @@ export const ActiveTableActions = (props: IActiveTableActions) => {
         const response = await getActionHistory(
           {
             page: data.number + 1,
-            size: 8,
+            size: SIZE,
           },
           code,
         )
@@ -81,7 +83,7 @@ export const ActiveTableActions = (props: IActiveTableActions) => {
         const response = await getActionHistory(
           {
             page: data.number - 1,
-            size: 8,
+            size: SIZE,
           },
           code,
         )

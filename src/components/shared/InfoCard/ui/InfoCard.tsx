@@ -8,6 +8,7 @@ import { IBriefcaseActive } from 'models/response/BriefcaseResponse'
 import { getNoun } from 'helpers/getNoun'
 import { floorPrice } from 'helpers/floorPrice'
 import { getRemainDays } from 'helpers/getRemainDays'
+import formatPrice from 'helpers/priceFormat'
 
 import { InfoCardContent } from './InfoCardContent'
 import { InfoCardStat } from './InfoCardStat'
@@ -39,10 +40,12 @@ export const InfoCard = (props: IBriefcaseActive & IProps) => {
     percents,
     briefcaseId,
     createddate,
+    image,
     fetch = () => null,
     briefcaseInvestStatus,
   } = props
 
+  console.log(image)
   const isActive = briefcaseAccountStatus === 'Active'
 
   const disableAction = useDisable()
@@ -51,6 +54,7 @@ export const InfoCard = (props: IBriefcaseActive & IProps) => {
     <div className={cn(s.card, className)}>
       <InfoCardContent
         name={t(`${briefcaseId}.title`)}
+        image={image}
         description={t(`${briefcaseId}.description`)}
         titleList={t(`${briefcaseId}.titleList`)}
         actionList={t(`${briefcaseId}.actionList`, { returnObjects: true })}
@@ -90,7 +94,10 @@ export const InfoCard = (props: IBriefcaseActive & IProps) => {
         />
       )}
       <div className={s.stats}>
-        <InfoCardStat label={t('minDeposit')} value={`$ ${amountMin}`} />
+        <InfoCardStat
+          label={t('minDeposit')}
+          value={`$ ${formatPrice(amountMin)}`}
+        />
         <InfoCardStat label={t('dailyIncome')} value={`${percents} %`} />
         <InfoCardStat
           label={t('blockingPeriod')}

@@ -8,6 +8,7 @@ export interface IInfoCardContent {
   technologies: string[]
   id: number
   fetch?: () => void
+  image: string
 }
 
 export interface IInfoCardForm {

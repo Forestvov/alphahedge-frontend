@@ -80,6 +80,13 @@
 
   @include utils.media-max-width(500) {
     font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      transform: translateY(2px);
+    }
   }
 }
 

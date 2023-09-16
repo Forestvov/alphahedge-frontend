@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import cn from 'classnames'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
@@ -19,12 +20,13 @@ const options: OptionType[] = [
   { label: 'USA', id: 2 },
 ]
 
-export const RegisterForm = () => {
+export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
   const resolver = yupResolver(registrationSchema)
 
   const [loading, setLoading] = useState(false)
 
   const navigator = useNavigate()
+  const params = useParams()
 
   const methods = useForm<IRegisterRequest>({
     resolver,
@@ -40,10 +42,7 @@ export const RegisterForm = () => {
     },
   })
 
-  const {
-    handleSubmit,
-    setValue,
-  } = methods
+  const { handleSubmit, setValue } = methods
 
   const onSubmit = async (data: IRegisterRequest) => {
     setLoading(true)
@@ -52,7 +51,9 @@ export const RegisterForm = () => {
     const config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: `${API_URL}/auth/register`,
+      url: isInvite
+        ? `${API_URL}/auth/register/${params.code}`
+        : `${API_URL}/auth/register`,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -72,7 +73,15 @@ export const RegisterForm = () => {
 
   return (
     <div className={s.wrapper}>
-      <h1 className={s.title}>Добро пожаловать!</h1>
+      <h1 className={cn(s.title, { [s.modif]: isInvite })}>
+        Добро пожаловать!
+      </h1>
+      {isInvite ? (
+        <h2 className={s.sub}>
+          Вы регистрируетесь по реферальной ссылке пользователя:{' '}
+          <span>{params.code}</span>
+        </h2>
+      ) : null}
       <FormProvider {...methods}>
         <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
           <div className={s.row}>

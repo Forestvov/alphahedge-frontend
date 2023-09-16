@@ -17,9 +17,27 @@
   font-weight: 500;
   margin-bottom: 53px;
 
+  &.modif {
+    margin-bottom: 20px;
+  }
+
   @include utils.media-max-width(900) {
     font-size: 30px;
     line-height: 30px;
+  }
+}
+
+.sub {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 39px;
+
+  span {
+    font-weight: 500;
+  }
+
+  @include utils.media-max-width(900) {
+    font-size: 24px;
   }
 }
 

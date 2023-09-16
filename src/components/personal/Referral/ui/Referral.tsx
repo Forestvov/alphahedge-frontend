@@ -69,12 +69,6 @@ export const Referral = () => {
     )
   }
 
-  if (data.page.empty) {
-    return (
-      <div className={s.empty}>У вас нет доходов с реферальной системы</div>
-    )
-  }
-
   return (
     <div className={s.referral}>
       <ReferralHeader
@@ -82,26 +76,30 @@ export const Referral = () => {
         total={data.sumAmount}
         referal={data.inviteUrl}
       />
-      <TableComponent
-        className={s.table}
-        classNameInner={s.inner}
-        classNameWrapper={s.wrapper}
-        classNameHeader={s.theader}
-        classNameBody={s.tbody}
-        classNamePagination={s.pagination}
-        tables={data.page.content}
-        currentPage={data.page.number}
-        total={data.page.totalElements}
-        fetchNext={fetchNext}
-        fetchPrev={fetchPrev}
-        renderComponent={(referal) => (
-          <ReferralItem
-            key={`${referal.parentId},${referal.accountId}`}
-            {...referal}
-          />
-        )}
-        tableTitles={[]}
-      />
+      {data.page.empty ? (
+        <div className={s.empty}>У вас нет доходов с реферальной системы</div>
+      ) : (
+        <TableComponent
+          className={s.table}
+          classNameInner={s.inner}
+          classNameWrapper={s.wrapper}
+          classNameHeader={s.theader}
+          classNameBody={s.tbody}
+          classNamePagination={s.pagination}
+          tables={data.page.content}
+          currentPage={data.page.number}
+          total={data.page.totalElements}
+          fetchNext={fetchNext}
+          fetchPrev={fetchPrev}
+          renderComponent={(referal) => (
+            <ReferralItem
+              key={`${referal.parentId},${referal.accountId}`}
+              {...referal}
+            />
+          )}
+          tableTitles={[]}
+        />
+      )}
     </div>
   )
 }

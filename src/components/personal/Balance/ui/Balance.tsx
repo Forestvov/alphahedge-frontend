@@ -2,8 +2,7 @@ import { Price } from 'components/shared/Price'
 
 import useBalance from 'hooks/context/useBalance'
 
-import { floorPrice } from 'helpers/floorPrice'
-
+import formatPrice from 'helpers/priceFormat'
 import s from './Balance.module.scss'
 
 export const Balance = () => {
@@ -40,7 +39,7 @@ export const Balance = () => {
         <>
           <Price
             className={s.total}
-            price={floorPrice(balance.balance)}
+            price={formatPrice(balance.balance)}
             type="lg"
           />
           <div className={s.bar}>
@@ -68,7 +67,7 @@ export const Balance = () => {
                 <Price
                   className={s.price}
                   type="xs"
-                  price={floorPrice(line.price)}
+                  price={formatPrice(line.price)}
                 />
               </div>
             ))}

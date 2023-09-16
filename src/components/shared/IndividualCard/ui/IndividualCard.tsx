@@ -75,7 +75,9 @@ export const IndividualCard = (props: IIndividualCard) => {
       <div className={s.row}>
         <div className={s.cell}>
           <div className={s.label}>Объем инвестиций</div>
-          <div className={s.price}>$ {formatPrice(amountMin, 'rub')}</div>
+          <div className={s.price}>
+            $ {formatPrice(amountMin).toString().replace(/,/gi, ' ')}
+          </div>
         </div>
         <div className={s.cell}>
           <div className={s.label}>Статус</div>

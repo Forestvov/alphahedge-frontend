@@ -1,2 +1,4 @@
-export const floorPrice = (value: number, rad: number = 100): number =>
-  parseInt(String(value * rad), 10) / rad
+import formatPrice from 'helpers/priceFormat'
+
+export const floorPrice = (value: number, rad: number = 100): string =>
+  formatPrice(value)

@@ -16,6 +16,7 @@ export interface IBriefcaseActive extends IBriefcase {
   gainAmount: any
   remainDays: number
   amount: number
+  image: string
   createddate: string
   createdDateShow: any
   briefcaseAccountStatus: string

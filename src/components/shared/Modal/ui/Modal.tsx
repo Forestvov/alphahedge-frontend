@@ -29,6 +29,7 @@ const fixedBody = (isOpen: boolean) => {
 export const Modal = forwardRef((props: IModal, ref) => {
   const {
     classNameButton,
+    className,
     children,
     textButton,
     isOpen = false,
@@ -71,7 +72,7 @@ export const Modal = forwardRef((props: IModal, ref) => {
       />
       {open
         ? createPortal(
-            <div className={s.modal}>
+            <div className={cn(s.modal, className)}>
               <div ref={refWrapper}>{children}</div>
             </div>,
             document.body,

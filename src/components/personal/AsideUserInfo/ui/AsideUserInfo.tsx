@@ -1,13 +1,12 @@
 import cn from 'classnames'
 
-import { floorPrice } from 'helpers/floorPrice'
-
 import useProfile from 'hooks/context/useProfile'
 import useBalance from 'hooks/context/useBalance'
 
 import { UserName } from 'components/shared/UserName'
 import { Price } from 'components/shared/Price'
 
+import formatPrice from 'helpers/priceFormat'
 import s from './AsideUserInfo.module.scss'
 
 export const AsideUserInfo = ({ isSplit }: { isSplit: boolean }) => {
@@ -22,7 +21,7 @@ export const AsideUserInfo = ({ isSplit }: { isSplit: boolean }) => {
           <div className={s.content}>
             <Price
               className={s.price}
-              price={floorPrice(cash.balance.activeBalance)}
+              price={formatPrice(cash.balance.activeBalance)}
               type="xs"
             />
             <div className={s.account}>

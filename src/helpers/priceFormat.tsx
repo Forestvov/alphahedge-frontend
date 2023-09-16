@@ -1,12 +1,7 @@
-const formatPrice = (price: number, currency: string) => {
-  const formatter = new Intl.NumberFormat('ru-RU', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2,
-  })
+const formatPrice = (price: number) => {
+  const formatter = new Intl.NumberFormat('ja-JP', {})
 
-  return formatter.format(price).slice(0, -2)
+  return formatter.format(price)
 }
 
 export default formatPrice

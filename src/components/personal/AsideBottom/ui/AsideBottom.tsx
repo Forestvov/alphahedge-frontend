@@ -22,7 +22,7 @@ export const AsideBottom = () => {
 
   return (
     <div className={s.bottom}>
-      <NavLink to="/">
+      <NavLink to="/help">
         <div className={s.icon}>
           <img src={HelpIcon} alt="помощь" />
         </div>
