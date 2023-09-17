@@ -11,8 +11,6 @@ import s from './EmailConfirm.module.scss'
 
 export const EmailConfirm = () => {
   const [a] = useTranslation('authPage')
-  const [f] = useTranslation('form')
-  const [n] = useTranslation('notification')
 
   const [loader, setLoader] = useState(false)
   const [success, setSuccess] = useState(false)

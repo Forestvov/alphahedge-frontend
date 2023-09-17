@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import { TableComponent } from 'components/shared/table'
 import { Loader } from 'components/shared/Loader'
@@ -11,7 +12,6 @@ import { ReferralHeader } from './ReferralHeader'
 import { ReferralItem } from './ReferralItem'
 
 import s from './Referral.module.scss'
-import { useTranslation } from 'react-i18next'
 
 const { geReferal } = ReferalService
 

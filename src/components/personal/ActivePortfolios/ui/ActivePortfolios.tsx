@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import cn from 'classnames'
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel, { EmblaCarouselType } from 'embla-carousel-react'
+import { useTranslation } from 'react-i18next'
 
 import BriefcaseServices from 'services/BriefcaseServices'
 import { IBriefcaseActive } from 'models/response/BriefcaseResponse'
@@ -12,7 +13,6 @@ import { CarouselPagination } from 'components/shared/CarouselPagination'
 
 import { IActivePortfolios } from '../model/ActivePortfolios.interface'
 import s from './ActivePortfolios.module.scss'
-import { useTranslation } from 'react-i18next'
 
 const options: EmblaOptionsType = {
   align: 'start',
