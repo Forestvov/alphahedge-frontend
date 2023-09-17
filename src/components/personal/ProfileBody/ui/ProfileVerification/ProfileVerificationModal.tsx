@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { toBase64 } from 'helpers/toBase64'
 import useProfile from 'hooks/context/useProfile'
@@ -12,6 +13,8 @@ import s from './ProfileVerification.module.scss'
 const { sendIdPhoto } = AccountServices
 
 export const ProfileVerificationModal = () => {
+  const [p] = useTranslation('panel')
+
   const { payload, setPayload } = useProfile()
 
   const [pending, setPending] = useState(false)
@@ -56,14 +59,11 @@ export const ProfileVerificationModal = () => {
   }
 
   return (
-    <Modal classNameButton={s.open} textButton="Открыть форму верификации">
+    <Modal classNameButton={s.open} textButton={p('verify_open')}>
       <form className={s.modal} onSubmit={onFormSubmit}>
-        <div className={s.title}>Верификация</div>
+        <div className={s.title}>{p('verify_title')}</div>
         <div className={s.field}>
-          <div className={s.label}>
-            Фото паспорта с фотографией его владельца или лицевая сторона ID
-            карты.
-          </div>
+          <div className={s.label}>{p('verify_popup')}</div>
           <label className={s.input} htmlFor="MAIN">
             <input
               name="MAIN"
@@ -91,17 +91,13 @@ export const ProfileVerificationModal = () => {
             {fileMain ? (
               <div className={s.file}>{fileMain.name}</div>
             ) : (
-              <span>Загрузить файл</span>
+              <span>{p('load_file')}</span>
             )}
           </label>
-          <p className={s.description}>
-            Допустимые разрешения : jpg, png, pdf. Максимальный размер 5 MB.
-          </p>
+          <p className={s.description}>{p('max_size')}</p>
         </div>
         <div className={s.field}>
-          <div className={s.label}>
-            Фото обратной стороны паспорта или обратная сторона ID карты.
-          </div>
+          <div className={s.label}>{p('photo1')}</div>
           <label className={s.input} htmlFor="BACK">
             <input
               type="file"
@@ -129,15 +125,13 @@ export const ProfileVerificationModal = () => {
             {fileBack ? (
               <div className={s.file}>{fileBack.name}</div>
             ) : (
-              <span>Загрузить файл</span>
+              <span>{p('load_file')}</span>
             )}
           </label>
-          <p className={s.description}>
-            Допустимые разрешения : jpg, png, pdf. Максимальный размер 5 MB.
-          </p>
+          <p className={s.description}>{p('max_size')}</p>
         </div>
         <button className={s.button} disabled={pending} type="submit">
-          Отправить на рассмотрение
+          {p('send')}
         </button>
       </form>
     </Modal>

@@ -1,0 +1,41 @@
+{
+  "bannerText": "Together we are building a global financial ecosystem by reimagining the way investing is done. ",
+  "bannerBtn": "Join us",
+  "titleFirst": "What makes us <span>unique</span> ?",
+  "cards": [
+    {
+      "title": "Deep Scan",
+      "text": "We deeply study the stock market, analyze trends, explore sectors, and identify prospects. "
+    },
+    {
+      "title": "Strategic approach",
+      "text": "Our experienced professionals develop customized strategies tailored to your goals and risk level. "
+    },
+    {
+      "title": "Innovative approaches",
+      "text": "At Alphahedge Holdings, we are always one step ahead, looking for innovative companies and projects that can change the world. "
+    },
+    {
+      "title": "Partnership and transparency",
+      "text": "Alphahedge Holdings is not just an investment company, it is a partnership with our clients. "
+    },
+    {
+      "title": "Education and training",
+      "text": "We believe in the importance of financial literacy. "
+    }
+  ],
+  "titleSecond": "Sectors and their <span>profitability</span>",
+  "titleThird": "You may also <span>interest</span>",
+  "briefTitleOne": "Private portfolio",
+  "briefDescriptionOne": "A private portfolio is a convenient way to invest for those who value time and comfort.",
+  "briefTitleSecond": "Exchange Traded Funds (ETFs)",
+  "briefDescriptionSecond": "An investment solution that allows you to independently create a diversified portfolio of securities",
+  "briefLink": "More details",
+  "teamTitle": "Our <span>values</span> form the foundation of our activities:",
+  "teamList": [
+    "Professionalism",
+    "Confidence",
+    "Innovation"
+  ],
+  "speakTitle": "Meetings with speakers"
+}

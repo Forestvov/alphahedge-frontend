@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import { TableComponent, TableLabel } from 'components/shared/table'
 import { Loader } from 'components/shared/Loader'
@@ -17,6 +18,8 @@ const { getGainBriefcase } = BriefcaseServices
 
 export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
   const { className, showTotal = true } = props
+
+  const [c] = useTranslation('common')
 
   const [data, setData] = useState<IGetGainBriefcaseResponse>()
 
@@ -104,11 +107,11 @@ export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
           className={s.table}
           classNameInner={s.inner}
           tableTitles={[
-            { title: 'Портфель' },
-            { title: 'Тип портфеля' },
-            { title: 'Сумма' },
-            { title: 'Дата' },
-            { title: 'Сумма дохода' },
+            { title: c('package') },
+            { title: c('typePackage') },
+            { title: c('total') },
+            { title: c('date') },
+            { title: c('totalAmount') },
           ]}
           total={data.page.totalPages}
           currentPage={data.page.number}

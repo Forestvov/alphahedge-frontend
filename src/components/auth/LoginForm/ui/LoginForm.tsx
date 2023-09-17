@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { FormProvider, useForm } from 'react-hook-form'
 import axios from 'axios'
+import { useTranslation } from 'react-i18next'
 
 import useBalance from 'hooks/context/useBalance'
 import useProfile from 'hooks/context/useProfile'
@@ -20,6 +21,9 @@ import s from './LoginForm.module.scss'
 const { getProfile, getBalance } = AccountServices
 
 export const LoginForm = () => {
+  const [a] = useTranslation('authPage')
+  const [f] = useTranslation('form')
+
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
@@ -83,41 +87,39 @@ export const LoginForm = () => {
 
   return (
     <div className={s.wrapper}>
-      <h1 className={s.title}>Войдите в аккаунт!</h1>
+      <h1 className={s.title}>{a('titleLogin')}</h1>
       <FormProvider {...methods}>
         <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
           <div className={s.row}>
             <div className={s.label}>E-mail</div>
             <Input
               className={s.input}
-              placeholder="Введите e-mail"
+              placeholder={f('emailPlaceholder')}
               type="text"
               name="email"
             />
           </div>
           <div className={s.row}>
-            <div className={s.label}>Пароль</div>
+            <div className={s.label}>{f('labelPassword')}</div>
             <Input
               className={s.input}
-              placeholder="Введите пароль"
+              placeholder={f('passwordPlaceholder')}
               type="password"
               name="password"
             />
           </div>
-          {error && (
-            <div className={s.error}>Почта или пароль введены неверно</div>
-          )}
-          <Link className={s.link} to="/">
-            Забыли пароль?
+          {error && <div className={s.error}>{a('errorLogin')}</div>}
+          <Link className={s.link} to="/recovery">
+            {a('recovery')}
           </Link>
           <button className={s.submit} disabled={loading} type="submit">
-            Войти
+            {a('in')}
           </button>
         </form>
       </FormProvider>
       <div className={s.links}>
-        <span>У вас нет аккаунта ?</span>
-        <Link to="/register">Зарегестрироваться</Link>
+        <span>{a('haveAccount')}</span>
+        <Link to="/register">{a('reg')}</Link>
       </div>
       <div className={s.copyright}>
         The activities of are conducted within the obtained permits and are in

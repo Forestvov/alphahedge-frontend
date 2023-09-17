@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import cn from 'classnames'
 import { toast } from 'react-toastify'
+import { useTranslation } from 'react-i18next'
 
 import { TableCell, TablePrice, TableRow } from 'components/shared/table'
 import { CounterChanger } from 'components/shared/CounterChanger'
@@ -33,10 +34,13 @@ export const ActiveTableRow = (props: IActiveTableRow) => {
     updateData = () => null,
   } = props
 
+  const [n] = useTranslation('notification')
+  const [p] = useTranslation('panel')
+
   const [sellCounter, setSellCounter] = useState(1)
   const [isOpen, setIsOpen] = useState(false)
 
-  const notifySuccess = () => toast.success('Вы продали данную акцию')
+  const notifySuccess = () => toast.success(n('sellAction'))
 
   const updateUser = useGetMainInfo()
 
@@ -108,7 +112,7 @@ export const ActiveTableRow = (props: IActiveTableRow) => {
       </TableRow>
       <TableRow className={cn(s.counter, { [s.show]: isOpen })}>
         <TableCell className={s.label}>
-          <span>Выберите кол-во акций :</span>
+          <span>{p('selectAction')}</span>
         </TableCell>
         <TableCell className={s.changer}>
           <CounterChanger

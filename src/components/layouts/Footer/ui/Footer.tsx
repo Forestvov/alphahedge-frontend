@@ -1,83 +1,91 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 import { Container } from 'components/shared/Container'
-
-import { CrowCopyright } from 'assets/images'
 import { HeaderLogo } from 'assets/icons'
 
 import s from './Footer.module.scss'
 
-export const Footer = () => (
-  <footer className={s.footer}>
-    <Container>
-      <div className={s.top}>
-        <div className={s.content}>
-          <h2 className={s.title}>Alphahedge Holdings</h2>
-          <p className={s.text}>
-            The activities of are conducted within the obtained permits and are
-            in full compliance with the obtained certificates.
-            <br />
-            Copyright ©2023, Alphahedge Holdings Ltd
-          </p>
-        </div>
-        <div className={s.navigation}>
-          <div className={s.links}>
-            <span>Информация</span>
-            <ul>
-              <li>
-                <Link to="/">Главная</Link>
-              </li>
-              <li>
-                <Link to="/">Контакты</Link>
-              </li>
-              <li>
-                <Link to="/">О фонде</Link>
-              </li>
-              <li>
-                <Link to="/help">FAQ</Link>
-              </li>
-            </ul>
+export const Footer = () => {
+  const [l] = useTranslation('layout')
+
+  return (
+    <footer className={s.footer}>
+      <Container>
+        <div className={s.top}>
+          <div className={s.content}>
+            <h2 className={s.title}>Alphahedge Holdings</h2>
+            <p className={s.text}>
+              The activities of are conducted within the obtained permits and
+              are in full compliance with the obtained certificates.
+              <br />
+              Copyright ©2023, Alphahedge Holdings Ltd
+            </p>
+          </div>
+          <div className={s.navigation}>
+            <div className={s.links}>
+              <span>{l('informationLabel')}</span>
+              <ul>
+                <li>
+                  <Link to="/">{l('homeLink')}</Link>
+                </li>
+                <li>
+                  <Link to="/">{l('contactsLink')}</Link>
+                </li>
+                <li>
+                  <Link to="/">{l('fond')}</Link>
+                </li>
+                <li>
+                  <Link to="/help">FAQ</Link>
+                </li>
+              </ul>
+            </div>
+            <div className={s.links}>
+              <span>{l('investLabel')}</span>
+              <ul>
+                <li>
+                  <Link to="/">{l('forex')}</Link>
+                </li>
+                <li>
+                  <Link to="/">{l('trendsLink')}</Link>
+                </li>
+                <li>
+                  <Link to="/">IvestingPro</Link>
+                </li>
+                <li>
+                  <Link to="/login">{l('account')}</Link>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className={s.links}>
-            <span>Инвестиции</span>
-            <ul>
-              <li>
-                <Link to="/">Форекс</Link>
-              </li>
-              <li>
-                <Link to="/">Тренды</Link>
-              </li>
-              <li>
-                <Link to="/">IvestingPro</Link>
-              </li>
-              <li>
-                <Link to="/">Аккаунт</Link>
-              </li>
-            </ul>
+            <span>{l('regLabel')}</span>
+            <div className={s.row}>
+              {l('addressLabel')}:{' '}
+              <span>Travessera de Gràcia, 21, 08021 {l('address')}</span>{' '}
+              <Link to="/cart">{l('mapLink')}</Link>
+            </div>
+            <div className={s.row}>
+              {l('reg')} <span>B72753833</span>{' '}
+              <Link to="/">{l('checkLink')}</Link>
+            </div>
           </div>
         </div>
-        <div className={s.copyright}>
-          <img src={CrowCopyright} alt="Crown copyright" />
-          <Link to="/">© Crown copyright</Link>
+        <div className={s.bottom}>
+          <div className={s.powered}>
+            Powered by
+            <img src={HeaderLogo} alt="powered by" />
+          </div>
+          <ul className={s.otherLinks}>
+            <li>
+              <Link to="/">Privacy policy</Link>
+            </li>
+            <li>
+              <Link to="/">Aml policy</Link>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div className={s.bottom}>
-        <div className={s.powered}>
-          Powered by
-          <img src={HeaderLogo} alt="powered by" />
-        </div>
-        <ul className={s.otherLinks}>
-          <li>
-            <Link to="/">Privacy policy</Link>
-          </li>
-          <li>
-            <Link to="/">Aml policy</Link>
-          </li>
-          <li>
-            <Link to="/">Our license</Link>
-          </li>
-        </ul>
-      </div>
-    </Container>
-  </footer>
-)
+      </Container>
+    </footer>
+  )
+}

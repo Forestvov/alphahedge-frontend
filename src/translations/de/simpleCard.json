@@ -1,0 +1,95 @@
+{
+  "1": {
+    "title": "Bahnbrechende Innovation",
+    "description": "Die Stiftung definiert „disruptive Innovation“ als die Einführung eines technologisch neuen Produkts oder einer neuen Dienstleistung, die das Potenzial hat, die Funktionsweise der Welt zu verändern.",
+    "titleList": "Disruptive Innovation-Unternehmen sind Unternehmen, die auf die Entwicklung neuer Produkte oder Dienstleistungen, technologische Verbesserungen und Fortschritte in der wissenschaftlichen Forschung in den folgenden Bereichen angewiesen sind oder davon profitieren: \n",
+    "technologies": [
+      "DNA-Technologie und die „genomische Revolution“",
+      "Automatisierung, Robotik und Energiespeicherung",
+      "Künstliche Intelligenz und das „Next Generation Internet“",
+      "Fintech-Innovation "
+    ],
+    "actionList": [
+      "TESLA INC.",
+      "COINBASE GLOBAL INC",
+      "BLOCK INC.",
+      "UNITY SOFTWARE INC.",
+      "UIPATH INC.",
+      "Veracyte INC",
+      "EXACT SCIENCES CORP"
+    ]
+  },
+  "2": {
+    "title": "Genomische Revolution",
+    "description": "Die Mitgliedsunternehmen konzentrieren sich auf die Erweiterung und Verbesserung der Lebensqualität von Menschen und anderen und werden voraussichtlich erheblich davon profitieren, indem sie technologische, wissenschaftliche und genomische Entwicklungen in ihre Unternehmen integrieren.  \n",
+    "titleList": "Zu den Unternehmen der Genomic Revolution gehören Unternehmen, die auf die Entwicklung neuer Produkte oder Dienstleistungen, technologische Verbesserungen und Fortschritte in der wissenschaftlichen Forschung in den folgenden Bereichen angewiesen sind oder davon profitieren: \n",
+    "technologies": [
+      "CRISPR",
+      "Gezielte Therapie",
+      "Bioinformatik",
+      "Molekulare Diagnostik",
+      "Stammzellen",
+      "Agrarbiologie"
+    ],
+    "actionList": [
+      "PAZIFISCHE BIOSWISSENSCHAFTEN VON KALIF",
+      "SCHRODINGER INC.",
+      "IONIS PHARMACEUTICALS INC",
+      "GINKGO BIOWORKS HOLDINGS INC",
+      "TELADOC HEALTH INC.",
+      "CRISPR THERAPEUTICS AG",
+      "ADAPTIVE BIOTECHNOLOGIEN",
+      "ACCOLADE INC."
+    ]
+  },
+  "3": {
+    "title": "Fintech",
+    "description": "Die Unternehmen konzentrieren sich auf die Entwicklung neuer Produkte oder Dienstleistungen, technologische Verbesserungen und Fortschritte in der wissenschaftlichen Forschung, unter anderem in Bezug auf Energie, Automatisierung und Fertigung, Materialien, künstliche Intelligenz und Transport, und es wird erwartet, dass sie erhebliche Vorteile erzielen. \n",
+    "titleList": "Zu den Fintech-Unternehmen zählen Unternehmen, die auf die Entwicklung neuer Produkte oder Dienstleistungen, technologische Verbesserungen und Fortschritte in der wissenschaftlichen Forschung in den folgenden Bereichen angewiesen sind oder davon profitieren: \n",
+    "technologies": [
+      "Blockchain-Technologie",
+      "Autonomer Transport",
+      "Robotik und Automatisierung",
+      "3d Drucken",
+      "Energiespeicher",
+      "Weltraumforschung"
+    ],
+    "actionList": [
+      "ROBINHOOD MARKETS INC.",
+      "IRIDIUM COMMUNICATIONS INC",
+      "NVIDIA CORP",
+      "INTUIT INC.",
+      "TERADYNE INC.",
+      "DEERE"
+    ]
+  },
+  "4": {
+    "title": "Internet der nächsten Generation",
+    "description": "Die Unternehmen in diesem Portfolio konzentrieren sich auf die Verlagerung der Kerntechnologie-Infrastruktur in die Cloud und bieten mobile, neue und On-Premise-Dienste und dürften beispielsweise Unternehmen zugute kommen, die auf eine verstärkte Nutzung gemeinsamer Technologien, Infrastrukturen und Dienste angewiesen sind oder davon profitieren von ihnen profitieren. \n",
+    "titleList": "Internetunternehmen der nächsten Generation sind Unternehmen, die auf die Entwicklung neuer Produkte oder Dienstleistungen, technologische Verbesserungen und Fortschritte in der wissenschaftlichen Forschung in den folgenden Bereichen angewiesen sind oder davon profitieren: \n",
+    "technologies": [
+      "Cloud Computing und Cybersicherheit",
+      "E-Commerce",
+      "Big Data und Künstliche Intelligenz (KI)",
+      "Mobile Technologien und Internet der Dinge",
+      "Soziale Plattformen",
+      "Blockchain und P2P"
+    ],
+    "actionList": [
+      "PALANTIR TECHNOLOGIES INC",
+      "VUZIX CORP.",
+      "PURE STORAGE INC.",
+      "TAIWAN SEMICONDUCTOR-SP",
+      "PAGERDUTY INC.",
+      "ROBLOX CORP."
+    ]
+  },
+  "invested": "Investiert",
+  "dailyIncome": "Tägliches Einkommen",
+  "daysLeft": "Tage übrig",
+  "minDeposit": "Mindesteinzahlung",
+  "blockingPeriod": "Sperrfrist",
+  "actionTitle": "In diesem Paket enthaltene Aktien:",
+  "inputPlaceholder": "Geben Sie den Einzahlungsbetrag ein",
+  "submitBtn": "Investieren"
+}

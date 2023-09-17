@@ -27,8 +27,6 @@ export const TransactionRow = (props: ITransaction) => {
 
   const closeHandler = useRef<any>()
 
-  console.log(closeHandler)
-
   return (
     <TableRow>
       <TableCell className={s.first}>

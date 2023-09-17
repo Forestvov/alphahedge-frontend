@@ -94,3 +94,21 @@
 .transaction {
   transform: translateX(-2px) translateY(1px);
 }
+
+.mobile {
+  display: none !important;
+
+  @include utils.media-max-width(900) {
+    display: flex !important;
+  }
+}
+
+button.mobile {
+  align-items: center;
+  padding-left: 12px;
+  height: 55px;
+
+  img {
+    transform: translateY(3px);
+  }
+}

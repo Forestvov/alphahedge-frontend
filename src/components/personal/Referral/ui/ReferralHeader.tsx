@@ -27,7 +27,7 @@ export const ReferralHeader = (props: IReferalHeader) => {
     <div className={s.header}>
       <div className={s.col}>
         <div className={s.value}>
-          <Price type="xs" price={total} />
+          <Price type="xs" price={total ?? 0} />
         </div>
         <div className={s.label}>Общий Доход</div>
       </div>

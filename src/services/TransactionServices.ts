@@ -25,8 +25,8 @@ export default class TransactionServices {
 
   static async addTransaction(
     data: IRequestTransaction,
-  ): Promise<AxiosResponse> {
-    return $api.post('/transaction', data)
+  ): Promise<AxiosResponse<TransactionBody>> {
+    return $api.post<TransactionBody>('/transaction', data)
   }
 
   static async getCoinPrice(

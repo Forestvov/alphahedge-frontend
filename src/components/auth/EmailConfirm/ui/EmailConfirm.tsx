@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useTranslation } from 'react-i18next'
 
 import { IAuthResponse } from 'models/response/AuthResponse'
 
@@ -9,6 +10,10 @@ import { API_URL } from '../../../../http'
 import s from './EmailConfirm.module.scss'
 
 export const EmailConfirm = () => {
+  const [a] = useTranslation('authPage')
+  const [f] = useTranslation('form')
+  const [n] = useTranslation('notification')
+
   const [loader, setLoader] = useState(false)
   const [success, setSuccess] = useState(false)
   const [errorConfirm, setErrorConfirm] = useState(false)
@@ -29,8 +34,7 @@ export const EmailConfirm = () => {
     }
 
     try {
-      const response = await axios.request<IAuthResponse>(config)
-      console.log(response)
+      await axios.request<IAuthResponse>(config)
       setSuccess(true)
     } catch {
       console.log('')
@@ -66,18 +70,12 @@ export const EmailConfirm = () => {
   return (
     <div className={s.wrapper}>
       <h1 className={s.title}>
-        {errorConfirm ? 'Почта подтверждена' : 'Подтвердите почту'}
+        {errorConfirm ? a('isConfirmEmail') : a('isNotConfirmEmail')}
       </h1>
       {errorConfirm ? (
-        <p className={s.text}>
-          Вы подтвердили почту. Перейдите на страницу авторизации.
-        </p>
+        <p className={s.text}>{a('isConfirmEmailText')}</p>
       ) : (
-        <p className={s.text}>
-          Мы отправили письмо вам на почту. Перейдите по ссылке чтобы
-          активировать свой аккаунт. Если вы уже перешли по ссылке из письма -
-          обновите страницу.
-        </p>
+        <p className={s.text}>{a('isNotConfirmEmailText')}</p>
       )}
       <div className={s.links}>
         <span className={s.email}>{localStorage.getItem('acceptEmail')}</span>
@@ -89,7 +87,7 @@ export const EmailConfirm = () => {
           onClick={resendMail}
           type="button"
         >
-          Отправить еще раз
+          {a('repeat')}
         </button>
       ) : (
         <button
@@ -98,15 +96,13 @@ export const EmailConfirm = () => {
           onClick={() => navigate('/login')}
           type="button"
         >
-          Авторизоваться
+          {a('auth')}
         </button>
       )}
-      {success && (
-        <div className={s.description}>Письмо отправленно повторно</div>
-      )}
+      {success && <div className={s.description}>{a('isSendEmail')}</div>}
       {!errorConfirm && (
         <button className={s.after} onClick={() => navigate('/')} type="button">
-          Подтвердить позже
+          {a('after')})
         </button>
       )}
     </div>

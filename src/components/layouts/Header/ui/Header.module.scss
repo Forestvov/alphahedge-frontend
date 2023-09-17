@@ -145,6 +145,15 @@
   border: 2px solid rgba(203, 203, 203, 0.10);
   background: #FFF;
   box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 120px;
+
+  a{
+    transition: 400ms;
+  }
+
+  a:hover {
+   color: var(--pinki-tin);
+  }
 }
 
 .drop {

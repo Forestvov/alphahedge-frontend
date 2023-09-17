@@ -1,6 +1,8 @@
 import { RouterProvider } from 'react-router-dom'
-import React, { useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
+
+import { PageLoader } from 'components/shared/Loader'
 
 import useProfile from 'hooks/context/useProfile'
 import useBalance from 'hooks/context/useBalance'
@@ -56,9 +58,9 @@ export const App = () => {
   }, [])
 
   return (
-    <>
+    <Suspense fallback={<PageLoader />}>
       <ToastContainer position="top-right" />
       <RouterProvider router={appRouter} />
-    </>
+    </Suspense>
   )
 }

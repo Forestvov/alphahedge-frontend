@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import useDisable from 'hooks/useDisable'
 
 import { AdminBack } from 'components/admins/AdminBack'
@@ -16,6 +18,8 @@ import s from './DashboardBody.module.scss'
 
 export const DashboardBody = (props: { adminEdit: boolean }) => {
   const { adminEdit } = props
+
+  const [c] = useTranslation('common')
 
   const { payload } = useProfile()
 
@@ -38,26 +42,26 @@ export const DashboardBody = (props: { adminEdit: boolean }) => {
       />
       <div className={s.grid}>
         <div className={s.col}>
-          <PersonalBlock label="Общий Баланс">
+          <PersonalBlock label={c('totalBalance')}>
             <Balance />
           </PersonalBlock>
           <PersonalBlock
-            label="Активные портфели"
+            label={c('activeBrief')}
             link={
               isEdit === '1'
                 ? `/admin/user/${profile?.accountId}/investments?tab=briefcase`
                 : '/personal/investments?tab=briefcase'
             }
-            textLink="Все портфели"
+            textLink={c('allBrief')}
           >
             <ActivePortfolios isAdmin={payload?.profile?.role === 'Admin'} />
           </PersonalBlock>
         </div>
-        <PersonalBlock label="Реферальная система">
+        <PersonalBlock label={c('refSystem')}>
           <Referral />
         </PersonalBlock>
       </div>
-      <PersonalBlock label="ПАКЕТ АКЦИЙ">
+      <PersonalBlock label={c('packageActions')}>
         <ActivePackage
           link={
             isEdit === '1'

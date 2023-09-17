@@ -1,3 +1,5 @@
+@use 'styles/use/utils';
+
 .form {
   display: grid;
   margin-top: 22px;
@@ -24,4 +26,47 @@
 
 .dropIn {
   z-index: 5;
+}
+
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 981px;
+  height: 1050px;
+  border-radius: 40px;
+  background: #FFF;
+  position: relative;
+
+  @include utils.media-max-width(1280) {
+    width: 600px;
+    height: auto;
+    min-height: 400px;
+  }
+
+  @include utils.media-max-width(700) {
+    min-width: 345px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+
+  @include utils.media-max-width(1280) {
+    top: 30px;
+    right: 30px;
+  }
+
+  @include utils.media-max-width(700) {
+    top: 20px;
+    right: 20px;
+  }
 }

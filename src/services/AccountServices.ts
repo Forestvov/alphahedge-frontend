@@ -2,11 +2,13 @@ import { AxiosResponse } from 'axios'
 
 import {
   IProfileField,
+  IProfileToken,
   IResponseBalance,
   IResponseProfile,
 } from 'models/response/AccountResponse'
 import {
   IPhotoRequest,
+  ISaveTokenRequest,
   ISettingProfileRequest,
 } from 'models/request/AccountRequest'
 
@@ -27,6 +29,14 @@ export default class AccountServices {
 
   static async sendIdPhoto(data: IPhotoRequest): Promise<AxiosResponse> {
     return $api.post('/account/file', data)
+  }
+
+  static async saveTokens(data: ISaveTokenRequest[]): Promise<AxiosResponse> {
+    return $api.post('/account/my/token/list', data)
+  }
+
+  static async getProfileTokens(): Promise<AxiosResponse<IProfileToken[]>> {
+    return $api.get<IProfileToken[]>('/account/my/tokens')
   }
 
   static async settingProfile(

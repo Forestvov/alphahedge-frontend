@@ -12,6 +12,7 @@ import { CarouselPagination } from 'components/shared/CarouselPagination'
 
 import { IActivePortfolios } from '../model/ActivePortfolios.interface'
 import s from './ActivePortfolios.module.scss'
+import { useTranslation } from 'react-i18next'
 
 const options: EmblaOptionsType = {
   align: 'start',
@@ -21,6 +22,8 @@ const { getMyBriefcaseActive } = BriefcaseServices
 
 export const ActivePortfolios = (props: IActivePortfolios) => {
   const { isAdmin = false } = props
+
+  const [p] = useTranslation('panel')
 
   const [briefcases, setBriefcase] = useState<IBriefcaseActive[] | null>(null)
   const [selectedIndex, setSelectedIndex] = useState(1)
@@ -74,7 +77,7 @@ export const ActivePortfolios = (props: IActivePortfolios) => {
             ))}
           </div>
         ) : (
-          <div className={s.empty}>У вас нет активных портфелий</div>
+          <div className={s.empty}>{p('notHavePackage')}</div>
         )}
       </div>
 

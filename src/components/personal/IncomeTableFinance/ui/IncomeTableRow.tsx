@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { TableCell, TablePrice, TableRow } from 'components/shared/table'
 
 import { clearDate } from 'helpers/clearDate'
@@ -17,6 +19,8 @@ export const IncomeTableRow = (props: IGainItem) => {
     image,
   } = props
 
+  const [c] = useTranslation('common')
+
   return (
     <TableRow>
       <TableCell className={s.briefName}>
@@ -26,7 +30,7 @@ export const IncomeTableRow = (props: IGainItem) => {
         <span>{briefcaseName}</span>
       </TableCell>
       <TableCell className={s.type}>
-        {code === 'ADVANCED' ? 'Индвидуальный' : 'Портфельные'}
+        {code === 'ADVANCED' ? c('simple') : c('advanced')}
       </TableCell>
       <TableCell className={s.price}>
         <span>$ {briefcaseAmount}</span>

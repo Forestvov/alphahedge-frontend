@@ -2,6 +2,7 @@ import cn from 'classnames'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { toast } from 'react-toastify'
+import { useTranslation } from 'react-i18next'
 
 import useGetMainInfo from 'hooks/useGetMainInfo'
 
@@ -26,6 +27,9 @@ const { investBriefcase } = BriefcaseServices
 export const InfoCardForm = (props: IInfoCardForm) => {
   const { briefcaseId, minValue, fetch, briefcaseInvestStatus } = props
 
+  const [n] = useTranslation(`notification`)
+  const [f] = useTranslation(`form`)
+
   const [status, setStatus] = useState<FetchStatusType | null>(null)
 
   const getMainInfo = useGetMainInfo()
@@ -34,8 +38,8 @@ export const InfoCardForm = (props: IInfoCardForm) => {
 
   const { handleSubmit, setError } = methods
 
-  const notifyError = () => toast.error('Произошла ошибка, попробуйте позже')
-  const notifySuccess = () => toast.success('Инвистиция прошла успешно')
+  const notifyError = () => toast.error(n('errorMessage'))
+  const notifySuccess = () => toast.success(n('successInvest'))
 
   const onSubmit = async (body: IField) => {
     const amount = Number(body.amount?.replace(/[^+\d]/g, ''))
@@ -45,7 +49,7 @@ export const InfoCardForm = (props: IInfoCardForm) => {
     }
 
     if (amount < minValue) {
-      setError('amount', { message: `Минимальный депозит ${minValue}` })
+      setError('amount', { message: `${f('minDeposit')} ${minValue}` })
       return
     }
 
@@ -80,8 +84,9 @@ export const InfoCardForm = (props: IInfoCardForm) => {
         <div className={s.wrapper}>
           <Input
             className={s.input}
-            placeholder="Введите сумму депозита"
+            placeholder={f('depositPlaceholder')}
             type="text"
+            prefix="$"
             name="amount"
           />
           {briefcaseInvestStatus === 'Disable' && (
@@ -105,7 +110,7 @@ export const InfoCardForm = (props: IInfoCardForm) => {
           disabled={status === 'pending'}
           type="submit"
         >
-          Инвестировать
+          {f('onInvest')}
         </Button>
       </form>
     </FormProvider>

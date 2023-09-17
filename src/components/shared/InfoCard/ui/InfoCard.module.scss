@@ -59,7 +59,7 @@
   width: 188px;
   white-space: nowrap;
   margin-left: 29px;
-  color: #000;
+  color: #fff;
 
   @include utils.media-max-width(900) {
     display: none;

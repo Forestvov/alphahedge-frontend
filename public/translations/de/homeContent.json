@@ -1,0 +1,41 @@
+{
+  "bannerText": "Gemeinsam bauen wir ein globales Finanzökosystem auf, indem wir die Art und Weise, wie Investitionen getätigt werden, neu denken. ",
+  "bannerBtn": "Begleiten Sie uns",
+  "titleFirst": "Was uns ausmacht <span>einzigartig</span> ?",
+  "cards": [
+    {
+      "title": "Tiefen-Scan",
+      "text": "Wir studieren den Aktienmarkt eingehend, analysieren Trends, erkunden Sektoren und identifizieren Perspektiven. "
+    },
+    {
+      "title": "Strategischer Ansatz",
+      "text": "Unsere erfahrenen Fachleute entwickeln maßgeschneiderte Strategien, die auf Ihre Ziele und Ihr Risikoniveau zugeschnitten sind. "
+    },
+    {
+      "title": "Innovative Ansätze",
+      "text": "Bei Alphahedge Holdings sind wir immer einen Schritt voraus und suchen nach innovativen Unternehmen und Projekten, die die Welt verändern können. "
+    },
+    {
+      "title": "Partnerschaft und Transparenz",
+      "text": "Alphahedge Holdings ist nicht nur eine Investmentgesellschaft, sondern eine Partnerschaft mit unseren Kunden. "
+    },
+    {
+      "title": "Schul-und Berufsbildung",
+      "text": "Wir glauben an die Bedeutung der Finanzkompetenz. "
+    }
+  ],
+  "titleSecond": "Sektoren und ihre <span>Rentabilität</span>",
+  "titleThird": "Du könntest auch <span>Interesse</span>",
+  "briefTitleOne": "Privates Portfolio",
+  "briefDescriptionOne": "Ein privates Portfolio ist eine bequeme Anlagemöglichkeit für diejenigen, die Wert auf Zeit und Komfort legen.",
+  "briefTitleSecond": "Exchange Traded Funds (ETFs)",
+  "briefDescriptionSecond": "Eine Anlagelösung, die es Ihnen ermöglicht, selbstständig ein diversifiziertes Wertpapierportfolio zusammenzustellen",
+  "briefLink": "Mehr Details",
+  "teamTitle": "Unser <span>Werte</span> bilden die Grundlage unserer Aktivitäten:",
+  "teamList": [
+    "Professionalität",
+    "Vertrauen",
+    "Innovation"
+  ],
+  "speakTitle": "Treffen mit Referenten"
+}

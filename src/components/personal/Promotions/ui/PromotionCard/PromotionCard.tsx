@@ -1,5 +1,7 @@
 import cn from 'classnames'
 import { Line } from 'react-chartjs-2'
+import { useTranslation } from 'react-i18next'
+
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -67,6 +69,8 @@ export const options: ChartOptions = {
 const { getActionBalance } = ActionServices
 
 export const PromotionCard = (props: IPromotionCard) => {
+  const [n] = useTranslation('notification')
+
   const { disable, image, actionCode, statistics, actionName, currentPrice } =
     props
 
@@ -105,8 +109,8 @@ export const PromotionCard = (props: IPromotionCard) => {
     )
   }
 
-  const notifySuccess = () => toast.success('Вы приобрели данную акцию')
-  const notifyError = () => toast.error('Что-то пошло не так, попробоуй позже')
+  const notifySuccess = () => toast.success(n('isBayAction'))
+  const notifyError = () => toast.error(n('errorMessage'))
 
   const fetchData = async () => {
     try {

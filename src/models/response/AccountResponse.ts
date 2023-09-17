@@ -36,3 +36,12 @@ export interface IResponseBalance {
   briefcaseBalance: number
   balance: number
 }
+
+export interface IProfileToken {
+  currencyTypeAccountId: number
+  accountId: number
+  currentTypeId: number
+  currencyToken: string
+  image: string
+  value: string
+}

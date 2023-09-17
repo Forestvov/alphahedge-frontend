@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import AnimateHeight from 'react-animate-height'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import { floorPrice } from 'helpers/floorPrice'
 
@@ -23,6 +24,8 @@ interface IPromotionCardActions {
 const { actionInvest } = ActionServices
 
 export const PromotionCardActions = (props: IPromotionCardActions) => {
+  const [c] = useTranslation('common')
+
   const { code, currentPrice, fetchData } = props
 
   const [count, setCount] = useState(1)
@@ -72,20 +75,20 @@ export const PromotionCardActions = (props: IPromotionCardActions) => {
         disabled={status === 'pending'}
         onClick={onChangeCounter}
       >
-        {isOpen ? 'Подтвердить' : 'Купить'}
+        {isOpen ? c('Accept') : c('buy')}
         <span className={s.price}>$ {floorPrice(currentPrice * count)}</span>
       </Button>
       <AnimateHeight height={isOpen ? 'auto' : 0}>
         <div className={s.body}>
           <div className={s.counter}>
-            <div className={s.counterLabel}>Выберите кол-во :</div>
+            <div className={s.counterLabel}>{c('selectCount')}</div>
             <CounterChanger
               decrement={decrementCounter}
               value={count}
               increment={incrementHandler}
             />
           </div>
-          <p className={s.notification}>*Вы покупаете актив без комиссий</p>
+          <p className={s.notification}>{c('nonDs')}</p>
         </div>
       </AnimateHeight>
     </div>

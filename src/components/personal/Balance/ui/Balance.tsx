@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { Price } from 'components/shared/Price'
 
 import useBalance from 'hooks/context/useBalance'
@@ -6,23 +8,25 @@ import formatPrice from 'helpers/priceFormat'
 import s from './Balance.module.scss'
 
 export const Balance = () => {
+  const [c] = useTranslation('common')
+
   const { cash } = useBalance()
 
   const { balance } = cash
 
   const items = [
     {
-      label: 'Активный баланс',
+      label: c('activeBalance'),
       price: balance?.activeBalance ?? 0,
       color: '#5350F2',
     },
     {
-      label: 'Инвестированно в портфели',
+      label: c('investBrief'),
       price: balance?.briefcaseBalance ?? 0,
       color: '#B050F2',
     },
     {
-      label: 'Инвестированно в акции',
+      label: c('investActions'),
       price: balance?.actionBalance ?? 0,
       color: '#F29100',
     },

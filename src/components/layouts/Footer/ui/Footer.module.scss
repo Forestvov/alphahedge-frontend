@@ -10,15 +10,14 @@
 
 .top {
   display: grid;
-  grid-template-columns: max(430px) repeat(2, 1fr);
-  gap: 280px;
+  grid-template-columns: max(430px) 1fr 521px;
+  gap: 175px;
   padding-bottom: 18px;
   border-bottom: 1px solid rgba(#FFFFFF, .3);
   margin-bottom: 20px;
 
   @include utils.media-max-width(1740) {
-    gap: 160px;
-    grid-template-columns: max(400px) repeat(2, 1fr);
+    grid-template-columns: max(400px) 1fr 270px;
   }
 
   @include utils.media-max-width(1470) {
@@ -91,7 +90,7 @@
 }
 
 .links {
-  span {
+  > span {
     display: block;
     font-size: 18px;
     font-weight: 600;
@@ -220,5 +219,43 @@
   a {
     font-size: 14px;
     font-weight: 300;
+  }
+}
+
+.row {
+  color: #BCBCBC;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 25px;
+
+  & + .row {
+    margin-top: 8px;
+  }
+
+  span {
+    color: var(--pinki-tin);
+  }
+
+  a {
+    color: #FFF;
+    font-size: 18px;
+    text-decoration-line: underline;
+  }
+
+  @include utils.media-max-width(1740) {
+    font-size: 16px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+  @include utils.media-max-width(1470) {
+    margin-top: 15px;
+    font-size: 15px;
+    a {
+      font-size: 15px;
+    }
+
   }
 }

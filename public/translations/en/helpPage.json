@@ -1,0 +1,40 @@
+{
+  "helpList": [
+    {
+      "title": "What is an investment fund?",
+      "text": "An investment fund is a financial organization that pools the funds of various investors to invest in a variety of assets in order to make a profit."
+    },
+    {
+      "title": "How can I invest in your fund?",
+      "text": "You can invest in our fund by filling out the appropriate application on our website or by contacting our managers."
+    },
+    {
+      "title": "What types of assets do you invest?",
+      "text": "We invest in a variety of assets, such as stocks, bonds, real estate and others, taking into account the chosen investment strategy."
+    },
+    {
+      "title": "What is the investment period for the fund?",
+      "text": "The investment period may vary depending on the chosen strategy. "
+    },
+    {
+      "title": "Can I withdraw my funds at any time?",
+      "text": "We generally have specific notice periods for withdrawals. "
+    },
+    {
+      "title": "How can I track the performance of my investment?",
+      "text": "We provide access to an online portal where you can track the performance of your investment and receive relevant reports."
+    },
+    {
+      "title": "What information is required to start investing?**",
+      "text": "To start investing, you will need to fill out an investor questionnaire and provide the necessary documents in accordance with legal requirements."
+    },
+    {
+      "title": "**What is your approach to risk management?",
+      "text": "We actively manage risk using a variety of strategies, asset diversification and market analysis. "
+    },
+    {
+      "title": "**What if I have additional questions not found in the FAQ?",
+      "text": "We are ready to answer all your questions. "
+    }
+  ]
+}

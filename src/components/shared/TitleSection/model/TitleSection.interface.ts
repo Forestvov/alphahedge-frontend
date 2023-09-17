@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 export interface ITitleSection {
-  children: ReactNode
+  title?: string
+  children?: ReactNode
   className?: string
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
+import { useTranslation } from 'react-i18next'
 
 import { floorPrice } from 'helpers/floorPrice'
 
@@ -15,25 +16,25 @@ import { TransactionPopupTimer } from './TransactionPopupTimer'
 
 import s from './TransactionPopup.module.scss'
 
-const { getTransactionBody, getTokenCode, getCoinPrice } = TransactionServices
+const { getTransactionBody, getCoinPrice } = TransactionServices
 
 interface ITransactionPopup {
-  transactionId: number
+  transactionId?: number
+  body?: TransactionBody | null
 }
 
 export const TransactionPopup = (props: ITransactionPopup) => {
-  const { transactionId } = props
+  const { transactionId, body } = props
 
-  const [data, setData] = useState<TransactionBody>()
+  const [c] = useTranslation('common')
+
+  const [data, setData] = useState<TransactionBody | null>(body ?? null)
   const [total, setTotal] = useState<number>()
-  const [transactionCode, setTransactionCode] = useState<string>()
 
   const fetchData = async (id: number) => {
     try {
       const response = await getTransactionBody(id)
-      const tokenCode = await getTokenCode()
       const tokenPrice = await getCoinPrice(response.data.currencyToken)
-      setTransactionCode(tokenCode.data.settingValue)
       setData(response.data)
       setTotal(response.data.amount / Number(tokenPrice.data.price))
     } catch (e) {
@@ -41,14 +42,25 @@ export const TransactionPopup = (props: ITransactionPopup) => {
     }
   }
 
+  const setTokenPrice = async () => {
+    if (body) {
+      const tokenPrice = await getCoinPrice(body.currencyToken)
+      setTotal(body.amount / Number(tokenPrice.data.price))
+    }
+  }
+
   useEffect(() => {
-    if (transactionId) {
+    if (transactionId && !body) {
       fetchData(transactionId)
+      return
+    }
+
+    if (body) {
+      setTokenPrice()
     }
   }, [transactionId])
 
-  const notifySuccess = () =>
-    toast.success('Адресс был добавлен в буфер обмена')
+  const notifySuccess = () => toast.success(c('copyAddress'))
 
   const copyHandler = (text: string) => {
     navigator.clipboard.writeText(text)
@@ -86,11 +98,11 @@ export const TransactionPopup = (props: ITransactionPopup) => {
             <div className={s.row}>
               <div className={s.value}>
                 <div className={s.address}>
-                  <span>{transactionCode}</span>...
-                  {transactionCode && (
+                  <span>{data.contact}</span>...
+                  {data.contact && (
                     <button
                       type="button"
-                      onClick={() => copyHandler(transactionCode)}
+                      onClick={() => copyHandler(data.contact)}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

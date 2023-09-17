@@ -52,12 +52,8 @@ export const IndividualList = () => {
 
   return (
     <div className={s.right}>
-      {data.map((card) => (
-        <IndividualCard
-          key={card.briefcaseAccountId}
-          fetch={getList}
-          {...card}
-        />
+      {data.map((card, idx) => (
+        <IndividualCard key={idx} fetch={getList} {...card} />
       ))}
     </div>
   )

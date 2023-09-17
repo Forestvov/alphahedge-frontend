@@ -7,3 +7,8 @@ export interface ISettingProfileRequest {
   profileSettingsCode: string
   value: Date
 }
+
+export interface ISaveTokenRequest {
+  currentTypeId: string
+  value: string
+}

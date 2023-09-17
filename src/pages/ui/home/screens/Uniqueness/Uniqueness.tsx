@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { EmblaOptionsType } from 'embla-carousel'
+import { useTranslation } from 'react-i18next'
 
 import { Container } from 'components/shared/Container'
 import { CarouselNavigation } from 'components/shared/CarouselNavigation'
@@ -8,16 +9,17 @@ import { TitleSection } from 'components/shared/TitleSection'
 
 import { UniquenessBg } from 'assets/images'
 
+import { IUniquenessCard } from './Uniqueness.interface'
 import { UniquenessCard } from './UniquenessCard'
-
 import s from './Uniqueness.module.scss'
-import { cards } from './Uniqueness.data'
 
 const options: EmblaOptionsType = {
   align: 'start',
 }
 
 export const Uniqueness = () => {
+  const [t] = useTranslation('homeContent')
+
   const [otherRef, embla] = useEmblaCarousel({ ...options })
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
@@ -27,9 +29,7 @@ export const Uniqueness = () => {
     <section className={s.section}>
       <Container>
         <div className={s.header}>
-          <TitleSection>
-            Что делает нас <span>уникальными</span> ?
-          </TitleSection>
+          <TitleSection title={t('titleFirst')} />
           <CarouselNavigation
             className={s.navigation}
             prevButtonClick={scrollPrev}
@@ -38,9 +38,11 @@ export const Uniqueness = () => {
         </div>
         <div className={s.carousel} ref={otherRef}>
           <div className={s.list}>
-            {cards.map((card, idx) => (
-              <UniquenessCard key={idx} title={card.title} text={card.text} />
-            ))}
+            {t('cards', { returnObjects: true, defaultValue: ['', ''] }).map(
+              (card: IUniquenessCard, idx: number) => (
+                <UniquenessCard key={idx} title={card.title} text={card.text} />
+              ),
+            )}
           </div>
         </div>
       </Container>

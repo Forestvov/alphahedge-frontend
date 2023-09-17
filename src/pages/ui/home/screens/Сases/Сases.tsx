@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { Container } from 'components/shared/Container'
 import { TitleSection } from 'components/shared/TitleSection'
 
@@ -8,27 +10,31 @@ import { Case } from './Case'
 
 import s from './Сases.module.scss'
 
-export const Сases = () => (
-  <section className={s.section}>
-    <Container>
-      <TitleSection className={s.header}>
-        Вас также может <span>заинтересовать</span>
-      </TitleSection>
-      <div className={s.list}>
-        <Case
-          title="Частный  портфель"
-          description="Частный портфель - это удобный способ инвестирования для тех, кто ценит сове время и комфорт."
-          image={FirstCase}
-          link="/"
-        />
-        <Case
-          title="Торгуемые на биржах фонты (ETF)"
-          description="Инвестиционное решение, позволяющее самостоятельно сформировать диверсифицрованный портфель ценных бумаг"
-          image={SecondCase}
-          link="/"
-        />
-      </div>
-    </Container>
-    <img className={s.bg} src={CasesBg} alt="bg" />
-  </section>
-)
+export const Сases = () => {
+  const [t] = useTranslation('homeContent')
+
+  return (
+    <section className={s.section}>
+      <Container>
+        <TitleSection className={s.header} title={t('titleThird')} />
+        <div className={s.list}>
+          <Case
+            title={t('briefTitleOne')}
+            description={t('briefDescriptionOne')}
+            image={FirstCase}
+            link="/"
+            linkText={t('briefLink')}
+          />
+          <Case
+            title={t('briefTitleSecond')}
+            description={t('briefDescriptionSecond')}
+            image={SecondCase}
+            link="/"
+            linkText={t('briefLink')}
+          />
+        </div>
+      </Container>
+      <img className={s.bg} src={CasesBg} alt="bg" />
+    </section>
+  )
+}

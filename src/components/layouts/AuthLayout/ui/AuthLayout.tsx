@@ -1,6 +1,7 @@
 import { Navigate } from 'react-router-dom'
 import React from 'react'
 import { Outlet } from 'react-router'
+import { useTranslation } from 'react-i18next'
 
 import { PageLoader } from 'components/shared/Loader'
 
@@ -18,6 +19,8 @@ import { PreviewImage } from 'assets/images'
 import s from './AuthLayout.module.scss'
 
 export const AuthLayout = () => {
+  const [t] = useTranslation('authPage')
+
   const { payload } = useProfile()
 
   if (payload.loading) {
@@ -40,26 +43,23 @@ export const AuthLayout = () => {
       </div>
       <div className={s.right}>
         <h2 className={s.title}>Alphahedge Holdings</h2>
-        <p className={s.text}>
-          Вместе мы строим глобальную финансовую экосистему, переосмысляя подход
-          к инвестированию.
-        </p>
+        <p className={s.text}>{t('rightText')}</p>
         <ul className={s.list}>
           <li>
             <img src={FirstIcon} alt="" />
-            <p>Индвидуальный подход к каждому клиенту.</p>
+            <p>{t('item1')}</p>
           </li>
           <li>
             <img src={SecondIcon} alt="" />
-            <p>Акции в режиме Real-Time.</p>
+            <p>{t('item2')}</p>
           </li>
           <li>
             <img src={ThirdIcon} alt="" />
-            <p>Разновидоности портфелей для инвестирования.</p>
+            <p>{t('item3')}</p>
           </li>
           <li>
             <img src={FourthIcon} alt="" />
-            <p>Удобный пользовательский интерфейс кабинета.</p>
+            <p>{t('item4')}</p>
           </li>
         </ul>
         <img className={s.preview} src={PreviewImage} alt="" />

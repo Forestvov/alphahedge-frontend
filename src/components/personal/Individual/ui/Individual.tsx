@@ -9,7 +9,10 @@ import s from './Individual.module.scss'
 export const Individual = () => {
   const [t] = useTranslation('advanceBlock')
 
-  const texts: string[] = t(`items`, { returnObjects: true })
+  const texts: string[] = t(`items`, {
+    returnObjects: true,
+    defaultValue: ['', ''],
+  })
 
   return (
     <div className={s.block}>

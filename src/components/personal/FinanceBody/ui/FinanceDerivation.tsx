@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { TransactionRow } from 'components/personal/TransactionBlock/ui/TransactionRow/TransactionRow'
 import { TableComponent } from 'components/shared/table'
 import { Loader } from 'components/shared/Loader'
@@ -8,6 +10,8 @@ import s from './FinanceBody.module.scss'
 
 export const FinanceDerivation = (props: IFinanceBody) => {
   const { data, fetchPrev, fetchNext } = props
+
+  const [c] = useTranslation('common')
 
   if (!data) {
     return (
@@ -33,7 +37,7 @@ export const FinanceDerivation = (props: IFinanceBody) => {
       renderComponent={(item) => (
         <TransactionRow {...item} key={item.transactionId} />
       )}
-      tableTitles={[{ title: 'История выводов' }]}
+      tableTitles={[{ title: c('historyOut') }]}
     />
   ) : (
     <div />

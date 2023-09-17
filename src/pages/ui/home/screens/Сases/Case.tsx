@@ -9,10 +9,11 @@ interface ICase {
   title: string
   description: string
   link: string
+  linkText: string
 }
 
 export const Case = (props: ICase) => {
-  const { description, image, title, link } = props
+  const { description, image, title, link, linkText } = props
 
   return (
     <div className={s.case}>
@@ -20,7 +21,7 @@ export const Case = (props: ICase) => {
       <h3 className={s.title}>{title}</h3>
       <p className={s.description}>{description}</p>
       <Link className={s.link} to={link}>
-        Подробнее <img src={ArrowLinkPink} alt="link" />
+        {linkText} <img src={ArrowLinkPink} alt="link" />
       </Link>
     </div>
   )

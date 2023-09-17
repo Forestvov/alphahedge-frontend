@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
+import { useTranslation } from 'react-i18next'
 
 import AdminService from 'services/AdminService'
 
@@ -26,12 +27,15 @@ const { closeBrief } = AdminService
 export const IndividualCardModal = (props: IIndividualCardModal) => {
   const { isDisable, briefcaseId, update = () => null } = props
 
+  const [p] = useTranslation('panel')
+  const [n] = useTranslation('notification')
+
   const { payload } = useProfile()
 
   const [status, setStatus] = useState<FetchStatusType | null>(null)
 
-  const notifyError = () => toast.error('Произошла ошибка, попробуйте позже')
-  const notifySuccess = () => toast.success('Статус был изменен')
+  const notifyError = () => toast.error(n('errorMessage'))
+  const notifySuccess = () => toast.success(n('changeStatus'))
 
   const sendRequestHandler = async () => {
     setStatus('pending')
@@ -65,22 +69,19 @@ export const IndividualCardModal = (props: IIndividualCardModal) => {
       onClick={onCloseBrief}
       type="button"
     >
-      Закрыть
+      {p('close')}
     </button>
   ) : (
     <Modal
       classNameButton={cn(s.open, { [s.isDisable]: isDisable })}
-      textButton="закрыть"
+      textButton={p('close')}
     >
       <div className={s.modal}>
-        <div className={s.title}>Закрыть портфель</div>
+        <div className={s.title}>{p('closeBrief')}</div>
         <p className={s.text}>
-          {status === 'success'
-            ? 'Вы успешно отправили заявку на закртытия портфеля'
-            : 'Для закртытия портфеля Вам необходимо отправить заявку в службу поддержки..'}
+          {status === 'success' ? p('successVerify') : p('veitVerify')}
         </p>
-        <div className={s.time}>Заявка обрабатывается в течение 10 минут.</div>
-
+        <div className={s.time}>{p('verifyTime')}</div>
         {status !== 'success' && (
           <button
             className={s.send}
@@ -88,7 +89,7 @@ export const IndividualCardModal = (props: IIndividualCardModal) => {
             disabled={status === 'pending'}
             type="button"
           >
-            Отправить на заявку
+            {p('sendRequest')}
           </button>
         )}
       </div>

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import {
   AccountIcon,
@@ -17,6 +18,8 @@ interface IProps {
 }
 
 export const AsideNavigationAdminEdit = ({ onClick }: IProps) => {
+  const [t] = useTranslation('personalNavigation')
+
   const { payload } = useProfile()
 
   return (
@@ -39,9 +42,9 @@ export const AsideNavigationAdminEdit = ({ onClick }: IProps) => {
         onClick={() => onClick(true)}
       >
         <div className={s.icon}>
-          <img src={InvestmentsIcon} alt="инвестиции" />
+          <img src={InvestmentsIcon} alt={t('invest')} />
         </div>
-        <span className={s.investments}>Инвестиции</span>
+        <span className={s.investments}>{t('invest')}</span>
       </NavLink>
 
       <NavLink
@@ -51,9 +54,9 @@ export const AsideNavigationAdminEdit = ({ onClick }: IProps) => {
         onClick={() => onClick(true)}
       >
         <div className={cn(s.icon, s.financeIcon)}>
-          <img src={FinanceIcon} alt="финансы" />
+          <img src={FinanceIcon} alt={t('finance')} />
         </div>
-        <span className={s.finance}>Финансы</span>
+        <span className={s.finance}>{t('finance')}</span>
       </NavLink>
 
       <NavLink
@@ -63,9 +66,9 @@ export const AsideNavigationAdminEdit = ({ onClick }: IProps) => {
         onClick={() => onClick(true)}
       >
         <div className={s.icon}>
-          <img src={AccountIcon} alt="аккаунт" />
+          <img src={AccountIcon} alt={t('account')} />
         </div>
-        <span className={s.account}>Аккаунт</span>
+        <span className={s.account}>{t('account')}</span>
       </NavLink>
     </>
   )

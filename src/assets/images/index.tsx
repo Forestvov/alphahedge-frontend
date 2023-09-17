@@ -41,8 +41,9 @@ export { default as AboutInvestImg } from './aboutUs/investImg.png'
 export { default as AboutIpoImg } from './aboutUs/ipo.png'
 
 // langs
-export { default as DeiIcon } from './langs/deu.jpg'
-export { default as EngIcon } from './langs/eng.jpg'
+export { default as DeiImage } from './langs/deu.jpg'
+export { default as EngImage } from './langs/eng.jpg'
+export { default as RusImage } from './langs/rus.jpg'
 
 // finance
 export { default as QrIcon } from './finance/qr.png'

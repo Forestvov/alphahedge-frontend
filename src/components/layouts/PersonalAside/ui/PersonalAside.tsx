@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import { useOnOutsideClick } from 'hooks/useOnOutsideClick'
 
@@ -14,6 +15,8 @@ import { IPersonalAside } from '../model/PersonalAside.interface'
 import s from './PersonalAside.module.scss'
 
 export const PersonalAside = ({ adminEdit }: IPersonalAside) => {
+  const [t] = useTranslation('personalNavigation')
+
   const [isSplit, setIsSplit] = useState(false)
 
   const toggleHandler = (split: boolean) => {
@@ -42,20 +45,20 @@ export const PersonalAside = ({ adminEdit }: IPersonalAside) => {
 
   return (
     <aside className={cn(s.aside, { [s.slide]: isSplit })} ref={ref}>
-        <div className={s.logo}>
-          <img src={LogoBlue} alt="logo" />
-        </div>
-        <AsideUserInfo isSplit={isSplit} />
-        <AsideNavigation adminEdit={adminEdit} onClick={onChangePage} />
-        <button
-          className={s.toggle}
-          onClick={() => toggleHandler(isSplit)}
-          type="button"
-        >
-          <img src={DoubleArrowIcon} alt="" />
-          <span>Свернуть меню</span>
-        </button>
-        <AsideBottom />
-      </aside>
+      <div className={s.logo}>
+        <img src={LogoBlue} alt="logo" />
+      </div>
+      <AsideUserInfo isSplit={isSplit} />
+      <AsideNavigation adminEdit={adminEdit} onClick={onChangePage} />
+      <button
+        className={s.toggle}
+        onClick={() => toggleHandler(isSplit)}
+        type="button"
+      >
+        <img src={DoubleArrowIcon} alt="" />
+        <span>{t('split')}</span>
+      </button>
+      <AsideBottom />
+    </aside>
   )
 }

@@ -4,6 +4,7 @@ import cn from 'classnames'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useTranslation } from 'react-i18next'
 
 import { Input } from 'components/shared/Input'
 import { DropDown, OptionType } from 'components/shared/DropDown'
@@ -14,19 +15,24 @@ import { registrationSchema } from '../lib/schema'
 import s from './RegisterForm.module.scss'
 import { API_URL } from '../../../../http'
 
-const options: OptionType[] = [
-  { label: 'Russia', id: 1 },
-  { label: 'Germany', id: 0 },
-  { label: 'USA', id: 2 },
-]
-
 export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
+  const [t] = useTranslation('authPage')
+  const [f] = useTranslation('form')
+  const [c] = useTranslation('country')
   const resolver = yupResolver(registrationSchema)
 
   const [loading, setLoading] = useState(false)
 
   const navigator = useNavigate()
   const params = useParams()
+
+  const options: OptionType[] = c('country', {
+    returnObjects: true,
+    defaultValue: ['', ''],
+  }).map((_country: string, idx: number) => ({
+    label: _country,
+    id: idx,
+  }))
 
   const methods = useForm<IRegisterRequest>({
     resolver,
@@ -74,62 +80,61 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
   return (
     <div className={s.wrapper}>
       <h1 className={cn(s.title, { [s.modif]: isInvite })}>
-        Добро пожаловать!
+        {t('registerTitle')}
       </h1>
       {isInvite ? (
         <h2 className={s.sub}>
-          Вы регистрируетесь по реферальной ссылке пользователя:{' '}
-          <span>{params.code}</span>
+          {t('referal')} <span>{params.code}</span>
         </h2>
       ) : null}
       <FormProvider {...methods}>
         <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
           <div className={s.row}>
             <div className={s.cell}>
-              <div className={s.label}>Фамилия</div>
+              <div className={s.label}>{f('famLabel')}</div>
               <Input
                 className={s.input}
-                placeholder="Ваша фамилия"
+                placeholder={f('famPlaceholder')}
                 type="text"
                 name="fam"
               />
             </div>
 
             <div className={s.cell}>
-              <div className={s.label}>Имя</div>
+              <div className={s.label}>{f('imLabel')}</div>
               <Input
                 className={s.input}
-                placeholder="Ваше имя"
+                placeholder={f('imPlaceholder')}
                 type="text"
                 name="im"
               />
             </div>
 
             <div className={s.cell}>
-              <div className={s.label}>Отчество</div>
+              <div className={s.label}>{f('otLabel')}</div>
               <Input
                 className={s.input}
-                placeholder="Ваше отечество"
+                placeholder={f('otPlaceholder')}
                 type="text"
                 name="ot"
               />
             </div>
 
             <div className={s.cell}>
-              <div className={s.label}>Username</div>
+              <div className={s.label}>{f('usernameLabel')}</div>
               <Input
                 className={s.input}
-                placeholder="Придумайте ник"
+                placeholder={f('usernamePlaceholder')}
                 type="text"
                 name="userName"
               />
             </div>
 
             <div className={s.cell}>
-              <div className={s.label}>Телефон</div>
+              <div className={s.label}>{f('phoneLabel')}</div>
               <Input
                 className={s.input}
-                placeholder="Введите телефон"
+                placeholder={f('phonePlaceholder')}
                 type="tel"
                 name="phoneNumber"
               />
@@ -139,27 +144,27 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
               <div className={s.label}>E-mail</div>
               <Input
                 className={s.input}
-                placeholder="Введите e-mail"
+                placeholder={f('emailPlaceholder')}
                 type="email"
                 name="email"
               />
             </div>
 
             <div className={s.cell}>
-              <div className={s.label}>Пароль</div>
+              <div className={s.label}>{f('labelPassword')}</div>
               <Input
                 className={s.input}
-                placeholder="Введите пароль"
+                placeholder={f('passwordPlaceholder')}
                 type="password"
                 name="password"
               />
             </div>
 
             <div className={s.cell}>
-              <div className={s.label}>Страна</div>
+              <div className={s.label}>{f('cityLabel')}</div>
               <DropDown
                 className={s.drop}
-                placeholder="Страна"
+                placeholder={f('cityLabel')}
                 options={options}
                 onSelect={(value) => setValue('country', value)}
                 defaultOption={options[0]}
@@ -167,13 +172,13 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
             </div>
           </div>
           <button className={s.submit} disabled={loading} type="submit">
-            Зарегестрироваться
+            {t('reg')}
           </button>
         </form>
       </FormProvider>
       <div className={s.links}>
-        <span>У вас уже есть аккаунт ?</span>
-        <Link to="/login">Войти</Link>
+        <span>{t('haveAccount')}</span>
+        <Link to="/login">{t('in')}</Link>
       </div>
       <div className={s.copyright}>
         The activities of are conducted within the obtained permits and are in

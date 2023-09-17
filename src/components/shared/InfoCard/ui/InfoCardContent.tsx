@@ -21,6 +21,7 @@ const { closeBrief } = AdminService
 export const InfoCardContent = (props: IInfoCardContent) => {
   const [t] = useTranslation(`simpleCard`)
   const [c] = useTranslation(`common`)
+  const [n] = useTranslation(`notification`)
 
   const {
     isActive,
@@ -42,8 +43,8 @@ export const InfoCardContent = (props: IInfoCardContent) => {
     setOpen((prevState) => !prevState)
   }
 
-  const notifyError = () => toast.error('Произошла ошибка, попробуйте позже')
-  const notifySuccess = () => toast.success('Статус был изменен')
+  const notifyError = () => toast.error(n('errorMessage'))
+  const notifySuccess = () => toast.success(n('changeStatus'))
 
   const onCloseBrief = async () => {
     setStatus('pending')

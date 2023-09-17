@@ -1,5 +1,6 @@
 import { FC, useEffect, useRef } from 'react'
 import Typed from 'typed.js'
+import { useTranslation } from 'react-i18next'
 
 import { BgBanner } from 'assets/images'
 import { ArrowLinkWhite, LogoBanner } from 'assets/icons'
@@ -9,18 +10,20 @@ import { Container } from 'components/shared/Container'
 import s from './MainBanner.module.scss'
 
 const text = [
-  'identity',
-  'creators',
-  'sustainability',
-  'everyone',
-  'builders',
-  'development',
+  'Identity',
+  'Creators',
+  'Sustainability',
+  'Everyone',
+  'Builders',
+  'Development',
   'Assets',
   'Shares',
   'Diversification',
 ]
 
 export const MainBanner: FC = () => {
+  const { t } = useTranslation('homeContent')
+
   const el = useRef(null)
 
   useEffect(() => {
@@ -47,13 +50,9 @@ export const MainBanner: FC = () => {
             <br />
             <span className={s.typed} ref={el} />
           </h1>
-          <p className={s.text}>
-            Вместе мы строим глобальную финансовую экосистему, переосмысляя
-            подход к инвестированию.&nbsp; Наша цель - сделать успех доступным
-            для всех, чтобы он стал реальностью каждого.
-          </p>
+          <p className={s.text}>{t('bannerText')}</p>
           <a className={s.link} href="/">
-            Присоедениться к нам
+            {t('bannerBtn')}
             <img className={s.arrow} src={ArrowLinkWhite} alt="logo" />
           </a>
         </div>

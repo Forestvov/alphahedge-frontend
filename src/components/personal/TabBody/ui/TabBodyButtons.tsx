@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import {
   NavigationDrop,
@@ -17,25 +18,8 @@ import { ITabBodyButtons, tabEnum } from '../model/TabBody.interface'
 
 import s from './TabBody.module.scss'
 
-const tabs: NavigationTabType[] = [
-  {
-    value: tabEnum.ACTIVE,
-    label: 'Акции',
-    count: 18,
-  },
-  {
-    value: tabEnum.PACKAGE,
-    label: 'портфельные инвестиции',
-    count: 18,
-  },
-  {
-    value: tabEnum.INDIVIDUAL,
-    label: 'индивидуальные введения',
-    count: 18,
-  },
-]
-
 export const TabBodyButtons = (props: ITabBodyButtons) => {
+  const [p] = useTranslation('panel')
   const { tab, onClick } = props
 
   const [disable, setDisable] = useState(true)
@@ -43,6 +27,24 @@ export const TabBodyButtons = (props: ITabBodyButtons) => {
 
   const { payload } = useProfile()
   const { counter } = useInvestCounter()
+
+  const tabs: NavigationTabType[] = [
+    {
+      value: tabEnum.ACTIVE,
+      label: p('actionsTab'),
+      count: counter.actions,
+    },
+    {
+      value: tabEnum.PACKAGE,
+      label: p('simpleTab'),
+      count: counter.simple,
+    },
+    {
+      value: tabEnum.INDIVIDUAL,
+      label: p('advancedTab'),
+      count: counter.advanced,
+    },
+  ]
 
   useEffect(() => {
     if (payload.profile?.profileSetting.length) {
@@ -75,7 +77,7 @@ export const TabBodyButtons = (props: ITabBodyButtons) => {
           disabled={tab === tabEnum.ACTIVE}
           type="button"
         >
-          Акции
+          {p('actionsTab')}
         </button>
         <button
           className={s.tab}
@@ -83,7 +85,7 @@ export const TabBodyButtons = (props: ITabBodyButtons) => {
           disabled={tab === tabEnum.PACKAGE}
           type="button"
         >
-          портфельные инвестиции
+          {p('simpleTab')}
         </button>
 
         {!disable ? (
@@ -94,7 +96,7 @@ export const TabBodyButtons = (props: ITabBodyButtons) => {
             type="button"
           >
             <img src={UnlockIcon} alt="lock" />
-            индивидуальные введения
+            {p('advancedTab')}
           </button>
         ) : (
           <TabBodyModal payload={isWait ? 'success' : null} />
@@ -109,7 +111,7 @@ export const TabBodyButtons = (props: ITabBodyButtons) => {
           onClick={() => onClick(tabEnum.ACTIVE)}
           type="button"
         >
-          Акции
+          {p('actionsTab')}
           {counter.actions && <div className={s.count}>{counter.actions}</div>}
         </button>
         <button
@@ -119,7 +121,7 @@ export const TabBodyButtons = (props: ITabBodyButtons) => {
           onClick={() => onClick(tabEnum.PACKAGE)}
           type="button"
         >
-          портфельные инвестиции
+          {p('simpleTab')}
           {counter.simple && <div className={s.count}>{counter.simple}</div>}
         </button>
 
@@ -132,7 +134,7 @@ export const TabBodyButtons = (props: ITabBodyButtons) => {
             type="button"
           >
             <img src={UnlockIcon} alt="lock" />
-            индивидуальные введения
+            {p('advancedTab')}
             {counter.advanced && (
               <div className={s.count}>{counter.advanced}</div>
             )}

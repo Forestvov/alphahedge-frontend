@@ -1,7 +1,8 @@
 export interface IToken {
-  currencyTypeId?: number
-  currencyToken?: string
-  image?: string
+  currencyTypeId: number
+  currencyToken: string
+  value: string
+  image: string
 }
 
 export interface ITokenCovert {
@@ -21,6 +22,7 @@ export interface TransactionBody {
   fio: string
   username: string
   image: any
+  contact: string
 }
 
 export interface TransactionCodeBody {

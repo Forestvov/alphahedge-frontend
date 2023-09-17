@@ -2,12 +2,12 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import AnimateHeight from 'react-animate-height'
+import cn from 'classnames'
 
 import { TitleSection } from 'components/shared/TitleSection'
 import { Container } from 'components/shared/Container'
 
 import s from './HelpPage.module.scss'
-import cn from 'classnames'
 
 interface IHelp {
   title: string
@@ -25,7 +25,7 @@ export const HelpPage = () => {
         <TitleSection className={s.title}>FAQs</TitleSection>
 
         <div className={s.list}>
-          {t('helpList', { returnObjects: true }).map(
+          {t('helpList', { returnObjects: true, defaultValue: ['', ''] }).map(
             (item: IHelp, idx: number) => (
               <div className={s.item} key={idx}>
                 <div className={s.question} onClick={() => setActiveIdx(idx)}>

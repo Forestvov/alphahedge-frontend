@@ -1,9 +1,9 @@
 import { FormProvider, useForm } from 'react-hook-form'
 import { toast } from 'react-toastify'
 import { getDirtyValues } from 'helpers/getDirtyValues'
+import { useTranslation } from 'react-i18next'
 
 import AccountServices from 'services/AccountServices'
-
 import { Button } from 'components/shared/Button'
 import { Input } from 'components/shared/Input'
 import { IProfileField } from 'models/response/AccountResponse'
@@ -13,11 +13,15 @@ import s from './ProfileEditor.module.scss'
 const { updateProfile } = AccountServices
 
 export const ProfileEditor = (props: IProfileField) => {
+  const [f] = useTranslation('form')
+  const [p] = useTranslation('panel')
+  const [n] = useTranslation('notification')
+
   const { fam, im, userName, email, phoneNumber, country } = props
 
   // const resolver = yupResolver(updateProfileSchema)
 
-  const notifySuccess = () => toast.success('Вы обновили данные')
+  const notifySuccess = () => toast.success(n('updateProfile'))
 
   const methods = useForm<IProfileField>({
     defaultValues: {
@@ -50,19 +54,19 @@ export const ProfileEditor = (props: IProfileField) => {
     <FormProvider {...methods}>
       <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
         <div className={s.header}>
-          <h2 className={s.title}>Личная информация</h2>
+          <h2 className={s.title}>{p('titlePersonal')}</h2>
           <Button className={s.button} type="submit">
-            Сохранить
+            {f('save')}
           </Button>
         </div>
         <div className={s.inputs}>
           <div className={s.cell}>
-            <Input placeholder="Фамилия" type="text" name="fam" />
-            <p className={s.label}>Фамилия</p>
+            <Input placeholder={f('famLabel')} type="text" name="fam" />
+            <p className={s.label}>{f('famLabel')}</p>
           </div>
           <div className={s.cell}>
-            <Input placeholder="Имя" type="text" name="im" />
-            <p className={s.label}>Имя</p>
+            <Input placeholder={f('imLabel')} type="text" name="im" />
+            <p className={s.label}>{f('imLabel')}</p>
           </div>
           <div className={s.cell}>
             <Input
@@ -74,8 +78,12 @@ export const ProfileEditor = (props: IProfileField) => {
             <p className={s.label}>USERNAME</p>
           </div>
           <div className={s.cell}>
-            <Input placeholder="Телефон" type="tel" name="phoneNumber" />
-            <p className={s.label}>Телефон</p>
+            <Input
+              placeholder={f('phoneLabel')}
+              type="tel"
+              name="phoneNumber"
+            />
+            <p className={s.label}>{f('phoneLabel')}</p>
           </div>
           <div className={s.cell}>
             <Input placeholder="E-mail" disabled type="email" name="email" />
@@ -87,27 +95,27 @@ export const ProfileEditor = (props: IProfileField) => {
           </div>
           <div className={s.cell}>
             <Input
-              placeholder="Старый пароль"
+              placeholder={f('oldPass')}
               type="password"
               name="oldPassword"
             />
-            <p className={s.label}>Старый пароль</p>
+            <p className={s.label}>{f('oldPass')}</p>
           </div>
           <div className={s.cell}>
             <Input
-              placeholder="Новый пароль"
+              placeholder={f('newPassPlaceholder')}
               type="password"
               name="newPassword"
             />
-            <p className={s.label}>Новый пароль (минимум 8 символов) </p>
+            <p className={s.label}>{f('newPassMinChar')}</p>
           </div>
           <div className={s.cell}>
             <Input
-              placeholder="Подтвердите пароль"
+              placeholder={f('confirmPass')}
               type="password"
               name="repeat_password"
             />
-            <p className={s.label}>Подтвердите пароль</p>
+            <p className={s.label}>{f('confirmPass')}</p>
           </div>
         </div>
       </form>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import { floorPrice } from 'helpers/floorPrice'
 
@@ -16,6 +17,8 @@ import s from './PromotionTable.module.scss'
 const { getActionBalance } = ActionServices
 
 export const PromotionTable = () => {
+  const [p] = useTranslation('panel')
+
   const { data, setData } = useActions()
 
   useEffect(() => {
@@ -73,15 +76,15 @@ export const PromotionTable = () => {
   return (
     <div className={s.wrapper}>
       <div className={s.header}>
-        <div className={s.left}>Пакет приобретенных акций</div>
+        <div className={s.left}>{p('packageActionTitle')}</div>
         <div className={s.right}>
           <TableLabel
-            label="общая стоимость Пакета"
+            label={p('totalPackage')}
             value={floorPrice(data.balance).toString()}
             type="price"
           />
           <TableLabel
-            label="Общее кол-во Акций"
+            label={p('amountPackage')}
             value={data.countActions.toString()}
             type="num"
           />
@@ -89,7 +92,7 @@ export const PromotionTable = () => {
       </div>
 
       {data?.countActions === 0 ? (
-        <div className={s.empty}>У вас нет пакетов акций</div>
+        <div className={s.empty}>{p('emptyListPackage')}</div>
       ) : (
         <TableComponent
           className={s.table}
@@ -111,10 +114,10 @@ export const PromotionTable = () => {
             />
           )}
           tableTitles={[
-            { title: 'Название' },
-            { title: 'Текущая цена' },
-            { title: 'Приобретенные акции' },
-            { title: 'Общая стоимость' },
+            { title: p('nameThead') },
+            { title: p('currentPriceThead') },
+            { title: p('actionCount') },
+            { title: p('totalAmount') },
           ]}
         />
       )}

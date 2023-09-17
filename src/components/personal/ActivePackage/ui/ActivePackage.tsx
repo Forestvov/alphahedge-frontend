@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import ActionServices from 'services/ActionServices'
 import { IActionBalanceResponse } from 'models/response/ActionResponse'
@@ -24,6 +25,8 @@ const { getActionBalance } = ActionServices
 
 export const ActivePackage = (props: IActivePackage) => {
   const { link } = props
+
+  const [p] = useTranslation('panel')
 
   const [data, setData] = useState<IActionBalanceResponse>()
 
@@ -88,19 +91,19 @@ export const ActivePackage = (props: IActivePackage) => {
       <div className={s.header}>
         <div className={s.left}>
           <TableLabel
-            label="общая стоимость Пакета"
+            label={p('totalPackage')}
             value={floorPrice(data.balance).toString()}
             type="price"
           />
           <TableLabel
-            label="Общее кол-во Акций"
+            label={p('amountPackage')}
             value={data.countActions.toString()}
             type="num"
           />
         </div>
         <div className={s.right}>
           <Link to={link}>
-            Все акции
+            {p('allAction')}
             <img src={ArrowLinkBlack} alt="arrow" />
           </Link>
         </div>
@@ -111,11 +114,11 @@ export const ActivePackage = (props: IActivePackage) => {
         className={s.table}
         classNameBody={s.tbody}
         tableTitles={[
-          { title: 'Название' },
+          { title: p('nameThead') },
           { title: '' },
-          { title: 'Текущая цена' },
-          { title: 'Приобретенные акции' },
-          { title: 'Общая стоимость' },
+          { title: p('currentPriceThead') },
+          { title: p('actionCount') },
+          { title: p('totalAmount') },
         ]}
         tables={data.actionAccountBalanceViewDtoPage.content}
         currentPage={data.actionAccountBalanceViewDtoPage.number}

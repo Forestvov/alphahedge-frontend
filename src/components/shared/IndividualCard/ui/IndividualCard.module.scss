@@ -126,10 +126,28 @@
   line-height: 23px;
 }
 
+.form {
+  width: 100%;
+
+  form {
+    margin-bottom: 10px;
+  }
+
+  div:first-child {
+    max-width: 100%;
+  }
+}
+
 .button {
   margin-left: auto;
   width: 188px;
   margin-top: auto;
+transition: 400ms;
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
 
   @include utils.media-max-width(1600) {
     margin-top: 20px;

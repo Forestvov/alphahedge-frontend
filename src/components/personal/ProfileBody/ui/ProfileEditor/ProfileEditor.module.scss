@@ -33,6 +33,13 @@
   width: 180px;
 }
 
+.loader {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .inputs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -59,4 +66,10 @@
   font-weight: 400;
   text-transform: capitalize;
   margin-top: 11px;
+}
+
+.drop {
+  > button {
+    font-weight: 500;
+  }
 }

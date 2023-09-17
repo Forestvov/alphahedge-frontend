@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import {
   TableCell,
@@ -23,6 +24,8 @@ const { getGainBriefcase } = BriefcaseServices
 
 export const IncomeTable = forwardRef((props: IIncomeTableCarousel, ref) => {
   const { className, showTotal = true, briefId } = props
+
+  const [p] = useTranslation('panel')
 
   const [data, setData] = useState<IGetGainBriefcaseResponse>()
 
@@ -101,19 +104,19 @@ export const IncomeTable = forwardRef((props: IIncomeTableCarousel, ref) => {
   return (
     <div className={cn(s.wrapper, className)}>
       <div className={s.header}>
-        <div className={s.title}>Доходы</div>
+        <div className={s.title}>{p('incomeHead')}</div>
         {showTotal && (
           <div className={s.total}>
             {data.gainSum && (
               <TableLabel
-                label="общее кол-во Доходов"
+                label={p('incomeTotal')}
                 value={data.gainSum.toString()}
                 type="price"
               />
             )}
             {data.briefcaseCount && (
               <TableLabel
-                label="кол-во Активных Портфелей"
+                label={p('incomeCount')}
                 value={data.briefcaseCount.toString()}
                 type="num"
               />
@@ -126,9 +129,9 @@ export const IncomeTable = forwardRef((props: IIncomeTableCarousel, ref) => {
         className={s.table}
         classNameInner={s.inner}
         tableTitles={[
-          { title: 'Объем инвестиций' },
-          { title: 'Дата' },
-          { title: 'Сумма дохода' },
+          { title: p('TotalInvest') },
+          { title: p('date') },
+          { title: p('TotalDoxod') },
         ]}
         total={data.page.totalPages}
         currentPage={data.page.number}

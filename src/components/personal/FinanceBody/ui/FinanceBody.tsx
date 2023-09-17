@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { AdminBack } from 'components/admins/AdminBack'
 
@@ -22,6 +23,8 @@ const { getTokens } = TransactionServices
 
 export const FinanceBody = (props: { adminEdit: boolean }) => {
   const { adminEdit } = props
+
+  const [c] = useTranslation('common')
 
   const { setTokens } = useTokens()
 
@@ -55,14 +58,14 @@ export const FinanceBody = (props: { adminEdit: boolean }) => {
       />
       <div className={s.grid}>
         <div className={s.col}>
-          <PersonalBlock label="Общий Баланс">
+          <PersonalBlock label={c('totalBalance')}>
             <Balance />
           </PersonalBlock>
-          <PersonalBlock className={s.block} label="Пополнение">
+          <PersonalBlock className={s.block} label={c('in')}>
             <TransactionBlock className={s.form} type="In" />
           </PersonalBlock>
         </div>
-        <PersonalBlock label="Вывод">
+        <PersonalBlock label={c('out')}>
           <TransactionBlock className={s.derivation} type="Out" />
         </PersonalBlock>
       </div>

@@ -11,10 +11,13 @@ import { ReferralHeader } from './ReferralHeader'
 import { ReferralItem } from './ReferralItem'
 
 import s from './Referral.module.scss'
+import { useTranslation } from 'react-i18next'
 
 const { geReferal } = ReferalService
 
 export const Referral = () => {
+  const [p] = useTranslation('panel')
+
   const [data, setData] = useState<IReferalResponse | null>(null)
 
   useEffect(() => {
@@ -77,7 +80,7 @@ export const Referral = () => {
         referal={data.inviteUrl}
       />
       {data.page.empty ? (
-        <div className={s.empty}>У вас нет доходов с реферальной системы</div>
+        <div className={s.empty}>{p('emptyReferal')}</div>
       ) : (
         <TableComponent
           className={s.table}
@@ -88,7 +91,7 @@ export const Referral = () => {
           classNamePagination={s.pagination}
           tables={data.page.content}
           currentPage={data.page.number}
-          total={data.page.totalElements}
+          total={data.page.totalPages}
           fetchNext={fetchNext}
           fetchPrev={fetchPrev}
           renderComponent={(referal) => (

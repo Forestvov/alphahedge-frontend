@@ -1,7 +1,82 @@
+@use 'styles/use/utils';
+
+.wrapper {
+  position: relative;
+
+  &:hover {
+    .dropDown {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
+
 .btn {
   color: #fff;
   border: 0.5px solid rgba(#fff, 0.55);
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 60px;
+  width: 55px;
+}
+
+
+.dropDown {
+  position: absolute;
+  right: 0;
+  padding: 25px 20px 25px 33px;
+  border-radius: 11px;
+  width: 172px;
+  border: 2px solid rgba(203, 203, 203, 0.10);
+  background: #FFF;
+  box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    transition: 400ms;
+
+    &:hover {
+      color: var(--pinki-tin);
+    }
+
+    & + button {
+      margin-top: 20px;
+    }
+  }
+
+  @include utils.media-max-width(1500) {
+    padding: 20px;
+    width: 150px;
+
+    button {
+      font-size: 18px;
+      color: #000;
+      height: auto !important;
+
+      & + button {
+        margin-top: 15px;
+      }
+    }
+  }
+
 }

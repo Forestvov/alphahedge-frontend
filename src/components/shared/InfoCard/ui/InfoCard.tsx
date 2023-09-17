@@ -45,7 +45,6 @@ export const InfoCard = (props: IBriefcaseActive & IProps) => {
     briefcaseInvestStatus,
   } = props
 
-  console.log(image)
   const isActive = briefcaseAccountStatus === 'Active'
 
   const disableAction = useDisable()
@@ -57,8 +56,14 @@ export const InfoCard = (props: IBriefcaseActive & IProps) => {
         image={image}
         description={t(`${briefcaseId}.description`)}
         titleList={t(`${briefcaseId}.titleList`)}
-        actionList={t(`${briefcaseId}.actionList`, { returnObjects: true })}
-        technologies={t(`${briefcaseId}.technologies`, { returnObjects: true })}
+        actionList={t(`${briefcaseId}.actionList`, {
+          returnObjects: true,
+          defaultValue: ['', ''],
+        })}
+        technologies={t(`${briefcaseId}.technologies`, {
+          returnObjects: true,
+          defaultValue: ['', ''],
+        })}
         isActive={isActive}
         id={briefcaseAccountId}
         isAdmin={isAdmin}

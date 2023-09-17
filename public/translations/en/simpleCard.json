@@ -1,0 +1,95 @@
+{
+  "1": {
+    "title": "Breakthrough Innovation",
+    "description": "The foundation defines “disruptive innovation” as the introduction of a technologically new product or service that has the potential to change the way the world works.",
+    "titleList": "Disruptive Innovation companies are those that rely on or benefit from the development of new products or services, technological improvements and advances in scientific research in the following areas: \n",
+    "technologies": [
+      "DNA technology and the “genomic revolution”",
+      "Automation, robotics and energy storage",
+      "Artificial Intelligence and the “Next Generation Internet”",
+      "Fintech innovation "
+    ],
+    "actionList": [
+      "TESLA INC.",
+      "COINBASE GLOBAL INC",
+      "BLOCK INC.",
+      "UNITY SOFTWARE INC.",
+      "UIPATH INC.",
+      "veracyte INC",
+      "EXACT SCIENCES CORP"
+    ]
+  },
+  "2": {
+    "title": "Genomic Revolution",
+    "description": "The member companies are focused on expanding and improving the quality of life for humans and others and are expected to benefit substantially by incorporating technological, scientific and genomics developments into their businesses.  \n",
+    "titleList": "Genomic Revolution companies include those that rely on or benefit from the development of new products or services, technological improvements and advances in scientific research in the following areas: \n",
+    "technologies": [
+      "CRISPR",
+      "Targeted therapy",
+      "Bioinformatics",
+      "Molecular diagnostics",
+      "Stem cells",
+      "Agricultural biology"
+    ],
+    "actionList": [
+      "PACIFIC BIOSCIENCES OF CALIF",
+      "SCHRODINGER INC.",
+      "IONIS PHARMACEUTICALS INC",
+      "GINKGO BIOWORKS HOLDINGS INC",
+      "TELADOC HEALTH INC.",
+      "CRISPR THERAPEUTICS AG",
+      "ADAPTIVE BIOTECHNOLOGIES",
+      "ACCOLADE INC."
+    ]
+  },
+  "3": {
+    "title": "Fintech",
+    "description": "The companies are focused on developing new products or services, technological improvements and advances in scientific research related to, among other things, energy, automation and manufacturing, materials, artificial intelligence and transportation, and are expected to realize significant benefits. \n",
+    "titleList": "Fintech companies include those that rely on or benefit from the development of new products or services, technological improvements and advances in scientific research in the following areas: \n",
+    "technologies": [
+      "Blockchain technology",
+      "Autonomous transport",
+      "Robotics and automation",
+      "3D printing",
+      "Energy storage",
+      "Space exploration"
+    ],
+    "actionList": [
+      "ROBINHOOD MARKETS INC.",
+      "IRIDIUM COMMUNICATIONS INC",
+      "NVIDIA CORP",
+      "INTUIT INC.",
+      "TERADYNE INC.",
+      "DEERE"
+    ]
+  },
+  "4": {
+    "title": "Next Generation Internet",
+    "description": "Companies in this portfolio are focused on moving core technology infrastructure to the cloud, delivering mobile, new and on-premise services, and are expected to benefit, for example, companies that rely on or benefit from increased use of shared technologies, infrastructure and services \n",
+    "titleList": "Next Generation Internet companies are those that rely on or benefit from the development of new products or services, technological improvements, and advances in scientific research in the following areas: \n",
+    "technologies": [
+      "Cloud Computing and Cybersecurity",
+      "E-commerce",
+      "Big Data and Artificial Intelligence (AI)",
+      "Mobile technologies and Internet of things",
+      "Social platforms",
+      "Blockchain and P2P"
+    ],
+    "actionList": [
+      "PALANTIR TECHNOLOGIES INC",
+      "VUZIX CORP.",
+      "PURE STORAGE INC.",
+      "TAIWAN SEMICONDUCTOR-SP",
+      "PAGERDUTY INC.",
+      "ROBLOX CORP."
+    ]
+  },
+  "invested": "Invested",
+  "dailyIncome": "Daily income",
+  "daysLeft": "Days left",
+  "minDeposit": "Minimum deposit",
+  "blockingPeriod": "Blocking period",
+  "actionTitle": "Shares included in this package:",
+  "inputPlaceholder": "Enter deposit amount",
+  "submitBtn": "Invest"
+}

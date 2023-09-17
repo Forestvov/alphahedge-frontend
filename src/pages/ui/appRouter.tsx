@@ -25,6 +25,7 @@ import { LoginPage } from './login/LoginPage'
 import { RegisterPage } from './register/RegisterPage'
 import { EmailConfirmPage } from './emailConfirmPage/EmailConfirmPage'
 import { HelpPage } from './help/HelpPage'
+import { RecoveryPage } from './recovery/RecoveryPage'
 
 export const appRouter = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ export const appRouter = createBrowserRouter([
       {
         path: '/login',
         element: <LoginPage />,
+      },
+      {
+        path: '/recovery',
+        element: <RecoveryPage />,
+      },
+      {
+        path: '/recovery/:code',
+        element: <RecoveryPage checkToken />,
       },
       {
         path: '/register',

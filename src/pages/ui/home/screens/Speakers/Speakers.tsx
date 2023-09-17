@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
+import { useTranslation } from 'react-i18next'
 
 import { Container } from 'components/shared/Container'
 import { TitleSection } from 'components/shared/TitleSection'
@@ -15,6 +16,8 @@ const options: EmblaOptionsType = {
 }
 
 export const Speakers = () => {
+  const [t] = useTranslation('homeContent')
+
   const [otherRef, embla] = useEmblaCarousel({ ...options })
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
@@ -24,9 +27,7 @@ export const Speakers = () => {
     <section className={s.section}>
       <Container>
         <div className={s.header}>
-          <TitleSection>
-            <span>Встречи</span> со спикерами
-          </TitleSection>
+          <TitleSection title={t('speakTitle')} />
           <CarouselNavigation
             className={s.navigation}
             prevButtonClick={scrollPrev}
