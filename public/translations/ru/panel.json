@@ -57,5 +57,8 @@
   "openVis": "Открыть введения",
   "notHavePackage": "У вас нет активных портфелий",
   "emptyReferal": "У вас нет доходов с реферальной системы",
-  "allAction": "Все акции"
+  "allAction": "Все акции",
+  "referalTotal": "Общий Доход",
+  "referalAmount": "Кол-Во Рефералов",
+  "referalLink": "Реферальная Ссылка"
 }

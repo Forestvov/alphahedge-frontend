@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { toast } from 'react-toastify'
+import { useTranslation } from 'react-i18next'
 
 import cn from 'classnames'
 
@@ -11,6 +12,8 @@ import s from './Referral.module.scss'
 
 export const ReferralHeader = (props: IReferalHeader) => {
   const { referal, total, count } = props
+
+  const { t } = useTranslation('panel')
 
   const [isCopy, setIsCopy] = useState(false)
 
@@ -29,11 +32,11 @@ export const ReferralHeader = (props: IReferalHeader) => {
         <div className={s.value}>
           <Price type="xs" price={total ?? 0} />
         </div>
-        <div className={s.label}>Общий Доход</div>
+        <div className={s.label}>{t('referalTotal')}</div>
       </div>
       <div className={s.col}>
         <div className={s.value}>{count}</div>
-        <div className={s.label}>Кол-во рефералов</div>
+        <div className={s.label}>{t('referalAmount')}</div>
       </div>
       <div className={cn(s.col, s.ref)}>
         <div className={s.value}>
@@ -57,7 +60,7 @@ export const ReferralHeader = (props: IReferalHeader) => {
             </svg>
           </button>
         </div>
-        <div className={s.label}>Реферальная ссылка</div>
+        <div className={s.label}>{t('referalLink')}</div>
       </div>
     </div>
   )
