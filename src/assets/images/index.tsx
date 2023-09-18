@@ -48,5 +48,10 @@ export { default as RusImage } from './langs/rus.jpg'
 // finance
 export { default as QrIcon } from './finance/qr.png'
 
+// privateBag
+export { default as PrivateBagBannerImg } from './privateBag/bannerImg.png'
+export { default as PrivateBagBg1 } from './privateBag/bg1.png'
+export { default as PrivateBagBg2 } from './privateBag/bg2.png'
+
 // contacts
 export { default as Mapimg } from './contacts/Map.png'
