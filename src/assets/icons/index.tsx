@@ -27,6 +27,7 @@ export { default as ArrowAccordionIcon } from './shared/ArrowAccordion.svg'
 export { default as ArrowBackIcon } from './shared/ArrowBack.svg'
 export { default as DoubleArrowIcon } from './shared/DoubleArrow.svg'
 export { default as EditIcon } from './shared/editIcon.svg'
+export { default as RhombusIcon } from './shared/RhombusIcon.svg'
 
 // personal
 export { default as LogoBlue } from './personal/logoBlue.svg'

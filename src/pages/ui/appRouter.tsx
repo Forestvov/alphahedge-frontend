@@ -17,6 +17,7 @@ import { Course1 } from './courses/course1/Course1'
 import { Course2 } from './courses/course2/Course2'
 import { AboutUs } from './aboutUs/AboutUs'
 import { Contacts } from './contacts/Contacts'
+import { PrivateBagPage } from './privateBag/PrivateBagPage'
 
 import { DashboardPage } from './personal/DashboardPage/DashboardPage'
 import { InvestmentsPage } from './personal/InvestmentsPage/InvestmentsPage'
@@ -109,6 +110,10 @@ export const appRouter = createBrowserRouter([
       {
         path: '/aml-policy',
         element: <AmlPolicy />,
+      },
+      {
+        path: '/privateBag',
+        element: <PrivateBagPage />,
       },
     ],
   },
