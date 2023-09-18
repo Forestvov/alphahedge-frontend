@@ -105,6 +105,11 @@
     color: #BCBCBC;
     font-size: 18px;
     line-height: 30px;
+    transition: 400ms;
+
+    &:hover {
+      color: var(--pinki-tin);
+    }
   }
 
   @include utils.media-max-width(1740) {
@@ -219,6 +224,11 @@
   a {
     font-size: 14px;
     font-weight: 300;
+    transition: 400ms;
+
+    &:hover {
+      color: var(--pinki-tin);
+    }
   }
 }
 
