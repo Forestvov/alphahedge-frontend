@@ -47,3 +47,6 @@ export { default as RusImage } from './langs/rus.jpg'
 
 // finance
 export { default as QrIcon } from './finance/qr.png'
+
+// contacts
+export { default as Mapimg } from './contacts/Map.png'

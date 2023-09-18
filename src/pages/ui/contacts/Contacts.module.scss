@@ -1,0 +1,125 @@
+@use 'styles/use/utils';
+
+.content {
+  padding: 200px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include utils.media-max-width(1500) {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  @include utils.media-max-width(500) {
+    padding: 200px 0 100px;
+  }
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  margin-bottom: 12px;
+  color: var(--primary-600, #7F56D9);
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.title {
+  margin-bottom: 24px;
+  color: var(--gray-900, #101828);
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+
+  @include utils.media-max-width(500) {
+    font-size: 32px;
+  }
+}
+
+.text {
+  margin-bottom: 51px;
+  color: var(--gray-500, #667085);
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+
+  @include utils.media-max-width(500) {
+    font-size: 16px;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include utils.media-max-width(1500) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.card_title {
+  color: var(--gray-900, #101828);
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+
+  margin-bottom: 8px;
+}
+
+.card_text {
+  color: var(--gray-500, #667085);
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+  margin-bottom: 20px;
+}
+
+.card_link {
+  color: var(--primary-700, #6941C6);
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 294px;
+}
