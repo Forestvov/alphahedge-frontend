@@ -10,7 +10,7 @@ import { Case } from './Case'
 
 import s from './Сases.module.scss'
 
-export const Сases = () => {
+export const Cases = () => {
   const [t] = useTranslation('homeContent')
 
   return (
@@ -22,7 +22,7 @@ export const Сases = () => {
             title={t('briefTitleOne')}
             description={t('briefDescriptionOne')}
             image={FirstCase}
-            link="/"
+            link="/privateBag"
             linkText={t('briefLink')}
           />
           <Case
