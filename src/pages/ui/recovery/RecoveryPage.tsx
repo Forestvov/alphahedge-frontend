@@ -1,7 +1,9 @@
 import { RecoveryForm } from 'components/auth/RecoveryForm'
 
-export const RecoveryPage = ({
-  checkToken = false,
-}: {
+interface IRecoveryPage {
   checkToken?: boolean
-}) => <RecoveryForm checkToken={checkToken} />
+}
+
+export const RecoveryPage = ({ checkToken = false }: IRecoveryPage) => (
+  <RecoveryForm checkToken={checkToken} />
+)

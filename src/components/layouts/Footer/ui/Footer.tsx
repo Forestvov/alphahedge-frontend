@@ -78,10 +78,10 @@ export const Footer = () => {
           </div>
           <ul className={s.otherLinks}>
             <li>
-              <Link to="/">Privacy policy</Link>
+              <Link to="/privacy-policy">Privacy policy</Link>
             </li>
             <li>
-              <Link to="/">Aml policy</Link>
+              <Link to="aml-policy">Aml policy</Link>
             </li>
           </ul>
         </div>

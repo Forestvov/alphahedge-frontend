@@ -28,6 +28,8 @@ import { RegisterPage } from './register/RegisterPage'
 import { EmailConfirmPage } from './emailConfirmPage/EmailConfirmPage'
 import { HelpPage } from './help/HelpPage'
 import { RecoveryPage } from './recovery/RecoveryPage'
+import { PrivacyPolicy } from './privacyPolicy/PrivacyPolicy'
+import { AmlPolicy } from './amlPolicy/AmlPolicy'
 
 export const appRouter = createBrowserRouter([
   {
@@ -99,6 +101,14 @@ export const appRouter = createBrowserRouter([
       {
         path: '/contacts',
         element: <Contacts />,
+      },
+      {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: '/aml-policy',
+        element: <AmlPolicy />,
       },
     ],
   },
