@@ -11,6 +11,7 @@ export const TitleSection = (props: ITitleSection) => {
     return (
       <h2
         className={cn(s.title, className)}
+        // eslint-disable-next-line
         dangerouslySetInnerHTML={{ __html: title }}
       />
     )

@@ -29,7 +29,7 @@ export const HeaderNav = () => {
       <NavLink className={s.link} to="/">
         {l('trendsLink')}
       </NavLink>
-      <NavLink className={s.link} to="/">
+      <NavLink className={s.link} to="/contacts">
         {l('contactsLink')}
       </NavLink>
     </nav>
