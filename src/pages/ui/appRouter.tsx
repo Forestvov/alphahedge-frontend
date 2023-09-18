@@ -18,6 +18,7 @@ import { Course2 } from './courses/course2/Course2'
 import { AboutUs } from './aboutUs/AboutUs'
 import { Contacts } from './contacts/Contacts'
 import { PrivateBagPage } from './privateBag/PrivateBagPage'
+import { EtfPage } from './etfPage/EtfPage'
 
 import { DashboardPage } from './personal/DashboardPage/DashboardPage'
 import { InvestmentsPage } from './personal/InvestmentsPage/InvestmentsPage'
@@ -114,6 +115,10 @@ export const appRouter = createBrowserRouter([
       {
         path: '/privateBag',
         element: <PrivateBagPage />,
+      },
+      {
+        path: '/etf',
+        element: <EtfPage />,
       },
     ],
   },

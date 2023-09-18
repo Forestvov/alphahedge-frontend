@@ -55,3 +55,6 @@ export { default as PrivateBagBg2 } from './privateBag/bg2.png'
 
 // contacts
 export { default as Mapimg } from './contacts/Map.png'
+
+// EtfPAge
+export { default as ETfBannerImg } from './Etf/EtfBannerImage.png'

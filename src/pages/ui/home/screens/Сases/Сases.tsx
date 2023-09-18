@@ -29,7 +29,7 @@ export const Cases = () => {
             title={t('briefTitleSecond')}
             description={t('briefDescriptionSecond')}
             image={SecondCase}
-            link="/"
+            link="/etf"
             linkText={t('briefLink')}
           />
         </div>
