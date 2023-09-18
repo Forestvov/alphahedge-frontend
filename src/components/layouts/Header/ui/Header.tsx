@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 import useProfile from 'hooks/context/useProfile'
 
@@ -19,6 +20,13 @@ export const Header = () => {
   const { pathname } = useLocation()
 
   const { width } = useWindowSize()
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }, [pathname])
 
   return (
     <header
