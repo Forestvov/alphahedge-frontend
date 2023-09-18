@@ -28,6 +28,7 @@ export const AsideNavigationUser = ({ onClick }: IProps) => {
 
   const logoutHandler = () => {
     localStorage.removeItem('token')
+    localStorage.removeItem('refresh')
     localStorage.removeItem('Account-Id')
     localStorage.removeItem('editor')
     localStorage.removeItem('user-type')

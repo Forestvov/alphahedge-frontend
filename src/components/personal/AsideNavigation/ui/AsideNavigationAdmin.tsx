@@ -1,10 +1,14 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import cn from 'classnames'
 import { useTranslation } from 'react-i18next'
+
+import useProfile from 'hooks/context/useProfile'
 
 import {
   AccountIcon,
   DashboardIcon,
+  ExitIcon,
+  HelpIcon,
   IndividualIcon,
   SystemAdminIcon,
   TransactionIcon,
@@ -20,6 +24,22 @@ interface IProps {
 
 export const AsideNavigationAdmin = ({ onClick }: IProps) => {
   const [t] = useTranslation('personalNavigation')
+
+  const navigator = useNavigate()
+
+  const { setPayload } = useProfile()
+
+  const logoutHandler = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('refresh')
+    localStorage.removeItem('Account-Id')
+    localStorage.removeItem('editor')
+    localStorage.removeItem('user-type')
+
+    onClick(true)
+    navigator('/')
+    setPayload({ isAuth: false, loading: false })
+  }
 
   return (
     <>
@@ -105,6 +125,19 @@ export const AsideNavigationAdmin = ({ onClick }: IProps) => {
         </div>
         <span className={s.finance}>{t('system')}</span>
       </NavLink>
+
+      <NavLink className={s.mobile} to="/help" onClick={() => onClick(true)}>
+        <div className={s.icon}>
+          <img src={HelpIcon} alt={t('help')} />
+        </div>
+        <span>{t('help')}</span>
+      </NavLink>
+      <button className={s.mobile} type="button" onClick={logoutHandler}>
+        <div className={s.icon}>
+          <img src={ExitIcon} alt={t('exit')} />
+        </div>
+        <span>{t('exit')}</span>
+      </button>
     </>
   )
 }
