@@ -18,7 +18,7 @@ export const ProfileInfo = ({ status }: { status: string }) => {
 
   return (
     <>
-      <h3 className={s.title}>Верификация</h3>
+      <h3 className={s.title}>{p('verify_title')}</h3>
       <div className={s.verification}>
         <img src={VerificationIcon} alt="verification" />
         <div className={s.verification__info}>

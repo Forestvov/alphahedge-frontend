@@ -1,10 +1,12 @@
 import { FormEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { toast } from 'react-toastify'
 
 import { toBase64 } from 'helpers/toBase64'
 import useProfile from 'hooks/context/useProfile'
 
 import AccountServices from 'services/AccountServices'
+import { FetchStatusType } from 'models/FetchStatusType'
 
 import { Modal } from 'components/shared/Modal'
 
@@ -14,10 +16,14 @@ const { sendIdPhoto } = AccountServices
 
 export const ProfileVerificationModal = () => {
   const [p] = useTranslation('panel')
+  const [n] = useTranslation('notification')
+
+  const notifyError = () => toast.error(n('errorMessage'))
+  const notifySuccess = () => toast.success(n('successVerify'))
 
   const { payload, setPayload } = useProfile()
 
-  const [pending, setPending] = useState(false)
+  const [pending, setPending] = useState<FetchStatusType>()
 
   const [fileMain, setFileMain] = useState<File | null>(null)
   const [fileBack, setFileBack] = useState<File | null>(null)
@@ -33,9 +39,9 @@ export const ProfileVerificationModal = () => {
   }
   const onFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    setPending(true)
+    setPending('pending')
 
-    if (fileMain && fileBack && !pending) {
+    if (fileMain && fileBack && pending !== 'pending') {
       try {
         const firstFile: string = await toBase64(fileMain)
         const secondFile: string = await toBase64(fileBack)
@@ -50,10 +56,12 @@ export const ProfileVerificationModal = () => {
             },
           })
         }
+        notifySuccess()
+        setPending('success')
       } catch (e) {
+        setPending('error')
+        notifyError()
         console.log(e)
-      } finally {
-        setPending(false)
       }
     }
   }
@@ -130,9 +138,15 @@ export const ProfileVerificationModal = () => {
           </label>
           <p className={s.description}>{p('max_size')}</p>
         </div>
-        <button className={s.button} disabled={pending} type="submit">
-          {p('send')}
-        </button>
+        {pending !== 'success' && (
+          <button
+            className={s.button}
+            disabled={pending === 'pending'}
+            type="submit"
+          >
+            {p('send')}
+          </button>
+        )}
       </form>
     </Modal>
   )

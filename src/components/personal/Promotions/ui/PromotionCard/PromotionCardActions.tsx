@@ -68,7 +68,7 @@ export const PromotionCardActions = (props: IPromotionCardActions) => {
   }
 
   return (
-    <div>
+    <div className={s.actions}>
       <Button
         className={cn(s.button, { [s.apply]: isOpen })}
         type="button"

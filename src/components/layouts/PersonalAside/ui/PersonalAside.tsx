@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 import { useTranslation } from 'react-i18next'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { useOnOutsideClick } from 'hooks/useOnOutsideClick'
 
@@ -58,9 +58,9 @@ export const PersonalAside = ({ adminEdit }: IPersonalAside) => {
 
   return (
     <aside className={cn(s.aside, { [s.slide]: isSplit })} ref={ref}>
-      <div className={s.logo}>
+      <Link className={s.logo} to="/">
         <img src={LogoBlue} alt="logo" />
-      </div>
+      </Link>
       <AsideUserInfo isSplit={isSplit} />
       <AsideNavigation adminEdit={adminEdit} onClick={() => null} />
       <button

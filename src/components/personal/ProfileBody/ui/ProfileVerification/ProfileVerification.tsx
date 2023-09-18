@@ -88,7 +88,7 @@ export const ProfileVerification = ({ status }: { status: string }) => {
         </div>
         <div className={s.info__text}>{p('verify_text')}</div>
       </div>
-      {status === VerificationEnum.NOT_STARTED && <ProfileVerificationModal />}
+      {status !== VerificationEnum.NOT_STARTED && <ProfileVerificationModal />}
     </div>
   )
 }

@@ -1,0 +1,45 @@
+@use 'styles/use/utils';
+
+.header {
+  text-align: center;
+  margin-bottom: 95px;
+
+  @include utils.media-max-width(1470) {
+    margin-bottom: 50px;
+  }
+}
+
+.title {
+  color: var(--purple-semi);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.96px;
+  margin-bottom: 28px;
+
+  @include utils.media-max-width(1470) {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  @include utils.media-max-width(900) {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+}
+
+.sub {
+  color: #6941C6;
+  font-size: 20px;
+  line-height: 30px;
+
+  @include utils.media-max-width(1470) {
+    font-size: 18px;
+  }
+
+  @include utils.media-max-width(900) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+}

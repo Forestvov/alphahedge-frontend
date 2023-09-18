@@ -65,7 +65,7 @@ export const InfoCardContent = (props: IInfoCardContent) => {
       <div className={s.header}>
         <div className={s.title}>
           <div className={s.icon}>
-            <img src={image} alt="rocket" />
+            <img src={image} alt={name} />
           </div>
           <span>{name}</span>
 

@@ -44,7 +44,7 @@ ChartJS.register(
 )
 
 export const options: ChartOptions = {
-  responsive: true,
+  responsive: false,
   scales: {
     x: {
       display: false,
@@ -130,7 +130,7 @@ export const PromotionCard = (props: IPromotionCard) => {
     <div className={s.card}>
       <div className={s.header}>
         <div className={s.icon}>
-          <img src={image} alt="apple" />
+          <img src={image} alt={actionName} />
         </div>
         <div className={s.content}>
           <div className={s.name}>{actionCode}</div>

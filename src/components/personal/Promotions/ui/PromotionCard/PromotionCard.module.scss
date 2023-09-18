@@ -5,6 +5,8 @@
   border-radius: 10px;
   background: #FAFAFA;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -14,6 +16,7 @@
   padding-bottom: 10px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 15px;
+  height: 87px;
 }
 
 .icon {
@@ -93,6 +96,11 @@
 
 .canvas {
   width: 100% !important;
+  max-width: 100%;
+}
+
+.actions {
+  margin-top: auto;
 }
 
 .button {

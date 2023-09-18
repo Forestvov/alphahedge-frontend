@@ -67,6 +67,8 @@ export const TransactionPopup = (props: ITransactionPopup) => {
     notifySuccess()
   }
 
+  console.log(data)
+
   return (
     <>
       {!data ? (
@@ -85,7 +87,8 @@ export const TransactionPopup = (props: ITransactionPopup) => {
             <img className={s.code} src={QrIcon} alt="qr_code" />
             <div className={s.row}>
               <div className={s.value}>
-                <span>{floorPrice(Number(total), 1000000)}</span>USDT
+                <span>{floorPrice(Number(total), 1000000)}</span>{' '}
+                {data.currencyToken}
               </div>
               <div className={s.notification}>
                 Amount <span className={s.circle}>!</span>
@@ -133,7 +136,7 @@ export const TransactionPopup = (props: ITransactionPopup) => {
                 www.alphahedge-holdings.com {floorPrice(data.amount)} USD
               </div>
               <div className={s.total}>
-                {floorPrice(Number(total), 1000000)} USDT
+                {floorPrice(Number(total), 1000000)} {data.currencyToken}
               </div>
             </div>
             <div className={s.right}>

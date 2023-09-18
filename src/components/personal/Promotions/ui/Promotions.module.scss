@@ -37,8 +37,8 @@
 .list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 45px 55px;
-  align-items: flex-start;
+  grid-gap: 30px;
+  //align-items: flex-start;
 
   @include utils.media-max-width(1800) {
     grid-gap: 35px 35px;

@@ -32,6 +32,7 @@ import { HelpPage } from './help/HelpPage'
 import { RecoveryPage } from './recovery/RecoveryPage'
 import { PrivacyPolicy } from './privacyPolicy/PrivacyPolicy'
 import { AmlPolicy } from './amlPolicy/AmlPolicy'
+import { TrendsPage } from './trends/TrendsPage'
 
 export const appRouter = createBrowserRouter([
   {
@@ -119,6 +120,10 @@ export const appRouter = createBrowserRouter([
       {
         path: '/etf',
         element: <EtfPage />,
+      },
+      {
+        path: '/trends',
+        element: <TrendsPage />,
       },
     ],
   },

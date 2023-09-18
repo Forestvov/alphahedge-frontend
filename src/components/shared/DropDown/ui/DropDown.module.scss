@@ -37,7 +37,13 @@
 .label {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
+
+  img {
+    flex: 0 0 auto;
+    height: auto;
+    width: 25px;
+  }
 }
 
 .active {
@@ -79,7 +85,13 @@
   transition: 400ms;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
+
+  img {
+    flex: 0 0 auto;
+    height: auto;
+    width: 25px;
+  }
 
   & + .item {
     margin-top: 5px;

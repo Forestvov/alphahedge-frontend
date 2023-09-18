@@ -5,6 +5,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useTranslation } from 'react-i18next'
+import { toast } from 'react-toastify'
 
 import { Input } from 'components/shared/Input'
 import { DropDown, OptionType } from 'components/shared/DropDown'
@@ -19,6 +20,8 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
   const [t] = useTranslation('authPage')
   const [f] = useTranslation('form')
   const [c] = useTranslation('country')
+  const [n] = useTranslation('notification')
+
   const resolver = yupResolver(registrationSchema)
 
   const [loading, setLoading] = useState(false)
@@ -48,6 +51,8 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
     },
   })
 
+  const notifyError = () => toast.error(n('emailAlready'))
+
   const { handleSubmit, setValue } = methods
 
   const onSubmit = async (data: IRegisterRequest) => {
@@ -71,7 +76,12 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
       localStorage.setItem('acceptEmail', data.email)
       await navigator('/verify')
     } catch (e) {
-      console.log(e)
+      // @ts-ignore
+      const {message} = e.response.data
+
+      if (message === 'Email already existed') {
+        notifyError()
+      }
     } finally {
       setLoading(false)
     }

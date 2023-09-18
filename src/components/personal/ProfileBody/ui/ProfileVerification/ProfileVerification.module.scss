@@ -122,7 +122,7 @@
   margin-top: 28px;
   transition: 400ms;
 
-  &.disabled {
+  &:disabled {
     pointer-events: none;
     opacity: .4;
   }

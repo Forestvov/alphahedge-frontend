@@ -145,9 +145,11 @@
   border: 2px solid rgba(203, 203, 203, 0.10);
   background: #FFF;
   box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, 0.25);
-  width: 120px;
+  width: 170px;
 
   a{
+    width: fit-content;
+    display: block;
     transition: 400ms;
   }
 

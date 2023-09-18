@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import cn from 'classnames'
 
 import useProfile from 'hooks/context/useProfile'
@@ -54,9 +54,9 @@ export const MobileMenu = (props: { adminEdit: boolean }) => {
   return (
     <>
       <div className={cn(s.menu, { [s.open]: isOpen })}>
-        <div className={s.logo}>
+        <Link className={s.logo} to="/">
           <img src={LogoBlue} alt="logo" />
-        </div>
+        </Link>
         <AsideUserInfo isSplit={false} />
         <AsideNavigation
           onClick={() => toggleOpenHandler(true)}

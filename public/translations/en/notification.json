@@ -6,7 +6,9 @@
   "successInvest": "The investment was successful",
   "sellAction": "You sold this share",
   "tokenExit": "This token is not available",
-  "addressExit": "The given output address is incorrect",
+  "addressExit": "This output address is incorrect",
   "successRequestAdvanced": "You have successfully submitted your application to open individual introductions.",
-  "textRequestAdvanced": "To open individual introductions, you need to send a request to the support service."
+  "textRequestAdvanced": "To open individual introductions, you need to send a request to the support service.",
+  "emailAlready": "The specified email is already in use.",
+  "successVerify": "Application sent successfully"
 }
