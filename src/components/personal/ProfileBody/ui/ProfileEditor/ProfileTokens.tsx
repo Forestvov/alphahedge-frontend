@@ -5,19 +5,21 @@ import { getDirtyValues } from 'helpers/getDirtyValues'
 import { useTranslation } from 'react-i18next'
 
 import AccountServices from 'services/AccountServices'
-import { ISaveTokenRequest } from 'models/request/AccountRequest'
+import AdminService from 'services/AdminService'
 
 import { Loader } from 'components/shared/Loader'
 import { Button } from 'components/shared/Button'
 import { Input } from 'components/shared/Input'
 
 import { IProfileToken } from 'models/response/AccountResponse'
+import { ISaveTokenRequest } from 'models/request/AccountRequest'
 
 import s from './ProfileEditor.module.scss'
 
 const { saveTokens, getProfileTokens } = AccountServices
+const { updateSystemTokens } = AdminService
 
-export const ProfileTokens = () => {
+export const ProfileTokens = ({ isAdmin = false }: { isAdmin?: boolean }) => {
   const [f] = useTranslation('form')
   const [p] = useTranslation('panel')
   const [n] = useTranslation('notification')
@@ -59,14 +61,29 @@ export const ProfileTokens = () => {
     if (fields) {
       const body = getDirtyValues(dirtyFields, data)
 
-      const formatBody: ISaveTokenRequest[] = Object.keys(body).map((key) => ({
-        // @ts-ignore
-        value: body[key],
-        currentTypeId: key,
-      }))
-
       try {
-        await saveTokens(formatBody)
+        if (isAdmin) {
+          const formatBody: ISaveTokenRequest[] = Object.keys(body).map(
+            (key) => ({
+              // @ts-ignore
+              value: body[key],
+              currencyTypeId: key,
+            }),
+          )
+
+          await updateSystemTokens(formatBody)
+        } else {
+          const formatBody: ISaveTokenRequest[] = Object.keys(body).map(
+            (key) => ({
+              // @ts-ignore
+              value: body[key],
+              currentTypeId: key,
+            }),
+          )
+
+          await saveTokens(formatBody)
+        }
+
         notifySuccess()
       } catch (e) {
         console.log('Error update', e)

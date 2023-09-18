@@ -33,7 +33,7 @@ export const ProfileBody = (props: { adminEdit: boolean }) => {
               phoneNumber={profile.phoneNumber}
               country={profile.country}
             />
-            <ProfileTokens />
+            {profile.role === 'User' && <ProfileTokens />}
             <ProfileInfo status={profile.verifiedStatus} />
           </>
         )}

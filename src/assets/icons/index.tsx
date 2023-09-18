@@ -44,6 +44,7 @@ export { default as IndividualIcon } from './personal/individual.svg'
 export { default as UsersIcon } from './personal/users.svg'
 export { default as TransactionIcon } from './personal/transaction.svg'
 export { default as Verification } from './personal/verificationIcon.svg'
+export { default as SystemAdminIcon } from './personal/systemIcon.svg'
 
 // auth
 export { default as FirstIcon } from './auth/first.svg'

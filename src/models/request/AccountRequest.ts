@@ -9,6 +9,7 @@ export interface ISettingProfileRequest {
 }
 
 export interface ISaveTokenRequest {
-  currentTypeId: string
+  currentTypeId?: string
+  currencyTypeId?: string
   value: string
 }

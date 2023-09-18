@@ -8,6 +8,7 @@ import {
 } from 'models/response/AdminResponse'
 
 import { AdminGainSetRequest, AdminRequest } from 'models/request/AdminRequest'
+import { ISaveTokenRequest } from 'models/request/AccountRequest'
 
 import $api from '../http'
 
@@ -110,5 +111,14 @@ export default class AdminService {
       accountId,
       verifiedStatus,
     })
+  }
+
+  static async updateSystemTokens(
+    data: ISaveTokenRequest[],
+  ): Promise<AxiosResponse<VerificationList>> {
+    return $api.post<VerificationList>(
+      `/transaction/save-system-token-list`,
+      data,
+    )
   }
 }

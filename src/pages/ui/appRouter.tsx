@@ -9,6 +9,7 @@ import { IndividualsPage } from './admins/IndividualsPage/IndividualsPage'
 import { UsersPage } from './admins/UsersPage/UsersPage'
 import { TransactionPage } from './admins/TransactionPage/TransactionPage'
 import { VerificationPage } from './admins/VerificationPage/VerificationPage'
+import { SystemPage } from './admins/SystemPage/SystemPage'
 
 import { HomePage } from './home/HomePage'
 import { ForexPage } from './forex/ForexPage'
@@ -171,6 +172,10 @@ export const appRouter = createBrowserRouter([
       {
         path: '/admin/verification',
         element: <VerificationPage />,
+      },
+      {
+        path: '/admin/system',
+        element: <SystemPage isAdmin />,
       },
     ],
   },

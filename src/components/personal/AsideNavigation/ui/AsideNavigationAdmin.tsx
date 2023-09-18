@@ -6,6 +6,7 @@ import {
   AccountIcon,
   DashboardIcon,
   IndividualIcon,
+  SystemAdminIcon,
   TransactionIcon,
   UsersIcon,
   Verification,
@@ -91,6 +92,18 @@ export const AsideNavigationAdmin = ({ onClick }: IProps) => {
           <img src={Verification} alt={t('verify')} />
         </div>
         <span className={s.finance}>{t('verify')}</span>
+      </NavLink>
+
+      <NavLink
+        className={({ isActive }) => (isActive ? s.current : '')}
+        to="/admin/system"
+        end
+        onClick={() => onClick(true)}
+      >
+        <div className={cn(s.icon, s.verification)}>
+          <img src={SystemAdminIcon} alt={t('system')} />
+        </div>
+        <span className={s.finance}>{t('system')}</span>
       </NavLink>
     </>
   )
