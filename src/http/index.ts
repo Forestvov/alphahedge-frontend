@@ -34,8 +34,19 @@ $api.interceptors.response.use(
     ) {
       originalRequest._isRetry = true
       try {
-        const response = await axios.put<any>(`${API_URL}/auth/token`)
+        const config = {
+          method: 'PUT',
+          maxBodyLength: Infinity,
+          url: `${API_URL}/auth/token`,
+          headers: {
+            'Content-Type': 'application/json',
+            withCredentials: true,
+            Authorization: localStorage.getItem('refresh'),
+          },
+        }
+        const response = await axios.request<any>(config)
         localStorage.setItem('token', response.data.acceptToken)
+        localStorage.setItem('refresh', response.data.refreshToken)
         return $api.request(originalRequest)
       } catch (e) {
         console.log('НЕ АВТОРИЗОВАН')

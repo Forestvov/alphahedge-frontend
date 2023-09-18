@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import cn from 'classnames'
+import { useTranslation } from 'react-i18next'
 
 import { clearDate } from 'helpers/clearDate'
 import { floorPrice } from 'helpers/floorPrice'
@@ -25,6 +26,8 @@ export const TransactionRow = (props: ITransaction) => {
     amount,
   } = props
 
+  const [t] = useTranslation('statuses')
+
   const closeHandler = useRef<any>()
 
   return (
@@ -43,7 +46,7 @@ export const TransactionRow = (props: ITransaction) => {
         {transactionStatus === 'Process' && transactionType === 'In' ? (
           <Modal
             classNameButton={cn(s.status, s.pending, s.disable)}
-            textButton="В обработке"
+            textButton={t('pending')}
             ref={closeHandler}
           >
             <div className={s.modal}>
@@ -80,9 +83,9 @@ export const TransactionRow = (props: ITransaction) => {
             disabled
             type="button"
           >
-            {transactionStatus === 'Success' && 'Успешно'}
-            {transactionStatus === 'Canceled' && 'Отменен'}
-            {transactionStatus === 'Process' && 'В обработке'}
+            {transactionStatus === 'Success' && t('success')}
+            {transactionStatus === 'Canceled' && t('cancel')}
+            {transactionStatus === 'Process' && t('pending')}
           </button>
         )}
       </TableCell>

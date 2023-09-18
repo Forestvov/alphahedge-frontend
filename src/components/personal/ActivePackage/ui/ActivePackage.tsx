@@ -83,7 +83,7 @@ export const ActivePackage = (props: IActivePackage) => {
   }
 
   if (data?.countActions === 0) {
-    return <div className={s.empty}>У вас нет пакетов акций</div>
+    return <div className={s.empty}>{p('emptyListPackage')}</div>
   }
 
   return (

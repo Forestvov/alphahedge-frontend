@@ -1,6 +1,7 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 import { useTranslation } from 'react-i18next'
+import { useLocation } from 'react-router-dom'
 
 import { useOnOutsideClick } from 'hooks/useOnOutsideClick'
 
@@ -16,6 +17,8 @@ import s from './PersonalAside.module.scss'
 
 export const PersonalAside = ({ adminEdit }: IPersonalAside) => {
   const [t] = useTranslation('personalNavigation')
+
+  const { pathname } = useLocation()
 
   const [isSplit, setIsSplit] = useState(false)
 
@@ -35,7 +38,17 @@ export const PersonalAside = ({ adminEdit }: IPersonalAside) => {
 
   useOnOutsideClick(ref, () => isSplit && toggleHandler(true))
 
+  useEffect(() => {
+    onChangePage()
+
+    return () => {
+      onChangePage()
+    }
+  }, [pathname])
+
   const onChangePage = () => {
+    const { classList } = document.body
+    classList.remove('fixed')
     toggleHandler(true)
     window.scrollTo({
       top: 0,
@@ -49,7 +62,7 @@ export const PersonalAside = ({ adminEdit }: IPersonalAside) => {
         <img src={LogoBlue} alt="logo" />
       </div>
       <AsideUserInfo isSplit={isSplit} />
-      <AsideNavigation adminEdit={adminEdit} onClick={onChangePage} />
+      <AsideNavigation adminEdit={adminEdit} onClick={() => null} />
       <button
         className={s.toggle}
         onClick={() => toggleHandler(isSplit)}

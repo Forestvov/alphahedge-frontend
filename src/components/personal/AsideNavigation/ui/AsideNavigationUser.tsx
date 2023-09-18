@@ -32,6 +32,7 @@ export const AsideNavigationUser = ({ onClick }: IProps) => {
     localStorage.removeItem('editor')
     localStorage.removeItem('user-type')
 
+    onClick(true)
     navigator('/')
     setPayload({ isAuth: false, loading: false })
   }
@@ -85,7 +86,7 @@ export const AsideNavigationUser = ({ onClick }: IProps) => {
         <span className={s.account}>{t('account')}</span>
       </NavLink>
 
-      <NavLink className={s.mobile} to="/help">
+      <NavLink className={s.mobile} to="/help" onClick={() => onClick(true)}>
         <div className={s.icon}>
           <img src={HelpIcon} alt={t('help')} />
         </div>

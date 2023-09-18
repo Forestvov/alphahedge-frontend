@@ -57,5 +57,8 @@
   "openVis": "Open introductions",
   "notHavePackage": "You have no active portfolios",
   "emptyReferal": "You have no income from the referral system",
-  "allAction": "All promotions"
+  "allAction": "All promotions",
+  "referalTotal": "Total Income",
+  "referalAmount": "Number of Referrals",
+  "referalLink": "Referral Link"
 }

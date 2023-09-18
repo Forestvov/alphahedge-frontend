@@ -60,6 +60,7 @@ export const LoginForm = () => {
     try {
       const response = await axios.request<IAuthResponse>(config)
       localStorage.setItem('token', response.data.acceptToken)
+      localStorage.setItem('refresh', response.data.refreshToken)
       const resProfile = await getProfile()
       const resBalance = await getBalance()
       setPayload({

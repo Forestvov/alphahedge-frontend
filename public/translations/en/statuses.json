@@ -1,0 +1,8 @@
+{
+  "allStatuses": "All statuses",
+  "success": "Successfully",
+  "pending": "In processing",
+  "cancel": "Canceled",
+  "notEmail": "Email not confirmed",
+  "notVerify": "No verification request"
+}

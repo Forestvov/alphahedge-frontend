@@ -20,6 +20,7 @@ export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
   const { className, showTotal = true } = props
 
   const [c] = useTranslation('common')
+  const [p] = useTranslation('panel')
 
   const [data, setData] = useState<IGetGainBriefcaseResponse>()
 
@@ -70,7 +71,7 @@ export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
   return (
     <div className={cn(s.wrapper, className)}>
       <div className={s.header}>
-        <div className={s.title}>Доходы</div>
+        <div className={s.title}>{p('incomeHead')}</div>
 
         {!data ? (
           <div />
@@ -80,14 +81,14 @@ export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
               <div className={s.total}>
                 {data.gainSum && (
                   <TableLabel
-                    label="общее кол-во Доходов"
+                    label={p('incomeTotal')}
                     value={data.gainSum.toString()}
                     type="price"
                   />
                 )}
                 {data.briefcaseCount && (
                   <TableLabel
-                    label="кол-во Активных Портфелей"
+                    label={p('incomeCount')}
                     value={data.briefcaseCount.toString()}
                     type="num"
                   />
