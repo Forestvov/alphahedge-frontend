@@ -67,7 +67,12 @@ export const Footer = () => {
             </div>
             <div className={s.row}>
               {l('reg')} <span>B72753833</span>{' '}
-              <Link to="/">{l('checkLink')}</Link>
+              <Link
+                to="https://www.einforma.com/informacion-empresa/stromatax#ancla-datos-comerciales"
+                target="_blank"
+              >
+                {l('checkLink')}
+              </Link>
             </div>
           </div>
         </div>

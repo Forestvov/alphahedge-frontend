@@ -9,6 +9,8 @@ import { CarouselNavigation } from 'components/shared/CarouselNavigation'
 
 import { Speaker } from './Speaker'
 
+import { ISpeaker } from './Speaker.interface'
+
 import s from './Speakers.module.scss'
 
 const options: EmblaOptionsType = {
@@ -36,12 +38,11 @@ export const Speakers = () => {
         </div>
         <div className={s.carousel} ref={otherRef}>
           <div className={s.list}>
-            <Speaker />
-            <Speaker />
-            <Speaker />
-            <Speaker />
-            <Speaker />
-            <Speaker />
+            {t('speakers', { returnObjects: true, defaultValue: ['', ''] }).map(
+              (speaker: ISpeaker, key: number) => (
+                <Speaker {...speaker} key={key} />
+              ),
+            )}
           </div>
         </div>
       </Container>

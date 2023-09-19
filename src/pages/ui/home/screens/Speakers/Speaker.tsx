@@ -1,22 +1,25 @@
-import { SpeakerImage } from 'assets/images'
 import { MapPoint } from 'assets/icons'
+
+import { ISpeaker } from './Speaker.interface'
 
 import s from './Speakers.module.scss'
 
-export const Speaker = () => (
-  <article className={s.speaker}>
-    <a className={s.image} href="/">
-      <img src={SpeakerImage} alt="" />
-    </a>
-    <div className={s.metaInfo}>
-      <div className={s.data}>2022-07-22</div>
-      <div className={s.position}>
-        <img src={MapPoint} alt="Лондон" />
-        <span>Лондон</span>
+export const Speaker = (props: ISpeaker) => {
+  const { date, image, title, country } = props
+
+  return (
+    <article className={s.speaker}>
+      <div className={s.image}>
+        <img src={image} alt={title} />
       </div>
-    </div>
-    <a className={s.name} href="/">
-      Инвестирование в Технологические Стартапы
-    </a>
-  </article>
-)
+      <div className={s.metaInfo}>
+        <div className={s.data}>{date}</div>
+        <div className={s.position}>
+          <img src={MapPoint} alt="Лондон" />
+          <span>{country}</span>
+        </div>
+      </div>
+      <div className={s.name}>{title}</div>
+    </article>
+  )
+}
