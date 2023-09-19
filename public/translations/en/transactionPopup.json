@@ -1,0 +1,9 @@
+{
+  "title": "Pay For",
+  "subTitle": "Your Order",
+  "text": "Please complete the order within the time indicated below, otherwise it will be cancelled.",
+  "amount": "Amount",
+  "selected": "Selected network",
+  "address": "Address",
+  "transaction": "Transaction sent from an exchange might fail."
+}

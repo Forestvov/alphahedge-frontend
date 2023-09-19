@@ -12,6 +12,7 @@ import s from './ProfileVerification.module.scss'
 export const ProfileVerification = ({ status }: { status: string }) => {
   const [p] = useTranslation('panel')
 
+  console.log(status)
   return (
     <div className={s.verification}>
       <div className={s.icons}>
@@ -88,7 +89,7 @@ export const ProfileVerification = ({ status }: { status: string }) => {
         </div>
         <div className={s.info__text}>{p('verify_text')}</div>
       </div>
-      {status !== VerificationEnum.NOT_STARTED && <ProfileVerificationModal />}
+      {status === VerificationEnum.NOT_STARTED && <ProfileVerificationModal />}
     </div>
   )
 }

@@ -27,6 +27,7 @@ export const TransactionPopup = (props: ITransactionPopup) => {
   const { transactionId, body } = props
 
   const [c] = useTranslation('common')
+  const [t] = useTranslation('transactionPopup')
 
   const [data, setData] = useState<TransactionBody | null>(body ?? null)
   const [total, setTotal] = useState<number>()
@@ -67,8 +68,6 @@ export const TransactionPopup = (props: ITransactionPopup) => {
     notifySuccess()
   }
 
-  console.log(data)
-
   return (
     <>
       {!data ? (
@@ -77,13 +76,10 @@ export const TransactionPopup = (props: ITransactionPopup) => {
         <>
           <div className={s.main}>
             <h2 className={s.title}>
-              Pay For
-              <div className={s.color}>Your Order</div>
+              {t('title')}
+              <div className={s.color}>{t('subTitle')}</div>
             </h2>
-            <p className={s.text}>
-              Please complete the order within the time indicated below,
-              otherwise it will be cancelled.
-            </p>
+            <p className={s.text}>{t('text')}</p>
             <img className={s.code} src={QrIcon} alt="qr_code" />
             <div className={s.row}>
               <div className={s.value}>
@@ -91,9 +87,9 @@ export const TransactionPopup = (props: ITransactionPopup) => {
                 {data.currencyToken}
               </div>
               <div className={s.notification}>
-                Amount <span className={s.circle}>!</span>
+                {t('amount')} <span className={s.circle}>!</span>
                 <span className={s.selected}>
-                  Selected network : {data.currencyToken}
+                  {t('selected')} : {data.currencyToken}
                 </span>
               </div>
             </div>
@@ -123,12 +119,10 @@ export const TransactionPopup = (props: ITransactionPopup) => {
                   )}
                 </div>
               </div>
-              <div className={s.notification}>Adress</div>
+              <div className={s.notification}>{t('address')}</div>
             </div>
 
-            <p className={s.transaction}>
-              Transaction sent from an exchange might fail.
-            </p>
+            <p className={s.transaction}>{t('transaction')}</p>
           </div>
           <div className={s.bottom}>
             <div className={s.left}>
