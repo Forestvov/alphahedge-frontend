@@ -30,10 +30,10 @@ export const Footer = () => {
                   <Link to="/">{l('homeLink')}</Link>
                 </li>
                 <li>
-                  <Link to="/">{l('contactsLink')}</Link>
+                  <Link to="/contacts">{l('contactsLink')}</Link>
                 </li>
                 <li>
-                  <Link to="/">{l('fond')}</Link>
+                  <Link to="/about">{l('fond')}</Link>
                 </li>
                 <li>
                   <Link to="/help">FAQ</Link>
@@ -44,7 +44,7 @@ export const Footer = () => {
               <span>{l('investLabel')}</span>
               <ul>
                 <li>
-                  <Link to="/">{l('forex')}</Link>
+                  <Link to="/forex">{l('forex')}</Link>
                 </li>
                 <li>
                   <Link to="/trends">{l('trendsLink')}</Link>
