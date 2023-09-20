@@ -1,0 +1,67 @@
+{
+  "banner": {
+    "title": "Die Börse ist",
+    "title1": "Das",
+    "title2": "Das",
+    "title3": "Prognose.",
+    "titlePink": "Bewegung",
+    "titlePink1": "Evolution",
+    "titlePink2": "Kunst",
+    "text1": "Wir verfolgen einen Ansatz, der Zuverlässigkeit und Innovation vereint und langfristig ein nachhaltiges Wachstum anstrebt.",
+    "text2": "Unsere Experten beobachten kontinuierlich Markttrends und führen Fundamentalanalysen durch, um potenziell attraktive Chancen zu identifizieren.",
+    "text3": "Unsere Mission ist es, ein Vermögensportfolio zu erstellen und zu verwalten, das mit unseren Zielen und unserer Philosophie übereinstimmt und Ihre Anlageambitionen unterstützt.\n"
+  },
+  "trust": {
+    "title": "Warum vertrauen sie uns?",
+    "label": "Unsere Erfolge und unser Ruf",
+    "card1": {
+      "title": "Wir erfüllen MiFID II",
+      "label": "Wir halten uns strikt an die europäischen Regulierungsvorschriften mit dem weltweit höchsten Anlegerschutzniveau."
+    },
+    "card2": {
+      "title": "Europäische Regelung",
+      "label": "CySEC-Lizenz und Zertifizierung in allen EU-Ländern. Auch gegenüber SEC und BaFin rechenschaftspflichtig."
+    },
+    "card3": {
+      "title": "AFME-Mitglied",
+      "label": "Als Teil der European Financial Markets Association beteiligen wir uns an der Entwicklung von Initiativen im Bereich der Regulierung europäischer Kapitalmärkte."
+    },
+    "card4": {
+      "title": "Durch Audits nachgewiesene Zuverlässigkeit",
+      "label": "Wir unterziehen uns regelmäßigen Audits und Due-Diligence-Verfahren, die von KPMG, dem von der SEC autorisierten Konsortium BDO und S. durchgeführt werden"
+    },
+    "card5": {
+      "title": "Garantiert Anlegerentschädigungsfonds",
+      "label": "Ihre Gelder sind durch die europäische Gesetzgebung geschützt und bis zu 20.000 Euro versichert."
+    },
+    "card6": {
+      "title": "Bewertung S",
+      "label": "Internationale Ratingagentur Standard"
+    }
+  },
+  "joinUs": {
+    "label": "Verwandeln Sie das Internet",
+    "title": "Treten Sie dem Ökosystem bei. ",
+    "text": "Das Alphahedge Holdings-Ökosystem heißt Sie willkommen – egal wo auf der Welt Sie sich befinden, wie hoch Ihr technisches Wissen oder Ihre Vertrautheit mit der Börse ist.\n \n",
+    "joinButton": "Begleiten Sie uns",
+    "plus1": "Trainingsprogramm",
+    "plus2": "Zugang zu Handelsplattformen \n",
+    "plus3": "Entwicklung von Anlagekompetenzen \n",
+    "plus4": "Vorstellung des Mentors \n",
+    "plus5": "Dividenden",
+    "plus6": "Portfoliomanagement-Tools \n",
+    "analiticTitle": "Preisgekrönte Analytik",
+    "analiticText": "Wo investieren? ",
+    "analiticText1": "- wöchentlich und kostenlos.",
+    "analiticTextPink": "profitable Anlageideen",
+    "moreButton": "Mehr Details",
+    "card1": {
+      "text": "Aktienempfehlungen für Beyond Meat und Zoom Video belegten Platz 1 in Bloombergs Prognosegenauigkeitsranking.",
+      "label": "Die Empfehlungen von Alphahedge Holdings sind die besten! "
+    },
+    "card2": {
+      "text": "Für die Auszeichnung wurden Tausende Teilnehmer aus 100 Ländern nominiert.",
+      "label": "Das Analysezentrum Alphahedge Holdings wurde laut Global Banking als das beste Unternehmen des Jahres 2020 ausgezeichnet"
+    }
+  }
+}
