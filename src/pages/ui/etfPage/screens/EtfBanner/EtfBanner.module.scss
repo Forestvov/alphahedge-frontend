@@ -1,7 +1,13 @@
+@use 'styles/use/utils';
+
 .banner {
   padding-top: 228px;
   padding-bottom: 228px;
   position: relative;
+
+  @include utils.media-max-width(500) {
+    padding-bottom: 100px;
+  }
 }
 
 .image {
@@ -9,6 +15,10 @@
   right: 0;
   top: 120px;
   max-width: 100%;
+
+  @include utils.media-max-width(1500) {
+    display: none;
+  }
 }
 
 .title {
@@ -24,6 +34,11 @@
   span {
     color: var(--pinki-tin);
   }
+
+  @include utils.media-max-width(500) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .text {
@@ -35,6 +50,11 @@
   line-height: 48px; /* 200% */
   margin-bottom: 34px;
   max-width: 916px;
+
+  @include utils.media-max-width(500) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .list {
@@ -55,4 +75,9 @@
   font-style: normal;
   font-weight: 500;
   line-height: 48px; /* 200% */
+
+  @include utils.media-max-width(500) {
+    font-size: 16px;
+    line-height: 32px;
+  }
 }
