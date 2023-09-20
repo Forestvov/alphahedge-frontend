@@ -1,0 +1,88 @@
+.trustContainer {
+  padding: 144px 312px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trust_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main_title {
+  color: var(--gray-900, #18181B);
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 114.286% */
+
+  margin-bottom: 30px;
+}
+
+.title_text {
+  color: #B050F2;
+  text-align: center;
+  font-family: var(--font-family-main);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+
+  margin-bottom: 74px;
+}
+
+
+.card_title {
+  color: #000;
+  font-family: var(--font-family-main);
+  text-align: center;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 133.333% */
+  margin-bottom: 20px;
+
+  max-width: 315px;
+}
+
+.card_text {
+  color: var(--gray-600, #52525B);
+  font-family: var(--font-family-main);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+
+  max-width: 330px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+
+  flex-wrap: wrap;
+  max-width: 1296px;
+
+}
+
+.TrustCardImage {
+  margin-bottom: 35px;
+}

@@ -19,6 +19,7 @@ export const Individual = () => {
       <div className={s.left}>
         <p
           className={s.text}
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: t('description') }}
         />
         <ul className={s.list}>

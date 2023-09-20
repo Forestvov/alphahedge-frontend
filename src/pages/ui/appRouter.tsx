@@ -19,6 +19,7 @@ import { AboutUs } from './aboutUs/AboutUs'
 import { Contacts } from './contacts/Contacts'
 import { PrivateBagPage } from './privateBag/PrivateBagPage'
 import { EtfPage } from './etfPage/EtfPage'
+import { InvestingPro } from './investingPro/InvestingPro'
 
 import { DashboardPage } from './personal/DashboardPage/DashboardPage'
 import { InvestmentsPage } from './personal/InvestmentsPage/InvestmentsPage'
@@ -124,6 +125,10 @@ export const appRouter = createBrowserRouter([
       {
         path: '/trends',
         element: <TrendsPage />,
+      },
+      {
+        path: '/investingPro',
+        element: <InvestingPro />,
       },
     ],
   },
