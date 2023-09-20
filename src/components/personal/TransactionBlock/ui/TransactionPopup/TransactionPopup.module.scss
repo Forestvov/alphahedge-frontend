@@ -2,7 +2,6 @@
 
 .loader {
   width: 100%;
-
   min-height: 300px;
   display: flex;
   justify-content: center;
@@ -16,9 +15,8 @@
     padding: 30px 40px 30px 40px;
   }
 
-
   @include utils.media-max-width(700) {
-    padding: 20px;
+    padding: 30px 20px 20px;
   }
 }
 
@@ -28,11 +26,11 @@
   line-height: 70px;
   margin-bottom: 25px;
 
-  @include utils.media-max-width(1280) {
+  @include utils.media-max-width(1800) {
     font-size: 35px;
-    line-height: 50px;
+    line-height: 45px;
+    margin-bottom: 15px;
   }
-
 
   @include utils.media-max-width(700) {
     line-height: 40px;
@@ -51,7 +49,7 @@
   line-height: 35px;
   margin-bottom: 40px;
 
-  @include utils.media-max-width(1280) {
+  @include utils.media-max-width(1800) {
     font-size: 20px;
     line-height: 31px;
   }
@@ -67,17 +65,22 @@
   display: block;
   margin: 40px auto;
 
-  @include utils.media-max-width(700) {
-    margin: 30px auto;
+  @include utils.media-max-width(1800) {
     width: 200px;
     height: 200px;
+    margin: 30px auto;
   }
 }
 
 .row {
-
   & + .row {
     margin-top: 40px;
+  }
+
+  @include utils.media-max-width(1800) {
+    & + .row {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -157,7 +160,6 @@
   height: 128px;
   border-radius: 0px 0px 40px 40px;
   padding: 0 65px;
-
   background: #FFF;
   box-shadow: 0px -5px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -170,7 +172,10 @@
   }
 
   @include utils.media-max-width(700) {
+    flex-direction: column;
+    align-items:  flex-start;
     padding: 25px 20px 30px;
+    width: 100%;
   }
 }
 
@@ -200,6 +205,13 @@
   }
 }
 
+.right {
+  @include utils.media-max-width(700) {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
 .timer {
   color: #000;
   font-size: 18px;
@@ -208,19 +220,16 @@
   height: 49.285px;
   position: relative;
   text-align: center;
-  line-height: 50px;
+  line-height: 42px;
 
   @include utils.media-max-width(1280) {
     font-size: 16px;
+    border: 2px solid var(--pinki-tin);
+    border-radius: 15px;
   }
 
-  svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    path {
-      stroke-dashoffset: 78;
-    }
+  @include utils.media-max-width(700) {
+    order: -1;
+    width: 100%;
   }
 }

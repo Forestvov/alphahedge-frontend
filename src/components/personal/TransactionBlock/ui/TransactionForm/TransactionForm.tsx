@@ -25,6 +25,7 @@ import { IProfileToken } from 'models/response/AccountResponse'
 import { TransactionPopup } from '../TransactionPopup/TransactionPopup'
 
 import { ITransactionForm } from '../../model/Transaction.interface'
+import { paymentCart } from '../../lib/paymentCart'
 import { transactionForm } from '../../lib/schema'
 
 import s from './TransactionForm.module.scss'
@@ -95,11 +96,20 @@ export const TransactionForm = (props: ITransactionForm) => {
     }
 
     if (type === 'Out') {
-      if (!WAValidator.validate(_data.contact, tokenName.label)) {
-        console.log('err')
-        notifyAddress()
+      if (!_data.contact) {
         setStatus('error')
         return
+      }
+
+      const validateToken =
+        tokenName.label === 'TRC20' ? 'Tether' : tokenName.label
+
+      if (!paymentCart[tokenName.label]) {
+        if (!WAValidator.validate(_data.contact, validateToken)) {
+          setStatus('error')
+          notifyAddress()
+          return
+        }
       }
 
       body = {
@@ -132,8 +142,15 @@ export const TransactionForm = (props: ITransactionForm) => {
 
   const onSelectToken = async (coin: any) => {
     try {
-      const response = await getCoinPrice(coin.label)
-      setCoinPrice(response.data.price)
+      // Проверяем, кошелек это или крипта, если кашелек то коэф 1:1
+      if (!coin.isPayer) {
+        const checkCoin = coin.label === 'TRC20' ? 'TUSD' : coin.label
+        const response = await getCoinPrice(checkCoin)
+        setCoinPrice(response.data.price)
+      } else {
+        setCoinPrice('1')
+      }
+
       setTokenName(coin)
 
       if (type === 'Out') {
@@ -172,12 +189,10 @@ export const TransactionForm = (props: ITransactionForm) => {
                   tokens
                     ? tokens.map((token) => ({
                         id: token.currencyTypeId,
-                        label:
-                          token.currencyToken === 'TRC20'
-                            ? 'TUSD'
-                            : token.currencyToken,
+                        label: token.currencyToken,
                         value: token.value,
                         image: token.image,
+                        isPayer: paymentCart[token.currencyToken],
                       }))
                     : []
                 }
@@ -194,6 +209,7 @@ export const TransactionForm = (props: ITransactionForm) => {
                         label: token.currencyToken,
                         value: token.value,
                         image: token.image,
+                        isPayer: paymentCart[token.currencyToken],
                       }))
                     : []
                 }
