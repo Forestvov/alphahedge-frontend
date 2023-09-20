@@ -1,14 +1,14 @@
 import { Course21, Course2Img } from 'assets/images'
 import { TitleSection } from 'components/courses/TitleSection'
-import { Sidebar } from '../sidebar/Sidebar'
+import { Course2Sidebar } from '../sidebar/Course2Sidebar'
 import s from './Course2.module.scss'
 
 export const Course2 = () => (
   <>
-    <Sidebar />
+    <Course2Sidebar />
     <div className={s.course2}>
       <img className={s.courseImg} src={Course2Img} alt="course" />
-      <section className={s.importantInvest}>
+      <section className={s.importantInvest} id="importantInvest">
         <TitleSection
           title="Почему важно инвестировать?"
           label="Урок 2. Почему важно инвестировать?"
@@ -37,7 +37,7 @@ export const Course2 = () => (
           считали риски, распределяли ресурсы и извлекали прибыль.
         </p>
       </section>
-      <section className={s.money}>
+      <section className={s.money} id="money">
         <TitleSection
           title="Деньги — это важный ресурс, они влияют на нашу жизнь"
           label="Урок 2. Почему важно инвестировать?"
@@ -62,7 +62,7 @@ export const Course2 = () => (
           теряете, деньги съедает инфляция.
         </p>
       </section>
-      <section className={s.inflation}>
+      <section className={s.inflation} id="inflation">
         <TitleSection
           title="Инфляция — это рост цен и снижение покупательной способности денег."
           label="Урок 2. Почему важно инвестировать?"
@@ -95,7 +95,7 @@ export const Course2 = () => (
           инфляцию и принесли прибыль.
         </p>
       </section>
-      <section className={s.investWin}>
+      <section className={s.investWin} id="investWin">
         <TitleSection
           title="Инвестиции помогут победить инфляцию и заработать"
           label="Урок 2. Почему важно инвестировать?"
@@ -133,7 +133,7 @@ export const Course2 = () => (
         </p>
         <img className={s.image} src={Course21} alt="courseImg" />
       </section>
-      <section className={s.magic}>
+      <section className={s.magic} id="magic">
         <TitleSection
           title="Магия сложного процента увеличивает вложения"
           label="Урок 2. Почему важно инвестировать?"

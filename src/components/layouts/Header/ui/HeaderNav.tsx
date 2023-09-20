@@ -14,7 +14,7 @@ export const HeaderNav = () => {
       <NavLink className={cn(s.link, s.current)} to="/">
         {l('homeLink')}
       </NavLink>
-      <NavLink className={`${s.link} ${s.drop}`} to="/">
+      <NavLink className={`${s.link} ${s.drop}`} to="/investingPro">
         InvestingPro
         <img className={s.dropArrow} src={DropArrow} alt="" />
         <div className={s.dropDown}>

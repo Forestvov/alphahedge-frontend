@@ -1,10 +1,16 @@
+@use 'styles/use/utils';
+
 .trustContainer {
-  padding: 144px 312px;
+  padding: 144px 0;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+
+  @include utils.media-max-width(500) {
+    padding: 100px 0;
+  }
 }
 
 .trust_title {
@@ -74,7 +80,7 @@
 
 .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 100px;
 
