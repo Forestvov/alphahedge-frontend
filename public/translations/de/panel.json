@@ -4,7 +4,7 @@
   "statusTitle": "Status",
   "Verify_NOT_STARTED": "FEHLGESCHLAGEN",
   "Verify_PENDING": "GESTARTET",
-  "Verify_SUCCESS": "VOLLENDET",
+  "Verify_SUCCESS": "BESTANDEN",
   "verify_text": "Bestätigen Sie Ihre Identität, um Zugriff auf alle Funktionen der Plattform zu erhalten!",
   "verify_popup": "Ein Foto eines Reisepasses mit einem Foto seines Besitzers oder der Vorderseite eines Personalausweises.",
   "verify_title": "Überprüfung",

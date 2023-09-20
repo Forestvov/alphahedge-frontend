@@ -4,7 +4,7 @@
   "statusTitle": "Status",
   "Verify_NOT_STARTED": "FAILED",
   "Verify_PENDING": "STARTED",
-  "Verify_SUCCESS": "COMPLETED",
+  "Verify_SUCCESS": "PASSED",
   "verify_text": "Confirm your identity to gain access to all the features of the platform!",
   "verify_popup": "A photo of a passport with a photo of its owner or the front side of an ID card.",
   "verify_title": "Verification",

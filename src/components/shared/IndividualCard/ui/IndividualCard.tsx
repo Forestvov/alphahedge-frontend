@@ -118,19 +118,24 @@ export const IndividualCard = (props: IIndividualCard) => {
 
           {isOpen ? (
             <IndividualCardModal
-              isDisable={isDisable}
+              isDisable={false}
               update={fetch}
               briefcaseId={briefcaseAccountId}
             />
           ) : (
-            <Button
-              className={cn(s.button, { [s.hide]: open })}
-              disabled={isDisable}
-              type="button"
-              onClick={investHandler}
+            <AnimateHeight
+              className={s.buttonWrapper}
+              height={open ? 0 : 'auto'}
             >
-              {c('open')}
-            </Button>
+              <Button
+                className={cn(s.button, { [s.hide]: open })}
+                disabled={isDisable}
+                type="button"
+                onClick={investHandler}
+              >
+                {c('open')}
+              </Button>
+            </AnimateHeight>
           )}
         </div>
 

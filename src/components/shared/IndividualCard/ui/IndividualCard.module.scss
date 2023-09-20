@@ -136,13 +136,28 @@
   div:first-child {
     max-width: 100%;
   }
+
+
+  @include utils.media-max-width(1600) {
+    form {
+      margin-top: 0;
+    }
+  }
+}
+
+.buttonWrapper {
+  margin-top: auto;
+  margin-left: auto;
+
+  @include utils.media-max-width(1600) {
+    margin-top: 20px;
+    width: 100%;
+  }
 }
 
 .button {
-  margin-left: auto;
   width: 188px;
-  margin-top: auto;
-transition: 400ms;
+  transition: 400ms;
 
   &.hide {
     opacity: 0;
@@ -150,7 +165,6 @@ transition: 400ms;
   }
 
   @include utils.media-max-width(1600) {
-    margin-top: 20px;
     width: 100%;
   }
 }
