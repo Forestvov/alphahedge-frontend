@@ -20,6 +20,7 @@ export interface IBriefcaseActive extends IBriefcase {
   createddate: string
   createdDateShow: any
   briefcaseAccountStatus: string
+  briefcaseAccountOrderToCloseStatus: string | 'Process'
   briefcaseInvestStatus: 'Enable' | 'Disable'
 }
 

@@ -39,6 +39,7 @@
   "veitVerify": "Um Ihr Portfolio zu schließen, müssen Sie eine Anfrage an den Support-Service senden.",
   "verifyTime": "Der Antrag wird innerhalb von 10 Minuten bearbeitet.",
   "sendRequest": "Einen Antrag stellen",
+  "pending": "Im Gange",
   "packageActionTitle": "Paket erworbener Aktien",
   "totalPackage": "Gesamtkosten des Pakets",
   "amountPackage": "Gesamtzahl der Anteile",
@@ -60,5 +61,7 @@
   "allAction": "Alle Aktionen",
   "referalTotal": "Gesamteinkommen",
   "referalAmount": "Anzahl der Empfehlungen",
-  "referalLink": "Empfehlungslink"
+  "referalLink": "Empfehlungslink",
+  "totalInvest": "Anlagebetrag",
+  "minInvest": "Mindest. Investitionsgröße"
 }

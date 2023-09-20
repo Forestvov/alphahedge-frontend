@@ -35,6 +35,7 @@ export const CloseTableBody = () => {
   const fetchUsers = async (): Promise<void> => {
     const qs = queryString.parse(searchParams.toString())
     const page = searchParams.get('page')
+    const statusSearch = searchParams.get('briefcaseAccountOrderToCloseStatus')
     delete qs.page
 
     const criteria: { key: string; value: string }[] = Object.keys(qs).map(
@@ -44,13 +45,22 @@ export const CloseTableBody = () => {
       }),
     )
 
+    console.log(statusSearch)
+
     try {
       const response = await getAdvanced({
         size: SIZE,
         page: page ? Number(page) : 0,
         sortField: 'createddate',
         sortDir: 'DESC',
-        criteria: [{ key: 'briefcaseCode', value: 'ADVANCED' }, ...criteria],
+        criteria: [
+          { key: 'briefcaseCode', value: 'ADVANCED' },
+          {
+            key: 'briefcaseAccountOrderToCloseStatus',
+            value: !statusSearch ? 'Process' : (statusSearch as string),
+          },
+          ...criteria,
+        ],
       })
       setUsers(response.data)
       setCounter({ active: null, close: response.data.totalElements })

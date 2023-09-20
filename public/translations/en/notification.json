@@ -9,6 +9,6 @@
   "addressExit": "This output address is incorrect",
   "successRequestAdvanced": "You have successfully submitted your application to open individual introductions.",
   "textRequestAdvanced": "To open individual introductions, you need to send a request to the support service.",
-  "emailAlready": "The specified email is already in use.",
+  "emailAlready": "The specified email or username is already in use.",
   "successVerify": "Application sent successfully"
 }

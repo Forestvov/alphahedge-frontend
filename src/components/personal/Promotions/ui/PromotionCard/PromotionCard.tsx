@@ -44,7 +44,8 @@ ChartJS.register(
 )
 
 export const options: ChartOptions = {
-  responsive: false,
+  responsive: true,
+  maintainAspectRatio: false,
   scales: {
     x: {
       display: false,
@@ -77,10 +78,10 @@ export const PromotionCard = (props: IPromotionCard) => {
   const { setData } = useActions()
 
   const data = {
-    labels: statistics.slice(statistics.length / 2).map((element) => element),
+    labels: statistics.slice(-30).map((element) => element),
     datasets: [
       {
-        data: statistics.slice(statistics.length / 2),
+        data: statistics.slice(-30),
         fill: 'start',
         backgroundColor: '#F3E9F9',
         borderColor: '#B050F2',

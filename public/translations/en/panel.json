@@ -39,6 +39,7 @@
   "veitVerify": "To close your portfolio, you need to send a request to the support service.",
   "verifyTime": "The application is processed within 10 minutes.",
   "sendRequest": "Submit an application",
+  "pending": "In progress",
   "packageActionTitle": "Package of acquired shares",
   "totalPackage": "total cost of the Package",
   "amountPackage": "Total number of Shares",
@@ -60,5 +61,7 @@
   "allAction": "All promotions",
   "referalTotal": "Total Income",
   "referalAmount": "Number of Referrals",
-  "referalLink": "Referral Link"
+  "referalLink": "Referral Link",
+  "totalInvest": "Investment Amount",
+  "minInvest": "Min. Investment size"
 }

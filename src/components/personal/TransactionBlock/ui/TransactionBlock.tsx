@@ -69,7 +69,7 @@ export const TransactionBlock = (props: ITransactionBlock) => {
   }
 
   return (
-    <div>
+    <>
       <TransactionForm className={className} fetch={fetchData} type={type} />
       {type === 'In' ? (
         <FinanceReplenishment
@@ -84,6 +84,6 @@ export const TransactionBlock = (props: ITransactionBlock) => {
           fetchNext={fetchNext}
         />
       )}
-    </div>
+    </>
   )
 }

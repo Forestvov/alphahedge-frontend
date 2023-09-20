@@ -74,7 +74,7 @@ export const IndividualCardModal = (props: IIndividualCardModal) => {
   ) : (
     <Modal
       classNameButton={cn(s.open, { [s.isDisable]: isDisable })}
-      textButton={p('close')}
+      textButton={isDisable ? p('pending') : p('close')}
     >
       <div className={s.modal}>
         <div className={s.title}>{p('closeBrief')}</div>

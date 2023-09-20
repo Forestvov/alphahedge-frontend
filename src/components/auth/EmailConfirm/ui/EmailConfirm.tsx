@@ -100,7 +100,7 @@ export const EmailConfirm = () => {
       {success && <div className={s.description}>{a('isSendEmail')}</div>}
       {!errorConfirm && (
         <button className={s.after} onClick={() => navigate('/')} type="button">
-          {a('after')})
+          {a('after')}
         </button>
       )}
     </div>

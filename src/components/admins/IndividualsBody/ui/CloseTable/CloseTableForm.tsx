@@ -21,7 +21,6 @@ const optionsPrice: OptionType[] = [
 ]
 
 const optionsStatus: OptionType[] = [
-  { label: 'Все статусы', id: 0 },
   { label: 'В обработке', id: 1 },
   { label: 'Успешно', id: 2 },
   { label: 'Отменен', id: 3 },

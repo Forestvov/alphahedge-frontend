@@ -5,7 +5,7 @@ import AnimateHeight from 'react-animate-height'
 import { FormProvider, useForm } from 'react-hook-form'
 
 import { InfoCardForm } from 'components/shared/InfoCard/ui/InfoCardForm'
-
+import { Button } from 'components/shared/Button'
 import { IBriefcaseActive } from 'models/response/BriefcaseResponse'
 
 import { getRemainDays } from 'helpers/getRemainDays'
@@ -13,7 +13,6 @@ import { getNoun } from 'helpers/getNoun'
 import formatPrice from 'helpers/priceFormat'
 
 import { BigLockIcon, BigUnlockIcon } from 'assets/icons'
-import { Button } from 'components/shared/Button'
 
 import BriefcaseServices from 'services/BriefcaseServices'
 import useGetMainInfo from 'hooks/useGetMainInfo'
@@ -31,18 +30,21 @@ interface IIndividualCard extends IBriefcaseActive {
 
 export const IndividualCard = (props: IIndividualCard) => {
   const {
+    amount,
     amountMin,
     briefcaseId,
     briefcaseInvestStatus,
     briefcaseAccountId,
     briefcaseAccountStatus,
     createddate,
+    briefcaseAccountOrderToCloseStatus,
     fetch,
   } = props
 
   const methods = useForm()
 
   const [c] = useTranslation('common')
+  const [p] = useTranslation('panel')
 
   const getMainInfo = useGetMainInfo()
 
@@ -75,7 +77,18 @@ export const IndividualCard = (props: IIndividualCard) => {
     <FormProvider {...methods}>
       <div className={s.card}>
         <div className={s.header}>
-          <img src={isDisable ? BigLockIcon : BigUnlockIcon} alt="" />
+          <img
+            src={!isOpen && isDisable ? BigLockIcon : BigUnlockIcon}
+            alt=""
+          />
+
+          {isOpen && (
+            <div className={s.totalAmount}>
+              <div className={s.amount}>{formatPrice(amount)}</div>{' '}
+              <span>{p('totalInvest')}</span>
+            </div>
+          )}
+
           {createddate && (
             <div className={s.day}>
               {getRemainDays(createddate)}{' '}
@@ -91,7 +104,7 @@ export const IndividualCard = (props: IIndividualCard) => {
         </div>
         <div className={s.row}>
           <div className={s.cell}>
-            <div className={s.label}>{c('totalInvest')}</div>
+            <div className={s.label}>{p('minInvest')}</div>
             <div className={s.price}>
               $ {formatPrice(amountMin).toString().replace(/,/gi, ' ')}
             </div>
@@ -118,7 +131,7 @@ export const IndividualCard = (props: IIndividualCard) => {
 
           {isOpen ? (
             <IndividualCardModal
-              isDisable={false}
+              isDisable={briefcaseAccountOrderToCloseStatus === 'Process'}
               update={fetch}
               briefcaseId={briefcaseAccountId}
             />

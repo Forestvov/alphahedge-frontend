@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -38,6 +38,8 @@ export const TransactionForm = (props: ITransactionForm) => {
   const [n] = useTranslation('notification')
   const [f] = useTranslation('form')
   const [c] = useTranslation('common')
+
+  const closeHandler = useRef<any>()
 
   const { tokens } = useTokens()
 
@@ -130,9 +132,7 @@ export const TransactionForm = (props: ITransactionForm) => {
 
   const onSelectToken = async (coin: any) => {
     try {
-      const response = await getCoinPrice(
-        coin.label === 'TRC20' ? 'TUSD' : coin.label,
-      )
+      const response = await getCoinPrice(coin.label)
       setCoinPrice(response.data.price)
       setTokenName(coin)
 
@@ -172,7 +172,10 @@ export const TransactionForm = (props: ITransactionForm) => {
                   tokens
                     ? tokens.map((token) => ({
                         id: token.currencyTypeId,
-                        label: token.currencyToken,
+                        label:
+                          token.currencyToken === 'TRC20'
+                            ? 'TUSD'
+                            : token.currencyToken,
                         value: token.value,
                         image: token.image,
                       }))
@@ -233,9 +236,18 @@ export const TransactionForm = (props: ITransactionForm) => {
           )}
         </form>
       </FormProvider>
-      <Modal textButton="" isOpen={openPopup} onClose={onClose}>
+      <Modal
+        textButton=""
+        isOpen={openPopup}
+        ref={closeHandler}
+        onClose={onClose}
+      >
         <div className={s.modal}>
-          <button className={s.close} type="button">
+          <button
+            className={s.close}
+            onClick={() => closeHandler.current()}
+            type="button"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"

@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import cn from 'classnames'
 
 import useAdvanceCounter from 'hooks/useAdvanceCounter'
@@ -25,6 +25,10 @@ export const IndividualsBody = () => {
   const [, setSearchParams] = useSearchParams()
 
   const [tab, setTab] = useState<'active' | 'close'>('active')
+
+  useEffect(() => {
+    setSearchParams(undefined)
+  }, [])
 
   const onClickHandler = (type: 'active' | 'close') => {
     setTab(type)
