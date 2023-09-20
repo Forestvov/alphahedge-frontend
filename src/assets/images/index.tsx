@@ -57,3 +57,13 @@ export { default as Mapimg } from './contacts/Map.png'
 
 // EtfPAge
 export { default as ETfBannerImg } from './Etf/EtfBannerImage.png'
+
+// InvestingPro
+export { default as InvestingProBannerImg } from './InvestingPro/InvestingProBannerImg.png'
+export { default as InvestingProTrustCardImg } from './InvestingPro/InvestingProTrustCardImg.svg'
+export { default as InvestingProTrustImg1 } from './InvestingPro/MiFIDIIBlue.png'
+export { default as InvestingProTrustImg2 } from './InvestingPro/cyprus.png'
+export { default as InvestingProTrustImg3 } from './InvestingPro/afme.png'
+export { default as InvestingProTrustImg4 } from './InvestingPro/euroclear.png'
+export { default as InvestingProTrustImg5 } from './InvestingPro/fund.png'
+export { default as InvestingProTrustImg6 } from './InvestingPro/global.png'
