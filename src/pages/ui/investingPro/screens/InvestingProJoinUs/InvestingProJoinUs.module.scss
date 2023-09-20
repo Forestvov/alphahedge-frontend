@@ -1,10 +1,17 @@
+@use 'styles/use/utils';
 
 .joinUs_topPart {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
 
   margin-bottom: 150px;
+
+  @include utils.media-max-width(500) {
+    margin-bottom: 70px;
+  }
 }
 
 .label {
@@ -64,6 +71,10 @@
 
   max-width: 390px;
   gap: 15px;
+
+  @include utils.media-max-width(500) {
+    font-size: 16px;
+  }
 }
 
 .plus {
@@ -102,20 +113,29 @@
 
 .joinUs_Analitic {
   width: 100%;
-  max-height: 650px;
   border-radius: 25px;
   background: #18181B;
 
   padding: 50px 50px;
   margin-bottom: 150px;
+
+  @include utils.media-max-width(500) {
+    padding: 10px;
+  }
 }
 
 .analitic_topPart {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: space-between;
   align-items: center;
 
   margin-bottom: 98px;
+
+  @include utils.media-max-width(500) {
+    margin-bottom: 50px;
+  }
 }
 
 .analitic_title {
@@ -174,6 +194,10 @@
   line-height: normal;
 
   margin-bottom: 15px;
+
+  @include utils.media-max-width(500) {
+    font-size: 24px;
+  }
 }
 
 .card_label {
@@ -185,6 +209,11 @@
   line-height: normal;
 
   margin-bottom: 30px;
+
+  @include utils.media-max-width(500) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .card_text {
@@ -194,11 +223,17 @@
   font-style: normal;
   font-weight: 400;
   line-height: 198.3%; /* 39.66px */
+
+  @include utils.media-max-width(500) {
+    font-size: 16px;
+  }
 }
 
 .analitic_cards {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
   align-items: center;
 }
 
@@ -208,4 +243,8 @@
   padding: 30px 22px;
   border-radius: 14px;
   background: #353438;
+
+  @include utils.media-max-width(500) {
+    padding: 10px;
+  }
 }

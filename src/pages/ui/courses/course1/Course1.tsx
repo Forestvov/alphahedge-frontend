@@ -9,12 +9,12 @@ import {
   Course17,
 } from 'assets/images'
 import { TitleSection } from 'components/courses/TitleSection'
-import { Sidebar } from '../sidebar/Sidebar'
+import { Course1Sidebar } from '../sidebar/Course1Sidebar'
 import s from './Course1.module.scss'
 
 export const Course1 = () => (
   <>
-    <Sidebar />
+    <Course1Sidebar />
     <div className={s.course1}>
       <img className={s.courseImg} src={Course1Img} alt="course" />
       <section className={s.whatIsOption} id="whatIsOption">
@@ -56,7 +56,7 @@ export const Course1 = () => (
           периода.
         </p>
       </section>
-      <section className={s.howWorkOption}>
+      <section className={s.howWorkOption} id="howWorkOption">
         <TitleSection
           title="Как работает опцион"
           label="Урок 1. Что такое опционы"
@@ -84,7 +84,7 @@ export const Course1 = () => (
           случае Дэвид и Луиза могут заключить контракт на колл-опцион.
         </p>
       </section>
-      <section className={s.call}>
+      <section className={s.call} id="call">
         <TitleSection
           title="Что такое опцион колл"
           label="Урок 1. Что такое опционы"
@@ -186,7 +186,7 @@ export const Course1 = () => (
           премией $100 от продажи опциона Дэвиду.
         </p>
       </section>
-      <section className={s.premium}>
+      <section className={s.premium} id="premium">
         <TitleSection
           title="Как формируется размер премии"
           label="Урок 1. Что такое опционы"
@@ -206,7 +206,7 @@ export const Course1 = () => (
           срока опционного контракта.
         </p>
       </section>
-      <section className={s.put}>
+      <section className={s.put} id="put">
         <TitleSection
           title="Что такое опцион пут"
           label="Урок 1. Что такое опционы"
@@ -255,7 +255,7 @@ export const Course1 = () => (
           определенного времени.
         </p>
       </section>
-      <section className={s.trade}>
+      <section className={s.trade} id="trade">
         <TitleSection
           title="Что следует помнить при торговле опционами"
           label="Урок 1. Что такое опционы"
