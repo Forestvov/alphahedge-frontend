@@ -1,3 +1,5 @@
+@use 'styles/use/utils';
+
 .wrapper {
   padding: 75px 0;
   background: black;
@@ -37,6 +39,12 @@
 .private_bag_cards {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+
+  @include utils.media-max-width(1500) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .card {
@@ -45,6 +53,10 @@
   padding: 40px;
   max-width: 760px;
   min-height: 611px;
+
+  @include utils.media-max-width(1500) {
+    padding: 10px;
+  }
 }
 
 .title {
@@ -56,6 +68,11 @@
   font-weight: 600;
   line-height: 100%; /* 24px */
   margin-bottom: 59px;
+
+  @include utils.media-max-width(1500) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 .list {
@@ -76,6 +93,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 20px */
+
+  @include utils.media-max-width(1500) {
+    font-size: 16px;
+  }
 }
 
 .strategy_cards {
@@ -90,6 +111,10 @@
   border-radius: 14px;
   background: #353438;
   padding: 40px 45px;
+
+  @include utils.media-max-width(1500) {
+    padding: 10px;
+  }
 }
 
 .strategy_title {
@@ -102,6 +127,10 @@
   line-height: 100%; /* 24px */
   text-align: center;
   margin-bottom: 29px;
+
+  @include utils.media-max-width(1500) {
+    font-size: 20px;
+  }
 }
 
 .percent {
@@ -176,6 +205,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: 139.5%; /* 25.11px */
+
+  @include utils.media-max-width(1500) {
+    font-size: 16px;
+  }
 }
 
 .bottom {

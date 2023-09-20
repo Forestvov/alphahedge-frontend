@@ -1,3 +1,5 @@
+@use 'styles/use/utils';
+
 .etf {
   background: black;
 
@@ -31,6 +33,11 @@
   font-weight: 700;
   line-height: 48px; /* 114.286% */
   margin-bottom: 52px;
+
+  @include utils.media-max-width(1500) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .desc {
@@ -42,6 +49,10 @@
   font-weight: 400;
   line-height: 100%; /* 20px */
   margin-bottom: 75px;
+
+  @include utils.media-max-width(1500) {
+    font-size: 16px;
+  }
 }
 
 .cards {
@@ -57,6 +68,10 @@
   padding: 28px 25px;
   border-radius: 14px;
   background: #353438;
+
+  @include utils.media-max-width(1500) {
+    padding: 20px;
+  }
 }
 
 .card_title {
@@ -69,6 +84,10 @@
   font-weight: 600;
   line-height: 100%; /* 24px */
   margin-bottom: 38px;
+
+  @include utils.media-max-width(1500) {
+    font-size: 20px;
+  }
 }
 
 .item {
