@@ -17,7 +17,10 @@ export const Individual = () => {
   return (
     <div className={s.block}>
       <div className={s.left}>
-        <p className={s.text}>{t('description')}</p>
+        <p
+          className={s.text}
+          dangerouslySetInnerHTML={{ __html: t('description') }}
+        />
         <ul className={s.list}>
           {texts.map((text, idx) => (
             <LightningText key={idx} text={text} />

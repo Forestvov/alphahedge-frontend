@@ -130,7 +130,9 @@ export const TransactionForm = (props: ITransactionForm) => {
 
   const onSelectToken = async (coin: any) => {
     try {
-      const response = await getCoinPrice(coin.label)
+      const response = await getCoinPrice(
+        coin.label === 'TRC20' ? 'TUSD' : coin.label,
+      )
       setCoinPrice(response.data.price)
       setTokenName(coin)
 

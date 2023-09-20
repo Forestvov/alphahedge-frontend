@@ -35,7 +35,11 @@ export const TransactionPopup = (props: ITransactionPopup) => {
   const fetchData = async (id: number) => {
     try {
       const response = await getTransactionBody(id)
-      const tokenPrice = await getCoinPrice(response.data.currencyToken)
+      const tokenPrice = await getCoinPrice(
+        response.data.currencyToken === 'TRC20'
+          ? 'TUSD'
+          : response.data.currencyToken,
+      )
       setData(response.data)
       setTotal(response.data.amount / Number(tokenPrice.data.price))
     } catch (e) {
@@ -45,7 +49,9 @@ export const TransactionPopup = (props: ITransactionPopup) => {
 
   const setTokenPrice = async () => {
     if (body) {
-      const tokenPrice = await getCoinPrice(body.currencyToken)
+      const tokenPrice = await getCoinPrice(
+        body.currencyToken === 'TRC20' ? 'TUSD' : body.currencyToken,
+      )
       setTotal(body.amount / Number(tokenPrice.data.price))
     }
   }

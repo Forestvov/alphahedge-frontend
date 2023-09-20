@@ -33,6 +33,8 @@ export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
       const response = await getGainBriefcase({
         page: 0,
         size: 6,
+        sortField: 'createdDate',
+        sortDir: 'DESC',
       })
       setData(response.data)
     } catch (e) {
@@ -46,6 +48,8 @@ export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
         const response = await getGainBriefcase({
           page: data.page.number + 1,
           size: 6,
+          sortField: 'createdDate',
+          sortDir: 'DESC',
         })
         setData(response.data)
       } catch (e) {
@@ -60,6 +64,8 @@ export const IncomeTableFinance = (props: IIncomeTableCarousel) => {
         const response = await getGainBriefcase({
           page: data.page.number - 1,
           size: 6,
+          sortField: 'createdDate',
+          sortDir: 'DESC',
         })
         setData(response.data)
       } catch (e) {

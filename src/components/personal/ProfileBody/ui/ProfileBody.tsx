@@ -4,7 +4,6 @@ import useProfile from 'hooks/context/useProfile'
 
 import { ProfileEditor } from './ProfileEditor/ProfileEditor'
 import { ProfileInfo } from './ProfileInfo/ProfileInfo'
-import { ProfileTokens } from './ProfileEditor/ProfileTokens'
 
 import s from './ProfileBody.module.scss'
 
@@ -33,7 +32,7 @@ export const ProfileBody = (props: { adminEdit: boolean }) => {
               phoneNumber={profile.phoneNumber}
               country={profile.country}
             />
-            {profile.role === 'User' && <ProfileTokens />}
+            {/* {profile.role === 'User' && <ProfileTokens />} */}
             <ProfileInfo status={profile.verifiedStatus} />
           </>
         )}

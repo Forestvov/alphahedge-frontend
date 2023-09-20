@@ -38,6 +38,8 @@ export const IncomeTable = forwardRef((props: IIncomeTableCarousel, ref) => {
       const response = await getGainBriefcase({
         page: 0,
         size: 6,
+        sortField: 'createdDate',
+        sortDir: 'DESC',
         criteria: briefId
           ? [
               { key: 'code', value: 'ADVANCED' },
@@ -59,6 +61,8 @@ export const IncomeTable = forwardRef((props: IIncomeTableCarousel, ref) => {
         const response = await getGainBriefcase({
           page: data.page.number + 1,
           size: 6,
+          sortField: 'createdDate',
+          sortDir: 'DESC',
           criteria: briefId
             ? [
                 { key: 'code', value: 'ADVANCED' },
@@ -79,6 +83,8 @@ export const IncomeTable = forwardRef((props: IIncomeTableCarousel, ref) => {
         const response = await getGainBriefcase({
           page: data.page.number - 1,
           size: 6,
+          sortField: 'createdDate',
+          sortDir: 'DESC',
           criteria: briefId
             ? [
                 { key: 'code', value: 'ADVANCED' },
