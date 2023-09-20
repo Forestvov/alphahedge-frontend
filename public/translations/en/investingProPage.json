@@ -1,0 +1,67 @@
+{
+  "banner": {
+    "title": "The stock market is",
+    "title1": "This",
+    "title2": "This",
+    "title3": "forecasting.",
+    "titlePink": "movement",
+    "titlePink1": "evolution",
+    "titlePink2": "art",
+    "text1": "We take an approach that combines reliability and innovation, striving for sustainable growth over the long term.",
+    "text2": "Our experts continually monitor market trends and conduct fundamental analysis to identify potentially attractive opportunities.",
+    "text3": "Our mission is to create and manage a portfolio of assets that aligns with our goals and philosophy and supports your investment ambitions.\n"
+  },
+  "trust": {
+    "title": "Why do they trust us?",
+    "label": "Our successes and reputation",
+    "card1": {
+      "title": "We comply with MiFID II",
+      "label": "We strictly follow the European regulatory regime with the highest level of investor protection in the world."
+    },
+    "card2": {
+      "title": "European regulation",
+      "label": "CySEC license and certification in all EU countries. Also accountable to SEC and BaFin."
+    },
+    "card3": {
+      "title": "AFME Member",
+      "label": "As part of the European Financial Markets Association, we participate in the development of initiatives in the field of regulation of European capital markets."
+    },
+    "card4": {
+      "title": "Reliability proven by audits",
+      "label": "We undergo regular audits and due diligence procedures conducted by KPMG, the SEC-authorized consortium BDO and S"
+    },
+    "card5": {
+      "title": "Guarantees Investor Compensation Fund",
+      "label": "Your funds are protected by European legislation and are insured for up to 20,000 euros."
+    },
+    "card6": {
+      "title": "Rating S",
+      "label": "International rating agency Standard"
+    }
+  },
+  "joinUs": {
+    "label": "Transform the Internet",
+    "title": "Join the ecosystem. ",
+    "text": "The Alphahedge Holdings ecosystem welcomes you - no matter where you are in the world, what your level of technical knowledge or familiarity with the stock market is.\n \n",
+    "joinButton": "Join us",
+    "plus1": "Training program",
+    "plus2": "Access to trading platforms \n",
+    "plus3": "Development of investment skills \n",
+    "plus4": "Mentor introduction \n",
+    "plus5": "Dividends",
+    "plus6": "Portfolio Management Tools \n",
+    "analiticTitle": "Award Winning Analytics",
+    "analiticText": "Where to invest? ",
+    "analiticText1": "- weekly and free.",
+    "analiticTextPink": "profitable investment ideas",
+    "moreButton": "More details",
+    "card1": {
+      "text": "Stock recommendations for Beyond Meat and Zoom Video ranked No. 1 in Bloomberg's forecast accuracy rankings.",
+      "label": "Alphahedge Holdings' recommendations are the best! "
+    },
+    "card2": {
+      "text": "Thousands of participants from 100 countries were nominated for the award.",
+      "label": "Analytical center Alphahedge Holdings recognized as the best in 2020 according to Global Banking"
+    }
+  }
+}
