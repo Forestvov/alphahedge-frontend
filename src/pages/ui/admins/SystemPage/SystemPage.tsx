@@ -1,5 +1,9 @@
-import { ProfileTokens } from 'components/personal/ProfileBody/ui/ProfileEditor/ProfileTokens'
+import { SystemTokens } from 'components/admins/SystemSetting'
 
-export const SystemPage = ({ isAdmin = false }: { isAdmin?: boolean }) => (
-  <ProfileTokens isAdmin={isAdmin} />
+import s from './SystemPage.module.scss'
+
+export const SystemPage = () => (
+  <div className={s.wrapper}>
+    <SystemTokens />
+  </div>
 )

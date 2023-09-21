@@ -210,7 +210,7 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: '/admin/system',
-        element: <SystemPage isAdmin />,
+        element: <SystemPage />,
       },
     ],
   },

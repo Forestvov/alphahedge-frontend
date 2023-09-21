@@ -3,6 +3,7 @@ export interface IToken {
   currencyToken: string
   value: string
   image: string
+  qrCode: string
 }
 
 export interface ITokenCovert {
@@ -21,6 +22,7 @@ export interface TransactionBody {
   amount: number
   fio: string
   username: string
+  qrCode: string
   image: any
   contact: string
 }

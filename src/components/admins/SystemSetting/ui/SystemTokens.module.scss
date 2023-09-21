@@ -42,8 +42,8 @@
 
 .inputs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 60px;
+  grid-template-columns: 1fr;
+  gap: 100px;
 
 
   @include utils.media-max-width(1600) {
@@ -66,6 +66,13 @@
   font-weight: 400;
   text-transform: capitalize;
   margin-top: 11px;
+}
+
+.image {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  margin: 20px 0;
 }
 
 .drop {

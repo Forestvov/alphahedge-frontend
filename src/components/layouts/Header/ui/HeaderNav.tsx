@@ -11,25 +11,44 @@ export const HeaderNav = () => {
 
   return (
     <nav className={s.navigation}>
-      <NavLink className={cn(s.link, s.current)} to="/">
+      <NavLink
+        className={({ isActive }) => cn(s.link, { [s.current]: isActive })}
+        to="/"
+      >
         {l('homeLink')}
       </NavLink>
       <NavLink className={`${s.link} ${s.drop}`} to="/investingPro">
         InvestingPro
         <img className={s.dropArrow} src={DropArrow} alt="" />
         <div className={s.dropDown}>
-          <NavLink className={`${s.link} ${s.link_black}`} to="/forex">
+          <NavLink
+            className={({ isActive }) =>
+              cn(s.link, s.link_black, { [s.current]: isActive })
+            }
+            to="/forex"
+          >
             Forex
           </NavLink>
-          <NavLink className={`${s.link} ${s.link_black}`} to="/about">
+          <NavLink
+            className={({ isActive }) =>
+              cn(s.link, s.link_black, { [s.current]: isActive })
+            }
+            to="/about"
+          >
             {l('fond')}
           </NavLink>
         </div>
       </NavLink>
-      <NavLink className={s.link} to="/trends">
+      <NavLink
+        className={({ isActive }) => cn(s.link, { [s.current]: isActive })}
+        to="/trends"
+      >
         {l('trendsLink')}
       </NavLink>
-      <NavLink className={s.link} to="/contacts">
+      <NavLink
+        className={({ isActive }) => cn(s.link, { [s.current]: isActive })}
+        to="/contacts"
+      >
         {l('contactsLink')}
       </NavLink>
     </nav>

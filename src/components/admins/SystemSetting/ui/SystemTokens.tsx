@@ -1,32 +1,31 @@
-import { useEffect, useState } from 'react'
-import { FormProvider, useForm } from 'react-hook-form'
-import { toast } from 'react-toastify'
-import { getDirtyValues } from 'helpers/getDirtyValues'
+/* eslint-disable */
 import { useTranslation } from 'react-i18next'
+import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
+import { FormProvider, useForm } from 'react-hook-form'
 
-import AccountServices from 'services/AccountServices'
 import AdminService from 'services/AdminService'
+import TransactionServices from 'services/TransactionServices'
 
-import { Loader } from 'components/shared/Loader'
+import { IToken } from 'models/IToken'
+
 import { Button } from 'components/shared/Button'
+import { Loader } from 'components/shared/Loader'
 import { Input } from 'components/shared/Input'
 
-import { IProfileToken } from 'models/response/AccountResponse'
-import { ISaveTokenRequest } from 'models/request/AccountRequest'
+import { SystemQr } from './SystemQr'
 
-import s from './ProfileEditor.module.scss'
+import s from './SystemTokens.module.scss'
 
-const { saveTokens, getProfileTokens } = AccountServices
+const { getTokens } = TransactionServices
 const { updateSystemTokens } = AdminService
 
-export const ProfileTokens = ({ isAdmin = false }: { isAdmin?: boolean }) => {
+export const SystemTokens = () => {
   const [f] = useTranslation('form')
   const [p] = useTranslation('panel')
   const [n] = useTranslation('notification')
 
-  // const resolver = yupResolver(updateProfileSchema)
-
-  const [fields, setFields] = useState<IProfileToken[]>()
+  const [fields, setFields] = useState<IToken[]>()
 
   const notifySuccess = () => toast.success(n('updateProfile'))
 
@@ -35,19 +34,18 @@ export const ProfileTokens = ({ isAdmin = false }: { isAdmin?: boolean }) => {
     mode: 'onChange',
   })
 
-  const {
-    handleSubmit,
-    setValue,
-    formState: { dirtyFields },
-  } = methods
+  const { handleSubmit, setValue } = methods
 
   const fetchTokens = async () => {
     try {
-      const response = await getProfileTokens()
+      const response = await getTokens()
       setFields(response.data)
-      response.data.map((field) =>
-        setValue(field.currentTypeId.toString(), field.value),
-      )
+      response.data.map((field) => {
+        setValue(field.currencyTypeId.toString(), field.value)
+        setValue(`qrCode_${field.currencyTypeId}`, {
+          image: field.qrCode,
+        })
+      })
     } catch (e) {
       console.log('Error fetch profile tokens', e)
     }
@@ -59,31 +57,17 @@ export const ProfileTokens = ({ isAdmin = false }: { isAdmin?: boolean }) => {
 
   const onSubmit = async (data: any) => {
     if (fields) {
-      const body = getDirtyValues(dirtyFields, data)
+      const body = Object.keys(data)
+        .map((key) => ({
+          value: data[key],
+          currencyTypeId: key,
+          qrCode: data[`qrCode_${key}`]?.image,
+        }))
+        .filter((item) => !item.currencyTypeId.includes('qrCode_'))
 
       try {
-        if (isAdmin) {
-          const formatBody: ISaveTokenRequest[] = Object.keys(body).map(
-            (key) => ({
-              // @ts-ignore
-              value: body[key],
-              currencyTypeId: key,
-            }),
-          )
-
-          await updateSystemTokens(formatBody)
-        } else {
-          const formatBody: ISaveTokenRequest[] = Object.keys(body).map(
-            (key) => ({
-              // @ts-ignore
-              value: body[key],
-              currentTypeId: key,
-            }),
-          )
-
-          await saveTokens(formatBody)
-        }
-
+        await updateSystemTokens(body)
+        await fetchTokens()
         notifySuccess()
       } catch (e) {
         console.log('Error update', e)
@@ -107,13 +91,19 @@ export const ProfileTokens = ({ isAdmin = false }: { isAdmin?: boolean }) => {
         ) : (
           <div className={s.inputs}>
             {fields.map((field, idx) => (
-              <div className={s.cell} key={idx}>
+              <div className={s.cell} key={field.currencyTypeId}>
                 <Input
                   placeholder={field.currencyToken}
                   type="text"
-                  name={field.currentTypeId.toString()}
+                  name={field.currencyTypeId.toString()}
                 />
                 <p className={s.label}>{field.currencyToken}</p>
+
+                {field.qrCode && (
+                  <img className={s.image} src={field.qrCode} alt="qrCode" />
+                )}
+
+                <SystemQr id={field.currencyTypeId} />
               </div>
             ))}
           </div>

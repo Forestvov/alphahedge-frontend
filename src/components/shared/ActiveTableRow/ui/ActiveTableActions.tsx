@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 
 import { clearDate } from 'helpers/clearDate'
@@ -38,6 +38,8 @@ const { getActionHistory } = ActionServices
 export const ActiveTableActions = (props: IActiveTableActions) => {
   const { isOpen, changeCounter, code, name, icon, totalPrice, totalAmount } =
     props
+
+  const closeHandler = useRef<any>()
 
   const [isOpenPopup, setIsOpenPopup] = useState<boolean>(false)
 
@@ -101,13 +103,13 @@ export const ActiveTableActions = (props: IActiveTableActions) => {
           className={s.inner}
           textButton="Подробнее"
           isOpen={isOpenPopup}
+          ref={closeHandler}
           onOpen={setIsOpenPopup}
-          onClose={setIsOpenPopup}
         >
           <div className={s.modal}>
             <button
               className={s.close}
-              onClick={() => setIsOpenPopup(false)}
+              onClick={() => closeHandler.current()}
               type="button"
             >
               <svg

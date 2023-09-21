@@ -11,5 +11,6 @@ export interface ISettingProfileRequest {
 export interface ISaveTokenRequest {
   currentTypeId?: string
   currencyTypeId?: string
+  qrCode?: string
   value: string
 }

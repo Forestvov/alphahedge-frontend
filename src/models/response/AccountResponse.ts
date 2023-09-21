@@ -44,4 +44,5 @@ export interface IProfileToken {
   currencyToken: string
   image: string
   value: string
+  qrCode: string
 }

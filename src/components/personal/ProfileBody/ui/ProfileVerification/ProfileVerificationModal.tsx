@@ -37,6 +37,7 @@ export const ProfileVerificationModal = () => {
       setFileBack(event[0])
     }
   }
+
   const onFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setPending('pending')

@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next'
 
 import { floorPrice } from 'helpers/floorPrice'
 
-import { QrIcon } from 'assets/images'
-
 import TransactionServices from 'services/TransactionServices'
 
 import { TransactionBody } from 'models/IToken'
@@ -101,7 +99,7 @@ export const TransactionPopup = (props: ITransactionPopup) => {
               <div className={s.color}>{t('subTitle')}</div>
             </h2>
             <p className={s.text}>{t('text')}</p>
-            <img className={s.code} src={QrIcon} alt="qr_code" />
+            <img className={s.code} src={data.qrCode} alt="qr_code" />
 
             <div className={s.row}>
               <div className={s.value}>
