@@ -1,0 +1,63 @@
+{
+  "banner": {
+    "title": "Academy",
+    "titlePink": "Alphahedge Holdings",
+    "textTitle1": "WHAT IS THE STOCK MARKET? ",
+    "textTitle2": "How to find a proven investment platform?",
+    "text1": "If you too are asking yourself these questions, you are not alone. ",
+    "text2": "But don’t despair - our online lessons will help you understand the structure of the stock market and turn from a beginner into an investment pro.",
+    "button": "Courses for training"
+  },
+  "courses": {
+    "title": "List of courses",
+    "card1": {
+      "title": "Options trading, Forex.",
+      "label": "Well",
+      "description": "The Options Trading course is designed for more experienced investors who want to expand their capabilities and increase the efficiency of their investments. "
+    },
+    "card2": {
+      "label": "Well",
+      "title": "Investment Basics.",
+      "description": "Investment Fundamentals course for beginners. "
+    },
+    "button": "Start training"
+  },
+  "application": {
+    "title": "Apply for a course",
+    "text": "Our mentors are experienced traders with a deep understanding of the forex market, ready to share their knowledge and strategies to help you achieve financial independence.",
+    "inputPlaceholder": "Enter your email",
+    "inputButton": "Send",
+    "bottomText1": "successful",
+    "bottomText2": "graduates",
+    "bottomText3": "Volume",
+    "bottomText4": "trading",
+    "card1": {
+      "title": "Personalized Approach",
+      "desc": "Our mentors work with each student individually, taking into account their level of knowledge, experience and goals. "
+    },
+    "card2": {
+      "title": "Deep Market Understanding",
+      "desc": " Our courses will allow you to immerse yourself in the world of Forex trading, understand the basic principles of market operation, analysis and risk management. "
+    },
+    "card3": {
+      "title": "Emphasis on Psychology",
+      "desc": "Our course mentors will help you develop mental toughness, which is a key factor in successful trading. "
+    },
+    "card4": {
+      "title": "Long Term Support",
+      "desc": "Our goal is not just to provide you with knowledge, but to support you in your trading journey on a long-term basis. "
+    },
+    "card5": {
+      "title": "Coordinated Support",
+      "desc": " Our team of mentors is always ready to answer your questions and help you overcome difficulties on the path to successful trading. "
+    },
+    "card6": {
+      "title": "Knowledge Update",
+      "desc": " The forex market is constantly changing and we provide our students with up-to-date information and strategies so they can adapt to new conditions and changes in the market."
+    },
+    "card7": {
+      "title": "Practical experience",
+      "desc": "We focus on practical experience. "
+    }
+  }
+}
