@@ -1,0 +1,38 @@
+{
+  "banner": {
+    "title": "The purpose of the Alphahedge Holdings fund was to provide investors with access to a wide range of investment opportunities in the stock market.",
+    "text": "The Fund strives to provide maximum returns to its investors while managing risk.",
+    "button": "More about the fund"
+  },
+  "invest": {
+    "titlePink": "Long-term investing",
+    "title": "and innovation in focus",
+    "text": "The Alphahedge Holdings fund promoted the principle of long-term investing based on fundamental analysis of companies and markets.\n\n",
+    "item1": "Long-term investing",
+    "item2": "Fundamental Analysis",
+    "item3": "Innovative approach",
+    "item4": "Future-oriented"
+  },
+  "ipo": {
+    "label": "Innovative approach",
+    "title": "Successful Investments and Leading IPOs",
+    "text": "Over the years, Alphahedge Holdings has achieved significant success. "
+  },
+  "knowledge": {
+    "title": "Investing in Knowledge and Social Responsibility",
+    "text": "The company has gained experience in various financial sectors and expanded the geography of its activities. ",
+    "numberLabel": "Charity projects",
+    "card1": {
+      "title": "Employees",
+      "text": "The foundation also invested heavily in the education of its employees. "
+    },
+    "card2": {
+      "title": "Research",
+      "text": "The fund team followed the latest trends in the financial markets and actively explored new investment opportunities."
+    },
+    "card3": {
+      "title": "Charity",
+      "text": "The Foundation also attached importance to social responsibility. "
+    }
+  }
+}
