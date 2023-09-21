@@ -1,5 +1,6 @@
-import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
+import { useNavigate } from 'react-router-dom'
 import s from './Courses.module.scss'
 
 interface ICourseCard {
@@ -13,6 +14,7 @@ interface ICourseCard {
 export const CourseCard = (props: ICourseCard) => {
   const { description, image, title, link, label } = props
   const navigate = useNavigate()
+  const [t] = useTranslation('forexPage')
 
   return (
     <div className={s.course}>
@@ -21,7 +23,7 @@ export const CourseCard = (props: ICourseCard) => {
       <h3 className={s.title}>{title}</h3>
       <p className={s.description}>{description}</p>
       <button className={s.button} type="button" onClick={() => navigate(link)}>
-        Начать обучение
+        {t('courses.button')}
       </button>
     </div>
   )

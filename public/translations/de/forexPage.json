@@ -1,0 +1,63 @@
+{
+  "banner": {
+    "title": "Akademie",
+    "titlePink": "Alphahedge Holdings",
+    "textTitle1": "Was ist der Aktienmarkt? ",
+    "textTitle2": "Wie finde ich eine bewährte Anlageplattform?",
+    "text1": "Wenn auch Sie sich diese Fragen stellen, sind Sie nicht allein. ",
+    "text2": "Aber verzweifeln Sie nicht – unsere Online-Lektionen helfen Ihnen, die Struktur des Aktienmarktes zu verstehen und vom Anfänger zum Anlageprofi zu werden.",
+    "button": "Kurse zur Ausbildung"
+  },
+  "courses": {
+    "title": "Liste der Kurse",
+    "card1": {
+      "title": "Optionshandel, Forex.",
+      "label": "Also",
+      "description": "Der Optionshandelskurs richtet sich an erfahrenere Anleger, die ihre Fähigkeiten erweitern und die Effizienz ihrer Investitionen steigern möchten. "
+    },
+    "card2": {
+      "label": "Also",
+      "title": "Anlagegrundlagen.",
+      "description": "Anlage-Grundlagenkurs für Einsteiger. "
+    },
+    "button": "Beginne zu trainieren"
+  },
+  "application": {
+    "title": "Bewerben Sie sich für einen Kurs",
+    "text": "Unsere Mentoren sind erfahrene Händler mit einem tiefen Verständnis des Forex-Marktes, die bereit sind, ihr Wissen und ihre Strategien weiterzugeben, um Ihnen zu finanzieller Unabhängigkeit zu verhelfen.",
+    "inputPlaceholder": "Geben sie ihre E-Mail Adresse ein",
+    "inputButton": "Schicken",
+    "bottomText1": "erfolgreich",
+    "bottomText2": "Absolventen",
+    "bottomText3": "Volumen",
+    "bottomText4": "Handel",
+    "card1": {
+      "title": "Personalisierter Ansatz",
+      "desc": "Unsere Mentoren arbeiten individuell mit jedem Studierenden und berücksichtigen dabei dessen Wissensstand, Erfahrung und Ziele. "
+    },
+    "card2": {
+      "title": "Tiefes Marktverständnis",
+      "desc": " Unsere Kurse ermöglichen es Ihnen, in die Welt des Devisenhandels einzutauchen und die Grundprinzipien des Marktbetriebs, der Analyse und des Risikomanagements zu verstehen. "
+    },
+    "card3": {
+      "title": "Schwerpunkt auf Psychologie",
+      "desc": "Unsere Kursmentoren helfen Ihnen dabei, mentale Stärke zu entwickeln, die ein Schlüsselfaktor für erfolgreiches Trading ist. "
+    },
+    "card4": {
+      "title": "Langzeitunterstützung",
+      "desc": "Unser Ziel ist es, Ihnen nicht nur Wissen zu vermitteln, sondern Sie langfristig auf Ihrem Weg zum Trading zu unterstützen. "
+    },
+    "card5": {
+      "title": "Koordinierte Unterstützung",
+      "desc": " Unser Mentorenteam ist immer bereit, Ihre Fragen zu beantworten und Ihnen bei der Überwindung von Schwierigkeiten auf dem Weg zum erfolgreichen Handel zu helfen. "
+    },
+    "card6": {
+      "title": "Wissensaktualisierung",
+      "desc": " Der Forex-Markt verändert sich ständig und wir stellen unseren Studenten aktuelle Informationen und Strategien zur Verfügung, damit sie sich an neue Bedingungen und Veränderungen auf dem Markt anpassen können."
+    },
+    "card7": {
+      "title": "Praktische Erfahrung",
+      "desc": "Bei uns steht die Praxiserfahrung im Vordergrund. "
+    }
+  }
+}
