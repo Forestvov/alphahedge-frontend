@@ -1,0 +1,22 @@
+{
+  "label": "Kontakte",
+  "title": "Wir sind ein professionelles Team",
+  "text": " Kontaktieren Sie uns, um Investitionsmöglichkeiten zu besprechen",
+  "card1": {
+    "title": "Adresse",
+    "text": "Das Hauptbüro befindet sich in ",
+    "link": "Barcelona, Spanien"
+  },
+  "card2": {
+    "title": "Post",
+    "text": "Fragen oder Probleme? "
+  },
+  "card3": {
+    "title": "Telegram-Neuigkeiten",
+    "text": "Erhalten Sie Neuigkeiten aus der Finanzwelt!"
+  },
+  "card4": {
+    "title": "Telegram-Forex",
+    "text": "Holen Sie sich Forex-Analysen!"
+  }
+}
