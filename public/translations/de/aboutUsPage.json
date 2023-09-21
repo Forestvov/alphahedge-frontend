@@ -1,0 +1,38 @@
+{
+  "banner": {
+    "title": "Der Zweck des Alphahedge Holdings-Fonds bestand darin, Anlegern Zugang zu einer breiten Palette von Anlagemöglichkeiten am Aktienmarkt zu bieten.",
+    "text": "Der Fonds ist bestrebt, seinen Anlegern maximale Renditen bei gleichzeitigem Risikomanagement zu bieten.",
+    "button": "Mehr zum Fonds"
+  },
+  "invest": {
+    "titlePink": "Langfristiges Investieren",
+    "title": "und Innovation im Fokus",
+    "text": "Der Alphahedge Holdings-Fonds förderte das Prinzip langfristiger Investitionen auf der Grundlage einer fundamentalen Analyse von Unternehmen und Märkten.\n\n",
+    "item1": "Langfristiges Investieren",
+    "item2": "Fundamentale Analyse",
+    "item3": "Innovativer Ansatz",
+    "item4": "Zukunftsorientiert"
+  },
+  "ipo": {
+    "label": "Innovativer Ansatz",
+    "title": "Erfolgreiche Investitionen und führende Börsengänge",
+    "text": "Im Laufe der Jahre hat Alphahedge Holdings bedeutende Erfolge erzielt. "
+  },
+  "knowledge": {
+    "title": "In Wissen und soziale Verantwortung investieren",
+    "text": "Das Unternehmen hat Erfahrungen in verschiedenen Finanzsektoren gesammelt und die Geographie seiner Aktivitäten erweitert. ",
+    "numberLabel": "Wohltätigkeitsprojekte",
+    "card1": {
+      "title": "Mitarbeiter",
+      "text": "Darüber hinaus investierte die Stiftung viel in die Ausbildung ihrer Mitarbeiter. "
+    },
+    "card2": {
+      "title": "Forschung",
+      "text": "Das Fondsteam verfolgte die neuesten Trends an den Finanzmärkten und sondierte aktiv neue Anlagemöglichkeiten."
+    },
+    "card3": {
+      "title": "Wohltätigkeit",
+      "text": "Auch auf soziale Verantwortung legte die Stiftung Wert. "
+    }
+  }
+}
