@@ -163,7 +163,7 @@ export const ActiveTableActions = (props: IActiveTableActions) => {
                     { title: 'Цена покупки' },
                     { title: 'Дата покупки' },
                     { title: 'Кол-во приобретенных акций' },
-                    { title: 'Подитог' },
+                    { title: 'Подытог' },
                   ]}
                   tables={data.content}
                   currentPage={data.number}
