@@ -26,7 +26,7 @@ export const AsideUserInfo = ({ isSplit }: { isSplit: boolean }) => {
             />
             <div className={s.account}>
               {payload.profile.role === 'User'
-                ? 'Buisness account'
+                ? 'Business account'
                 : 'Admin account'}
             </div>
           </div>
