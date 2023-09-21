@@ -1,0 +1,22 @@
+{
+  "label": "Contacts",
+  "title": "We are a professional team",
+  "text": " Contact Us to Discuss Investment Opportunities",
+  "card1": {
+    "title": "Address",
+    "text": "The main office is located in ",
+    "link": "Barcelona, Spain"
+  },
+  "card2": {
+    "title": "Mail",
+    "text": "Questions or problems? "
+  },
+  "card3": {
+    "title": "Telegram news",
+    "text": "Get news about the world of finance!"
+  },
+  "card4": {
+    "title": "Telegram forex",
+    "text": "Get Forex analytics!"
+  }
+}
