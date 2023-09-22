@@ -2,8 +2,6 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import cn from 'classnames'
 import { useTranslation } from 'react-i18next'
 
-import useProfile from 'hooks/context/useProfile'
-
 import {
   AccountIcon,
   DashboardIcon,
@@ -15,6 +13,8 @@ import {
   UsersIcon,
   Verification,
 } from 'assets/icons'
+
+import useProfile from 'hooks/context/useProfile'
 
 import s from './AsideNavigation.module.scss'
 
