@@ -55,6 +55,17 @@ export const App = () => {
     } else {
       setPayload({ loading: false, isAuth: false })
     }
+
+    const script = document.createElement('script')
+
+    script.src = '//code.jivo.ru/widget/B0YtvffwtK'
+    script.async = true
+
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
   }, [])
 
   return (

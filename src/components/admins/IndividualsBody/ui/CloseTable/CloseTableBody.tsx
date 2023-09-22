@@ -45,8 +45,6 @@ export const CloseTableBody = () => {
       }),
     )
 
-    console.log(statusSearch)
-
     try {
       const response = await getAdvanced({
         size: SIZE,

@@ -16,7 +16,6 @@
 
   @include utils.media-max-width(900) {
     grid-template-columns: 1fr;
-    height: 100%;
   }
 }
 
