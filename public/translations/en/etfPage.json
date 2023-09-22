@@ -1,0 +1,34 @@
+{
+  "banner": {
+    "titlePink": "Exchange Traded Funds (ETFs)",
+    "title": "An easy way to start investing",
+    "text": "ETFs are investment funds, shares (investment certificates) of which are traded on stock exchanges. The main advantages of ETFs:",
+    "item1": "Trading ETFs is as easy as trading stocks",
+    "item2": "The ability to quickly and easily independently create a diversified portfolio of securities",
+    "item3": "Lower fees than buying each share individually"
+  },
+  "cards": {
+    "title": "What are ETFs (Exchange Traded Funds)?",
+    "text": "ETFs are investment funds that are traded on an exchange and can include different asset classes, for example, stocks, bonds, foreign exchange instruments, commodity assets, etc.",
+    "card1": {
+      "title": "Diversification",
+      "desc1": "With one investment you purchase a ready-made basket of assets: from stocks and bonds to commodities and currencies.",
+      "desc2": "ETFs include different instruments and assets, allowing you to conveniently diversify investment risks."
+    },
+    "card2": {
+      "title": "Save time",
+      "desc1": "Investments in ETFs do not require special knowledge or professional qualifications and are available to most private investors.",
+      "desc2": "ETFs allow you to invest in industries or indices that generate interest and confidence, without spending time researching the market and selecting assets."
+    },
+    "card3": {
+      "title": "Liquidity",
+      "desc1": "Just like transactions with shares, transactions with ETFs can be made at any time the exchange is open.",
+      "desc2": "ETFs are convenient because their shares can be quickly sold and bought in the desired volume at a price acceptable to the investor."
+    },
+    "card4": {
+      "title": "Potential Risks",
+      "desc1": "ETFs, like any other investment instrument, are subject to various types of risks, for example, regulatory risk, currency risk, tax risk, interest rate risk, etc.",
+      "desc2": "It is very important to understand these risks and evaluate them yourself*."
+    }
+  }
+}

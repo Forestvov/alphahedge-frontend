@@ -1,0 +1,34 @@
+{
+  "banner": {
+    "titlePink": "Exchange Traded Funds (ETFs)",
+    "title": "Eine einfache Möglichkeit, mit dem Investieren zu beginnen",
+    "text": "ETFs sind Investmentfonds, deren Anteile (Investmentzertifikate) an Börsen gehandelt werden. Die wesentlichen Vorteile von ETFs:",
+    "item1": "Der Handel mit ETFs ist genauso einfach wie der Handel mit Aktien",
+    "item2": "Die Möglichkeit, schnell und einfach unabhängig ein diversifiziertes Wertpapierportfolio zusammenzustellen",
+    "item3": "Niedrigere Gebühren als beim Kauf jeder Aktie einzeln"
+  },
+  "cards": {
+    "title": "Was sind ETFs (Exchange Traded Funds)?",
+    "text": "ETFs sind Investmentfonds, die an einer Börse gehandelt werden und verschiedene Anlageklassen umfassen können, beispielsweise Aktien, Anleihen, Deviseninstrumente, Rohstoffe usw.",
+    "card1": {
+      "title": "Diversifizierung",
+      "desc1": "Mit einer Investition erwerben Sie einen vorgefertigten Vermögenskorb: von Aktien und Anleihen bis hin zu Rohstoffen und Währungen.",
+      "desc2": "ETFs umfassen verschiedene Instrumente und Vermögenswerte, sodass Sie Anlagerisiken bequem diversifizieren können."
+    },
+    "card2": {
+      "title": "Zeit sparen",
+      "desc1": "Investitionen in ETFs erfordern keine besonderen Kenntnisse oder beruflichen Qualifikationen und stehen den meisten Privatanlegern zur Verfügung.",
+      "desc2": "Mit ETFs können Sie in Branchen oder Indizes investieren, die Interesse und Vertrauen wecken, ohne Zeit mit der Erforschung des Marktes und der Auswahl von Vermögenswerten zu verbringen."
+    },
+    "card3": {
+      "title": "Liquidität",
+      "desc1": "Ebenso wie Transaktionen mit Aktien können Transaktionen mit ETFs jederzeit während der Börsenöffnungszeit durchgeführt werden.",
+      "desc2": "ETFs sind praktisch, weil ihre Anteile schnell im gewünschten Volumen zu einem für den Anleger akzeptablen Preis verkauft und gekauft werden können."
+    },
+    "card4": {
+      "title": "Mögliche Risiken",
+      "desc1": "ETFs unterliegen wie jedes andere Anlageinstrument verschiedenen Arten von Risiken, beispielsweise regulatorischen Risiken, Währungsrisiken, Steuerrisiken, Zinsrisiken usw.",
+      "desc2": "Es ist sehr wichtig, diese Risiken zu verstehen und selbst einzuschätzen*."
+    }
+  }
+}
