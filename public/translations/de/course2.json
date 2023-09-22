@@ -1,0 +1,61 @@
+{
+  "importantInvest": {
+    "title": "Warum ist es wichtig zu investieren?",
+    "label": "Lektion 1: Warum ist es wichtig zu investieren?",
+    "text1": "Sicherlich haben Sie in der Vergangenheit bereits investiert, das heißt, Sie haben Ihre Ressourcen so investiert, dass sie heute Vorteile bringen:",
+    "list1": {
+      "item1": "ging zur Universität und beschäftigte sich mit der Selbstentwicklung,",
+      "item2": "für ein angenehmes Leben eine Wohnung oder ein Auto gekauft haben,",
+      "item3": "Zeit und Aufmerksamkeit in die Beziehungen zu geliebten Menschen investieren, um glücklich zu sein,",
+      "item4": "Geld für eine Einlage gespart oder in ein Unternehmen investiert."
+    },
+    "text2": "Dies sind alles schwerwiegende Investitionsentscheidungen, bei denen Sie Risiken berücksichtigt, Ressourcen zugewiesen und Gewinne erzielt haben."
+  },
+  "money": {
+    "title": "Geld ist eine wichtige Ressource, es beeinflusst unser Leben",
+    "label": "Lektion 1: Warum ist es wichtig zu investieren?",
+    "text1": "Die Geldquelle ist die Beschäftigung oder das eigene Unternehmen. ",
+    "text2": "Um auch im Alter einen komfortablen Lebensstandard aufrechtzuerhalten, müssen Sie heute Ihr Geld richtig verwalten und vor der Pensionierung Kapital aufbauen. ",
+    "text3": "Was passiert mit dem Geld, das Sie heute nicht ausgeben, sondern einfach auf einem Bankkonto anlegen oder zu Hause behalten? "
+  },
+  "inflation": {
+    "title": "Unter Inflation versteht man einen Anstieg der Preise und einen Rückgang der Kaufkraft des Geldes.",
+    "label": "Lektion 1: Warum ist es wichtig zu investieren?",
+    "text1": "Aufgrund der Inflation können mit dem gleichen Geldbetrag jedes Jahr immer weniger Waren und Dienstleistungen gekauft werden.",
+    "text2": "Nehmen wir an, Sie haben 10.000 Euro und bewahren sie zu Hause auf, oder sie liegen einfach ungenutzt auf einem Bankkonto, wie in einem Safe. ",
+    "text3": "Die Inflation nach der Pandemie steigt weltweit. ",
+    "text4": "Diese Inflation wird in 10 Jahren 43 % Ihres Geldes verschlingen: Aus 10.000 Euro werden 5.636 Euro.",
+    "text5": "Leider liegt die Inflation außerhalb unserer Kontrolle; sie hängt von globalen Wirtschaftsfaktoren ab. "
+  },
+  "investWin": {
+    "title": "Investitionen werden dazu beitragen, die Inflation zu bekämpfen und Geld zu verdienen",
+    "label": "Lektion 1: Warum ist es wichtig zu investieren?",
+    "text1": "Die konservativste und verständlichste Möglichkeit, Geld zu sparen, ist eine Bankeinlage. ",
+    "text2": "Mit Investitionen an der Börse können Sie höhere Renditen erzielen als mit einer Einlage. ",
+    "text3": "Die Inflation nach der Pandemie steigt weltweit. ",
+    "list2": {
+      "item1Bold": "europäisch",
+      "item1": "Aktien - 10,7 % pro Jahr.",
+      "item2": "Aktien - 8,155 % pro Jahr.",
+      "item2Bold": "amerikanisch"
+    },
+    "text4": "Und so wuchsen die beliebtesten Aktien im Zeitraum vom 01.04.21 bis 01.04.22:"
+  },
+  "magic": {
+    "title": "Der Zauber des Zinseszinses erhöht die Investitionen",
+    "label": "Lektion 1. Was sind Optionen?",
+    "text1": "Historische Aktienrenditen sind beeindruckend, aber Sie können noch mehr verdienen, wenn:",
+    "text2": "Kommen wir zurück zu Ihren 10.000 Euro, die 10 Jahre dort lagen, von der Inflation aufgefressen wurden und wertlos geworden sind. ",
+    "list3": {
+      "item1": "Investieren Sie Geld nicht nur einmal, sondern regelmäßig. ",
+      "item2": "Die aus den Anlagen erhaltenen Zinsen werden in Wertpapiere reinvestiert, also reinvestiert. "
+    },
+    "text3": "Nehmen wir an, dass die Rendite von US-Aktien gleich bleibt – etwa 8 % pro Jahr, obwohl die bisherige Wertentwicklung von Anlageinstrumenten keine Garantie für deren Rendite in der Zukunft ist. ",
+    "text4": "Es erwartet Sie ein kurzer und spannender Kurs, in dem wir Ihnen Folgendes verraten:",
+    "list4": {
+      "item1": "wie man mit Investitionen genau Geld verdient,",
+      "item2": "in was und wie man investiert,",
+      "item3": "wie Sie Ihr Portfolio aufbauen und verwalten."
+    }
+  }
+}

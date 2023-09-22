@@ -1,0 +1,61 @@
+{
+  "importantInvest": {
+    "title": "Why is it important to invest?",
+    "label": "Lesson 1: Why is it important to invest?",
+    "text1": "Surely in the past you have already invested, that is, you have invested your resources so that they bring benefits today:",
+    "list1": {
+      "item1": "went to university and engaged in self-development,",
+      "item2": "bought an apartment or a car for a comfortable life,",
+      "item3": "invested time and attention in relationships with loved ones in order to be happy,",
+      "item4": "saved money for a deposit or invested in a business."
+    },
+    "text2": "These are all serious investment decisions in which you considered risks, allocated resources, and extracted profits."
+  },
+  "money": {
+    "title": "Money is an important resource, it influences our lives",
+    "label": "Lesson 1: Why is it important to invest?",
+    "text1": "The source of money is employment or your own business. ",
+    "text2": "To maintain a comfortable standard of living in old age, you need to manage your money correctly today and build capital before retirement. ",
+    "text3": "What happens to the money you don't spend today, but just save in a bank account or keep at home? "
+  },
+  "inflation": {
+    "title": "Inflation is an increase in prices and a decrease in the purchasing power of money.",
+    "label": "Lesson 1: Why is it important to invest?",
+    "text1": "Due to inflation, the same amount of money can buy fewer and fewer goods and services every year.",
+    "text2": "Let's say you have 10,000 euros, you keep them at home, or they just sit idle in a bank account, like in a safe. ",
+    "text3": "Post-pandemic inflation is rising around the world. ",
+    "text4": "This level of inflation will eat 43% of your money in 10 years: 10,000 euros will turn into 5,636 euros.",
+    "text5": "Unfortunately, inflation is beyond our control; it depends on global economic factors. "
+  },
+  "investWin": {
+    "title": "Investments will help beat inflation and earn money",
+    "label": "Lesson 1: Why is it important to invest?",
+    "text1": "The most conservative and understandable way to save money is a bank deposit. ",
+    "text2": "Investments in the stock market allow you to get higher returns than a deposit. ",
+    "text3": "Post-pandemic inflation is rising around the world. ",
+    "list2": {
+      "item1Bold": "European",
+      "item1": "shares - 10.7% per annum.",
+      "item2": "shares - 8.155% per annum.",
+      "item2Bold": "American"
+    },
+    "text4": "And this is how the most popular stocks grew in the period from 04/01/21 to 04/01/22:"
+  },
+  "magic": {
+    "title": "The magic of compound interest increases investments",
+    "label": "Lesson 1. What are options",
+    "text1": "Historical stock returns are impressive, but you can earn even more if:",
+    "text2": "Let's return to your 10,000 euros, which lay there for 10 years, were eaten up by inflation and became worthless. ",
+    "list3": {
+      "item1": "invest money not just once, but regularly. ",
+      "item2": "The interest received from investments is reinvested in securities, that is, reinvested. "
+    },
+    "text3": "Let's assume that the return on US stocks remains the same - about 8% per annum, although the past performance of investment vehicles does not guarantee their return in the future. ",
+    "text4": "A short and exciting course awaits you in which we will tell you:",
+    "list4": {
+      "item1": "how exactly to make money on investments,",
+      "item2": "what and how to invest in,",
+      "item3": "how to build and manage your portfolio."
+    }
+  }
+}

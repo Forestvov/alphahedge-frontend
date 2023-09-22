@@ -1,0 +1,86 @@
+{
+  "whatIsOption": {
+    "title": "Welche Optionen gibt es?",
+    "label": "Lektion 1. Was sind Optionen?",
+    "text1": "Wenn ein Anleger davon überzeugt ist, dass eine Aktie steigen wird, kann er von der Kursänderung profitieren, ohne die Aktie direkt zu kaufen. ",
+    "text2": "Die Option ist weniger wert als die Aktien selbst. ",
+    "text3": "Stellen wir uns vor, dass eine Aktie an der Börse zu einem Preis von 100 US-Dollar gehandelt wird. ",
+    "text4": "ist einer der Vorteile des Optionshandels.",
+    "text4Bold": "Möglichkeit, mit weniger Investitionen mehr zu verdienen ",
+    "text5": "Allerdings gehen mit einer hohen Ertragsaussicht auch höhere Risiken einher, da der Anleger durch den Kauf einer Option nicht zum Eigentümer des Wertpapiers wird. ",
+    "text6Bold": "Möglichkeit",
+    "text6": "ist ein Vertrag, der das Recht einräumt, ein Wertpapier zu einem bestimmten Preis während eines bestimmten Zeitraums zu kaufen oder zu verkaufen."
+  },
+  "howWorkOption": {
+    "title": "Wie funktioniert eine Option?",
+    "label": "Lektion 1. Was sind Optionen?",
+    "text1": "Stellen wir uns vor, dass David in der Nähe seines Zuhauses ein Café namens Your Coffee hat, in das er oft mit seiner Freundin Louise Kaffee trinken geht. ",
+    "text2": "Nach einer detaillierten Untersuchung der Geschäfte des Coffeeshops kam David zu dem Schluss, dass die Aktien von Your Coffee unterbewertet sind. ",
+    "text3": "Louise glaubt das nicht und geht im Gegenteil davon aus, dass die Kurse von Your Coffee in naher Zukunft sinken werden.",
+    "text4": "David möchte sich die Gelegenheit, vom steigenden Preis zu profitieren, nicht entgehen lassen und ist bereit, jetzt Aktien von Your Coffee von Louise zu einem Preis von 50 $ pro Aktie zu kaufen. "
+  },
+  "call": {
+    "title": "Was ist eine Anrufoption?",
+    "label": "Lektion 1. Was sind Optionen?",
+    "text1": "Da beide Parteien der Transaktion, David und Louise, von ihrer Prognose überzeugt sind, können sie sich auf folgende Konditionen einigen:",
+    "list1": {
+      "item1": "David zahlt Louise einen einmaligen Bonus, zum Beispiel 100 $, der nicht erstattungsfähig ist.",
+      "item2": "Wenn die Your Coffee-Aktien in zwei Wochen auf 55 US-Dollar pro Aktie steigen, wird Louise sie zum alten Preis von 50 US-Dollar pro Aktie an David verkaufen.",
+      "item3": "Wenn die Aktie nicht steigt, ist David nicht verpflichtet, die Aktien von Louise zurückzukaufen."
+    },
+    "text2": "An der Börse wird ein solcher Kontrakt Call-Option genannt. ",
+    "text2Bold": "zugrundeliegende Vermögenswert.",
+    "text3": "In unserem Beispiel handelt es sich bei dem Basiswert um Your Coffee-Aktien.",
+    "text4Bold": "Anrufoption",
+    "text4": "– Eine Vertragsart, die dem Optionskäufer das Recht einräumt, innerhalb einer bestimmten Zeit Aktien zu einem vorher festgelegten Preis zu kaufen.",
+    "text5Bold": "schlagen",
+    "tex5": "Wenn die Bedingungen der Option erfüllt sind, hat David das Recht, Aktien zu einem Preis von 50 $ pro Aktie zu kaufen, unabhängig vom aktuellen Marktpreis von Your Coffee. ",
+    "text6": " oder der Ausübungspreis der Option.",
+    "text7Bold": "Schlagen",
+    "text7": "- der Preis, zu dem der Käufer der Option das Recht zum Kauf hat und der Verkäufer verpflichtet ist, den Basiswert zu verkaufen.",
+    "text8": "Abhängig von den Marktbewegungen können beide Seiten des Optionsvertrags profitieren. ",
+    "text9Bold": "Wenn der Aktienkurs steigt",
+    "text9": "Stellen wir uns vor, dass Davids Erwartungen gerechtfertigt waren und zwei Wochen später die Your Coffee-Aktien von 50 $ auf 60 $ pro Aktie stiegen. ",
+    "text10": "Sobald David die Aktien besitzt, kann er sie für 60 US-Dollar pro Aktie auf dem Markt verkaufen und 10 US-Dollar pro verkaufter Aktie verdienen. ",
+    "text11": "Louise muss 100 Your Coffee-Aktien zu einem Preis unter dem Marktpreis an David verkaufen. ",
+    "text12Bold": "Wenn der Aktienkurs fällt",
+    "text12": "Stellen wir uns nun vor, dass sich Davids Annahmen als falsch herausstellten und die Your Coffee-Aktien kurz vor Vertragsablauf von 50 $ auf 40 $ pro Aktie fielen. ",
+    "text13": "Es macht keinen Sinn, Aktien für 50 $ von Louise zu kaufen, da die Wertpapiere auf dem Markt günstiger gehandelt werden, aber niemand wird die Prämie von 100 $ zurückzahlen – das ist ein direkter Verlust durch den Kauf der Option.",
+    "text14Bold": "Schlagen",
+    "text14": " der Preis, zu dem der Optionskäufer das Recht zum Kauf hat und der Optionsverkäufer verpflichtet ist, den Basiswert zu verkaufen.",
+    "text15": "Abhängig von den Marktbewegungen können beide Seiten des Optionsvertrags profitieren. ",
+    "text16": "Gleichzeitig geht es Louise gut – sie besitzt immer noch 100 Aktien von Your Coffee, obwohl diese im Preis gefallen sind. "
+  },
+  "premium": {
+    "title": "Wie wird die Prämienhöhe ermittelt?",
+    "label": "Lektion 1. Was sind Optionen?",
+    "text1": "Der Wert des Vertrags wird wie auf jedem Markt durch das Verhältnis zwischen Angebot und Nachfrage bestimmt. ",
+    "text2": "Um festzustellen, ob es sich lohnt, einen Vertrag zu kaufen, wägen die Teilnehmer die Risiken und den erwarteten Gewinn aus der Transaktion ab. "
+  },
+  "put": {
+    "title": "Was ist eine Put-Option?",
+    "label": "Lektion 1. Was sind Optionen?",
+    "text1": "Stellen Sie sich nun vor, dass David Anteile an Your Coffee besitzt und Louise ein Auge auf die Anteile hat.",
+    "text2": "Der aktuelle Aktienpreis beträgt 50 US-Dollar pro Aktie. ",
+    "text3": "Louise hingegen glaubt, dass die Your Coffee-Aktien nach der Veröffentlichung des Berichts steigen werden. ",
+    "list1": {
+      "item1": "David zahlt Louise einen einmaligen Bonus, zum Beispiel 100 $, der nicht erstattungsfähig ist.",
+      "item2": "Wenn die Your Coffee-Aktien in zwei Wochen auf 55 US-Dollar pro Aktie steigen, wird Louise sie zum alten Preis von 50 US-Dollar pro Aktie an David verkaufen.",
+      "item3": "Sollte der Aktienkurs von Your Coffee in dieser Zeit steigen, darf David seine Wertpapiere nicht an Louise verkaufen."
+    },
+    "text4": "In diesem Fall kann David Louise in folgendem Punkt zustimmen:",
+    "text5": "Diese Art von Vertrag heißt",
+    "text5Bold": "Put-Option.",
+    "text6": " Der Kauf erfolgt, wenn ein fallender Preis des Basiswerts zu erwarten ist. ",
+    "text7Bold": "Put-Option",
+    "text7": "– Eine Vertragsart, die dem Optionskäufer das Recht einräumt, Aktien zu einem vorher festgelegten Preis innerhalb einer bestimmten Zeit zu verkaufen."
+  },
+  "trade": {
+    "title": "Was Sie beim Handel mit Optionen beachten sollten",
+    "label": "Lektion 1. Was sind Optionen?",
+    "text1": "David erfuhr, dass man mit Optionen Geld aus der Entwicklung des Marktpreises einer Aktie verdienen kann. ",
+    "text2": "Wenn erwartet wird, dass die Aktie steigt, können Sie eine Call-Option nutzen. ",
+    "text3": "Wenn ein Rückgang der Kurse des Basiswerts zu erwarten ist, können Sie eine Put-Option nutzen, um Ihre Anlage gegen mögliche Verluste abzusichern.",
+    "text4": "Beide Möglichkeiten können auf unterschiedliche Art und Weise kombiniert werden. "
+  }
+}

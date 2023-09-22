@@ -1,0 +1,86 @@
+{
+  "whatIsOption": {
+    "title": "What are options",
+    "label": "Lesson 1. What are options",
+    "text1": "If an investor is confident that a stock will rise, he can profit from the price change without purchasing the stock directly. ",
+    "text2": "The option is worth less than the shares themselves. ",
+    "text3": "Let's imagine that a stock is trading on the stock exchange at a price of $100. ",
+    "text4": "is one of the advantages of options trading.",
+    "text4Bold": "Ability to earn more with less investment ",
+    "text5": "However, high earning potential comes with greater risks because purchasing an option does not make the investor the owner of the security. ",
+    "text6Bold": "Option",
+    "text6": "is a contract that gives the right to buy or sell a security at a certain price during a certain period."
+  },
+  "howWorkOption": {
+    "title": "How does an option work?",
+    "label": "Lesson 1. What are options",
+    "text1": "Let's imagine that David has a coffee shop called Your Coffee near his home, where he often goes to have coffee with his friend Louise. ",
+    "text2": "After a detailed study of the coffee shop's business, David concluded that Your Coffee shares are undervalued. ",
+    "text3": "Louise doesn’t think so and, on the contrary, expects Your Coffee’s quotes to decline in the near future.",
+    "text4": "David does not want to miss the opportunity to profit from the rising price and is ready to buy shares of Your Coffee from Louise right now, at a price of $50 per share. "
+  },
+  "call": {
+    "title": "What is a call option",
+    "label": "Lesson 1. What are options",
+    "text1": "Since both parties to the transaction, David and Louise, are confident in their forecast, they can agree on the following terms:",
+    "list1": {
+      "item1": "David pays Louise a one-time bonus, for example $100, which is non-refundable.",
+      "item2": "If Your Coffee shares rise to $55 per share in two weeks, Louise will sell them to David at the old price of $50 per share.",
+      "item3": "If the stock does not rise, David is not obligated to buy back the shares from Louise."
+    },
+    "text2": "On the stock exchange, this type of contract is called a call option. ",
+    "text2Bold": "underlying asset.",
+    "text3": "In our example, the underlying asset is Your Coffee shares.",
+    "text4Bold": "Call option",
+    "text4": "- A type of contract that gives the option buyer the right to buy shares at a predetermined price within a specified time.",
+    "text5Bold": "strike",
+    "tex5": "If the conditions of the option are met, David has the right to buy shares at a price of $50 per share, regardless of Your Coffee's current market price. ",
+    "text6": " , or the exercise price of the option.",
+    "text7Bold": "Strike",
+    "text7": "- the price at which the buyer of the option has the right to buy, and the seller is obliged to sell the underlying asset.",
+    "text8": "Depending on market movements, both sides of the option contract can benefit. ",
+    "text9Bold": "If the stock price rises",
+    "text9": "Let’s imagine that David’s expectations were justified and two weeks later Your Coffee shares rose from $50 to $60 per share. ",
+    "text10": "Once David has the shares, he can sell them on the market for $60 per share and earn $10 per share sold. ",
+    "text11": "Louise will have to sell 100 shares of Your Coffee to David at a price below the market price. ",
+    "text12Bold": "If the stock price falls",
+    "text12": "Now let's imagine that David's assumptions turned out to be wrong and Your Coffee shares fell from $50 to $40 per share right before the contract expired. ",
+    "text13": "There is no point in buying shares for $50 from Louise, since the securities are traded cheaper on the market, but no one will return the $100 premium - this is a direct loss from buying the option.",
+    "text14Bold": "Strike",
+    "text14": " the price at which the option buyer has the right to buy and the option seller is obligated to sell the underlying asset.",
+    "text15": "Depending on market movements, both sides of the option contract can benefit. ",
+    "text16": "At the same time, Louise is doing well - she still owns 100 shares of Your Coffee, although they have fallen in price. "
+  },
+  "premium": {
+    "title": "How is the premium amount determined?",
+    "label": "Lesson 1. What are options",
+    "text1": "The value of the contract, as in any market, is determined by the relationship between supply and demand. ",
+    "text2": "To determine whether a contract is worth buying, participants weigh the risks and the expected profit from the transaction. "
+  },
+  "put": {
+    "title": "What is a put option",
+    "label": "Lesson 1. What are options",
+    "text1": "Now imagine that David owns shares in Your Coffee, and Louise is eyeing the shares.",
+    "text2": "The current share price is $50 per share. ",
+    "text3": "Louise, on the other hand, believes that Your Coffee shares will rise following the release of the report. ",
+    "list1": {
+      "item1": "David pays Louise a one-time bonus, for example $100, which is non-refundable.",
+      "item2": "If Your Coffee shares rise to $55 per share in two weeks, Louise will sell them to David at the old price of $50 per share.",
+      "item3": "If Your Coffee's stock price rises during this time, David may not sell his securities to Louise."
+    },
+    "text4": "In this case, David can agree with Louise on the following:",
+    "text5": "This type of contract is called",
+    "text5Bold": "put option.",
+    "text6": " It is purchased when the price of the underlying asset is expected to fall. ",
+    "text7Bold": "Put option",
+    "text7": "- A type of contract that gives the option buyer the right to sell shares at a predetermined price within a specified time."
+  },
+  "trade": {
+    "title": "What to Remember When Trading Options",
+    "label": "Lesson 1. What are options",
+    "text1": "David learned that options can be used to make money from the movement of a stock's market price. ",
+    "text2": "If the stock is expected to rise, you can use a call option. ",
+    "text3": "If the quotes of the underlying asset are expected to decline, you can use a put option to insure your investment against possible losses.",
+    "text4": "Both of these types of options can be combined in various ways. "
+  }
+}
