@@ -8,7 +8,7 @@ export const Invest = () => {
   const [t] = useTranslation('aboutUsPage')
 
   return (
-    <section className={s.invest}>
+    <section className={s.invest} id="invest">
       <Container>
         <h2 className={s.title}>
           <span>{t('invest.titlePink')}</span> {t('invest.title')}

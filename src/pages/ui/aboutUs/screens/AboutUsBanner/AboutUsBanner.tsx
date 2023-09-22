@@ -13,10 +13,10 @@ export const AboutUsBanner = () => {
         <div className={s.content}>
           <h1 className={s.title}>{t('banner.title')}</h1>
           <p className={s.text}>{t('banner.text')}</p>
-          <button className={s.button} type="button">
+          <a className={s.button} type="button" href="/about#invest">
             {t('banner.button')}
             <img className={s.arrow} src={ArrowLinkWhite} alt="logo" />
-          </button>
+          </a>
         </div>
       </Container>
       <img className={s.img} src={AboutBannerImg} alt="about" />
