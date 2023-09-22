@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
+
 import { Container } from 'components/shared/Container'
 import { Mapimg } from 'assets/images'
 import { ContactsCard } from './ContactsCard'
@@ -6,6 +8,19 @@ import s from './Contacts.module.scss'
 
 export const Contacts = () => {
   const [t] = useTranslation('contactsPage')
+
+  useEffect(() => {
+    const script = document.createElement('script')
+
+    script.src = '//code.jivo.ru/widget/B0YtvffwtK'
+    script.async = true
+
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
 
   const ContactsCards = [
     {
@@ -33,6 +48,7 @@ export const Contacts = () => {
       type: 'link',
     },
   ]
+
   return (
     <Container>
       <div className={s.content}>
