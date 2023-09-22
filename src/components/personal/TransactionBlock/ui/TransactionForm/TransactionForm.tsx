@@ -32,6 +32,7 @@ import s from './TransactionForm.module.scss'
 
 const { getCoinPrice, addTransaction } = TransactionServices
 const { getProfileTokens } = AccountServices
+const { getTokens } = TransactionServices
 
 export const TransactionForm = (props: ITransactionForm) => {
   const { className, type, fetch } = props
@@ -92,6 +93,7 @@ export const TransactionForm = (props: ITransactionForm) => {
         currencyToken: tokenName.label,
         contact: tokenName.value,
         amountIn: (Number(_data.deposit) / Number(coinPrice)).toString(),
+        qrCode: tokenName.qrCode,
       }
     }
 
@@ -193,6 +195,7 @@ export const TransactionForm = (props: ITransactionForm) => {
                         value: token.value,
                         image: token.image,
                         isPayer: paymentCart[token.currencyToken],
+                        qrCode: token.qrCode,
                       }))
                     : []
                 }
