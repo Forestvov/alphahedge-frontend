@@ -11,5 +11,8 @@ export interface IUser {
   registeredDate: string
   role: UserType
   status: StatusAccountType
-  verifiedStatus?: string
+  verifiedStatus: string
+  referalAccountFio: string
+  referalAccountId: string
+  referalAccountUsername: string
 }
