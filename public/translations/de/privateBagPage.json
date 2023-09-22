@@ -1,0 +1,55 @@
+{
+  "banner": {
+    "titlePink": "Privates Portfolio",
+    "title": "Bequeme und effektive Möglichkeit, Geld anzulegen",
+    "text": "Kapitallebensversicherungslösung für Ersparnisse und Investitionen. ",
+    "item1": "Investitionen entsprechend der gewählten Strategie",
+    "item2": "Möglichkeit zur Angabe eines Begünstigten",
+    "item3": "Die Steuer auf erhaltene Gewinne wird automatisch berechnet und einbehalten",
+    "item4": "Möglichkeit, jedes Jahr eine Rückerstattung der persönlichen Einkommensteuer in Höhe von 20 % zu erhalten",
+    "item5": "Günstigere Verwaltungsgebühr von 0,29 % bis 0,99 % pro Jahr"
+  },
+  "tabs": {
+    "tab1": "Über das Privatportfolio",
+    "tab2": "Anlagestrategien",
+    "tab1Card1": {
+      "title": "Warum sollten Sie in ein Privatportfolio investieren?",
+      "desc1": "Flexible Beitragsbedingungen.",
+      "desc2": "Für Beiträge fallen keine zusätzlichen Gebühren an.",
+      "desc3": "Geringe Verwaltungsgebühr, von 0,29 % bis 0,99 % pro Jahr, abhängig von der Strategie und dem Anlagebetrag.",
+      "desc4": "Zusätzlich wird Ihr Leben für einen Betrag von 2 % des Anlagewertes (Thesaurierungsbetrag) versichert.",
+      "desc5": "Möglichkeit zur Angabe eines oder mehrerer Begünstigter.",
+      "desc6": "Die Steuer auf erhaltene Gewinne wird zum Zeitpunkt der Auszahlung der Mittel automatisch berechnet und einbehalten.",
+      "desc7": "Möglichkeit, jedes Jahr eine Rückerstattung der persönlichen Einkommensteuer in Höhe von 20 % zu erhalten"
+    },
+    "tab1Card2": {
+      "title": "Investitionsmanagement",
+      "desc1": "Die Investitionen erfolgen entsprechend der gewählten Strategie.",
+      "desc2": "Ihr Anlageportfolio wird in Ihrem Namen von den Experten von Alphahedge Holdings verwaltet.",
+      "desc3": "Da Ihre Anlagen von erfahrenen Experten verwaltet werden, müssen Sie sich keine Gedanken mehr darüber machen, in welche Vermögenswerte Sie investieren oder wann Sie Ihren Vermögensmix im Rahmen Ihrer Strategie ändern müssen.",
+      "desc4": "Überwachen Sie jederzeit Ihre Anlageergebnisse und erhalten Sie monatliche Berichte unserer Experten."
+    },
+    "tab2Card1": {
+      "title": "Aggressive Wachstumsstrategie",
+      "text": "Ziel dieser Strategie ist es, durch diversifizierte Investitionen in Beteiligungspapiere (Aktien) langfristig maximale Renditen zu erzielen. "
+    },
+    "tab2Card2": {
+      "title": "Wachstumsstrategie",
+      "text": "Ziel dieser Strategie ist es, den Wert des investierten Vermögens durch Anlagen mit erhöhtem Risiko mittel- bis langfristig zu steigern. "
+    },
+    "tab2Card3": {
+      "title": "Ausgewogene Strategie",
+      "text": "Ziel dieser Strategie ist eine mittelfristige Wertsteigerung der Vermögenswerte durch Investitionen mit moderatem Risiko. "
+    },
+    "tab2Card4": {
+      "title": "Real-Value-Strategie",
+      "text": "Ziel dieser Strategie ist eine moderate Wertsteigerung des Vermögens durch risikoarme Investitionen. "
+    },
+    "tab2Card5": {
+      "title": "Konservative Strategie",
+      "text": "Das Ziel dieser Strategie besteht darin, den Vermögenswert durch diversifizierte Anleihenanlagen zu erhalten. "
+    },
+    "tab2Stock": "Aktie",
+    "tab2Bonds": "Fesseln"
+  }
+}

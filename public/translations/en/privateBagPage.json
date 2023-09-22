@@ -1,0 +1,55 @@
+{
+  "banner": {
+    "titlePink": "Private portfolio",
+    "title": "Convenient and effective way to invest money",
+    "text": "Endowment life insurance solution for savings and investments. ",
+    "item1": "Investments in accordance with the chosen strategy",
+    "item2": "Possibility to specify a beneficiary",
+    "item3": "Tax on profits received is calculated and withheld automatically",
+    "item4": "Opportunity to receive a 20% personal income tax refund every year",
+    "item5": "More favorable administration fee, from 0.29% to 0.99% per year"
+  },
+  "tabs": {
+    "tab1": "About the Private Portfolio",
+    "tab2": "Investment Strategies",
+    "tab1Card1": {
+      "title": "Why should you invest in a Private Portfolio?",
+      "desc1": "Flexible terms of contributions.",
+      "desc2": "There are no additional fees applied to contributions.",
+      "desc3": "Low administration fee, from 0.29% to 0.99% per year, depending on the strategy and investment amount.",
+      "desc4": "Additionally, your life will be insured for an amount of 2% of the investment value (accumulation amount).",
+      "desc5": "Possibility to specify one or more beneficiaries.",
+      "desc6": "Tax on profits received is calculated and withheld automatically at the time of payment of funds.",
+      "desc7": "Opportunity to receive a 20% personal income tax refund every year"
+    },
+    "tab1Card2": {
+      "title": "Investment management",
+      "desc1": "Investments will be made in accordance with the chosen strategy.",
+      "desc2": "Your investment portfolio is managed on your behalf by Alphahedge Holdings experts.",
+      "desc3": "With your investments managed by experienced experts, you no longer need to worry about which assets to invest in or when to change your asset mix within your strategy.",
+      "desc4": "Monitor your investment results at any time and receive monthly reports prepared by our experts."
+    },
+    "tab2Card1": {
+      "title": "Aggressive growth strategy",
+      "text": "The goal of this strategy is to achieve maximum returns in the long term through diversified investments in equity securities (stocks). "
+    },
+    "tab2Card2": {
+      "title": "Growth strategy",
+      "text": "The goal of this strategy is to increase the value of invested assets through investments with increased risk for a medium to long term. "
+    },
+    "tab2Card3": {
+      "title": "Balanced strategy",
+      "text": "The goal of this strategy is a medium-term increase in the value of assets through investments with moderate risk. "
+    },
+    "tab2Card4": {
+      "title": "Real Value Strategy",
+      "text": "The goal of this strategy is a moderate increase in asset value through low-risk investments. "
+    },
+    "tab2Card5": {
+      "title": "Conservative strategy",
+      "text": "The goal of this strategy is to preserve asset value through diversified bond investments. "
+    },
+    "tab2Stock": "Stock",
+    "tab2Bonds": "Bonds"
+  }
+}
