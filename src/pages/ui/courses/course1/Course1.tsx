@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import {
   Course1Img,
   Course11,
@@ -12,275 +13,121 @@ import { TitleSection } from 'components/courses/TitleSection'
 import { Course1Sidebar } from '../sidebar/Course1Sidebar'
 import s from './Course1.module.scss'
 
-export const Course1 = () => (
-  <>
-    <Course1Sidebar />
-    <div className={s.course1}>
-      <img className={s.courseImg} src={Course1Img} alt="course" />
-      <section className={s.whatIsOption} id="whatIsOption">
-        <TitleSection
-          title="Что такое опционы"
-          label="Урок 1. Что такое опционы"
-        />
-        <p className={s.text}>
-          Если инвестор уверен, что акции вырастут, он может заработать на
-          изменении цены, не покупая акции напрямую. Достаточно заключить
-          контракт с тем, кто уже владеет этими бумагами. Подобные контракты
-          называются опционными. Они регулярно заключаются между инвесторами и
-          торгуются на бирже, как акции, облигации и ETF.
-        </p>
-        <p className={s.text}>
-          Опцион стоит дешевле, чем сами акции. При этом прибыль остается
-          одинаковой.
-        </p>
-        <img className={s.image} src={Course11} alt="courseImg" />
-        <p className={s.text}>
-          Представим, что на бирже торгуется акция по цене $100. Дэвид уверен,
-          что в ближайшее дни стоимость акции вырастет на 5%. Купив акцию за
-          $100, он получит доход $5. При покупке опциона Дэвид мог бы получить
-          такую же прибыль, вложив при этом значительно меньше денег.
-        </p>
-        <p className={s.text}>
-          <span>Способность зарабатывать больше с меньшими вложениями</span> —
-          одно из преимуществ торговли опционами.
-        </p>
-        <p className={s.text}>
-          Однако высокий потенциал заработка сопряжен с большими рисками,
-          поскольку покупка опциона не делает инвестора владельцем ценной
-          бумаги. В случае если рынок пойдет против инвестора, он останется без
-          акций, а вложения в опцион никто не вернет.
-        </p>
-        <p className={s.text}>
-          <span>Опцион</span> — это контракт, который дает право купить или
-          продать ценную бумагу по определенной цене в течение определенного
-          периода.
-        </p>
-      </section>
-      <section className={s.howWorkOption} id="howWorkOption">
-        <TitleSection
-          title="Как работает опцион"
-          label="Урок 1. Что такое опционы"
-        />
-        <p className={s.text}>
-          Представим, что у Дэвида рядом с домом есть кофейня Your Coffee, куда
-          он часто заходит выпить кофе со своей знакомой Луизой. Акции этой
-          кофейни торгуются на бирже по цене $50 за бумагу. У Луизы есть 100
-          акций Your Coffee, а у Дэвида их нет.
-        </p>
-        <p className={s.text}>
-          После детального изучения бизнеса кофейни, Дэвид сделал вывод, что
-          акции Your Coffee недооценены. Через пару недель компания опубликует
-          сильный отчет и котировки могут пойти вверх.
-        </p>
-        <p className={s.text}>
-          Луиза так не считает и, напротив, ожидает снижения котировок Your
-          Coffee в ближайшее время.
-        </p>
-        <img className={s.image} src={Course12} alt="courseImg" />
-        <p className={s.text}>
-          Дэвид не хочет упускать возможность заработать на росте цены и готов
-          купить акции Your Coffee у Луизы прямо сейчас, по цене $50 за акцию.
-          Но у него нет денег, чтобы рассчитаться сразу за 100 акций. В таком
-          случае Дэвид и Луиза могут заключить контракт на колл-опцион.
-        </p>
-      </section>
-      <section className={s.call} id="call">
-        <TitleSection
-          title="Что такое опцион колл"
-          label="Урок 1. Что такое опционы"
-        />
-        <p className={s.text}>
-          Поскольку обе стороны сделки, Дэвид и Луиза, убеждены в своем
-          прогнозе, они могут договориться о следующих условиях:
-        </p>
-        <ul>
-          <li className={s.list}>
-            Дэвид выплачивает Луизе единовременную премию, к примеру $100,
-            которая не подлежит возврату.
-          </li>
-          <li className={s.list}>
-            Если через две недели акции Your Coffee вырастут до $55 за бумагу,
-            Луиза продаст их Дэвиду по старой цене — $50 за акцию.
-          </li>
-          <li className={s.list}>
-            Если котировки не вырастут, Дэвид не обязан выкупать акции у Луизы.
-          </li>
-        </ul>
-        <img className={s.image} src={Course13} alt="courseImg" />
-        <p className={s.text}>
-          На бирже такой тип контракта называется колл-опцион. Его приобретают,
-          когда ждут роста цены <span>базового актива.</span> В нашем примере
-          базовый актив — акции Your Coffee.
-        </p>
-        <p className={s.text}>
-          <span>Опцион колл</span> — тип контракта, который дает право
-          покупателю опциона купить акции по заранее установленной цене в
-          течение определенного времени.
-        </p>
-        <p className={s.text}>
-          Если условия опциона выполняются, Дэвид имеет право купить акции по
-          цене $50 за штуку независимо от текущих рыночных котировок Your
-          Coffee. Эта цена называется <span>страйк</span>, или цена исполнения
-          опциона.
-        </p>
-        <p className={s.text}>
-          <span>Страйк</span> — цена, по которой покупатель опциона имеет право
-          купить, а продавец обязан продать базовый актив.
-        </p>
-        <p className={s.text}>
-          В зависимости от движения рынка обе стороны опционного контракта могут
-          извлечь выгоду. Если ожидания покупателя оправдаются, он заработает на
-          изменении котировок. В обратной ситуации, когда оправдываются ожидания
-          продавца, он останется при своих акциях с премией на руках. Рассмотрим
-          два варианта развития событий опционного контракта Дэвида и Луизы.
-        </p>
-        <p className={s.text}>
-          <span>Если цена акций вырастет</span>
-        </p>
-        <p className={s.text}>
-          Представим, что ожидания Дэвида оправдались и через две недели акции
-          Your Coffee выросли с $50 до $60 за бумагу. Он может исполнить
-          контракт — выкупить у Луизы 100 акций Your Coffee по цене $50 за
-          штуку.
-        </p>
-        <img className={s.image} src={Course14} alt="courseImg" />
-        <p className={s.text}>
-          После того как акции окажутся у Дэвида, он может продать их на рынке
-          по $60 за штуку и заработать по $10 с каждой проданной бумаги. За
-          вычетом уплаченной премии в $100 доход Дэвида составит $900.
-        </p>
-        <p className={s.text}>
-          Луизе же придется продать 100 акций Your Coffee Дэвиду по цене ниже
-          рыночной. Она лишится возможности получить прибыль $1000 от роста
-          стоимости бумаг, а взамен получит премию $100.
-        </p>
-        <p className={s.text}>
-          <span>Если цена акций упадет</span>
-        </p>
-        <p className={s.text}>
-          Теперь представим, что предположения Дэвида оказались ошибочными и
-          акции Your Coffee подешевели с $50 до $40 за бумагу прямо перед
-          истечением срока действия контракта. В таком случае Дэвид может
-          отказаться от его исполнения.
-        </p>
-        <p className={s.text}>
-          Покупать акции за $50 у Луизы нет смысла, поскольку на рынке бумаги
-          торгуются дешевле, но премию $100 никто не вернет — это прямой убыток
-          от покупки опциона.
-        </p>
-        <p className={s.text}>
-          <span>Страйк</span> — цена, по которой покупатель опциона имеет право
-          купить, а продавец обязан продать базовый актив.
-        </p>
-        <p className={s.text}>
-          В зависимости от движения рынка обе стороны опционного контракта могут
-          извлечь выгоду. Если ожидания покупателя оправдаются, он заработает на
-          изменении котировок. В обратной ситуации, когда оправдываются ожидания
-          продавца, он останется при своих акциях с премией на руках. Рассмотрим
-          два варианта развития событий опционного контракта Дэвида и Луизы.
-        </p>
-        <img className={s.image} src={Course15} alt="courseImg" />
-        <p className={s.text}>
-          В то же время у Луизы всё хорошо — она все еще владеет 100 акциями
-          Your Coffee, хотя они подешевели. Часть потерь удалось компенсировать
-          премией $100 от продажи опциона Дэвиду.
-        </p>
-      </section>
-      <section className={s.premium} id="premium">
-        <TitleSection
-          title="Как формируется размер премии"
-          label="Урок 1. Что такое опционы"
-        />
-        <p className={s.text}>
-          Стоимость контракта, как и на любом рынке, определяется соотношением
-          спроса и предложения. Например, если к Дэвиду и Луизе присоединится
-          третий участник, то продавец опциона может выбирать, кто готов
-          заплатить больше.
-        </p>
-        <img className={s.image} src={Course16} alt="courseImg" />
-        <p className={s.text}>
-          Чтобы определить, стоит ли покупать контракт, участники взвешивают
-          риски и величину прогнозируемой прибыли от сделки. При принятии
-          решения учитывается время до истечения опциона, величина
-          предполагаемого движения котировок и рыночные колебания цены в течение
-          срока опционного контракта.
-        </p>
-      </section>
-      <section className={s.put} id="put">
-        <TitleSection
-          title="Что такое опцион пут"
-          label="Урок 1. Что такое опционы"
-        />
-        <p className={s.text}>
-          Теперь представим, что акциями Your Coffee владеет Дэвид, а Луиза
-          присматривается к бумагам.
-        </p>
-        <p className={s.text}>
-          Текущая цена акций — $50 за бумагу. Дэвид почитал новости компании,
-          изучил финансовые показатели и решил, что в ближайшее время акции
-          могут скорректироваться. В ближайшие две недели, когда Your Coffee
-          опубликует отчет, котировки могут опуститься до $40 за акцию.
-          Продавать акции Дэвид не хочет — он убежден, что в долгосрочной
-          перспективе бумаги вырастут, но лучше подстраховаться.
-        </p>
-        <p className={s.text}>
-          Луиза, напротив, считает, что акции Your Coffee будут расти после
-          выхода отчета. Она общалась с управляющим кофейни, который рассказал,
-          что дела у компании идут в гору.
-        </p>
-        <p className={s.text}>
-          В таком случае Дэвид может договориться с Луизой о следующем:
-        </p>
-        <ul>
-          <li className={s.list}>
-            Дэвид выплачивает Луизе единовременную премию, к примеру $100,
-            которая не подлежит возврату.
-          </li>
-          <li className={s.list}>
-            Если через две недели акции Your Coffee вырастут до $55 за бумагу,
-            Луиза продаст их Дэвиду по старой цене — $50 за акцию.
-          </li>
-          <li className={s.list}>
-            Если за это время котировки Your Coffee вырастут, Дэвид может не
-            продавать Луизе свои ценные бумаги.
-          </li>
-        </ul>
-        <p className={s.text}>
-          Такой тип контракта называется <span>пут-опцион</span>. Его
-          приобретают когда ждут падения цены базового актива.{' '}
-        </p>
-        <p className={s.text}>
-          <span>Опцион пут</span> — тип контракта, который дает право покупателю
-          опциона продать акции по заранее установленной цене в течение
-          определенного времени.
-        </p>
-      </section>
-      <section className={s.trade} id="trade">
-        <TitleSection
-          title="Что следует помнить при торговле опционами"
-          label="Урок 1. Что такое опционы"
-        />
-        <p className={s.text}>
-          Дэвид усвоил, что с помощью опционов можно заработать на движении
-          рыночной цены акций. При этом не обязательно быть владельцем ценной
-          бумаги.
-        </p>
-        <p className={s.text}>
-          При ожидаемом росте акций можно воспользоваться опционом колл. Когда
-          стоимость акций будет расти, инвестор получит доход от разницы между
-          ценой контракта и рыночной ценой акций.
-        </p>
-        <p className={s.text}>
-          При ожидаемом снижении котировок базового актива можно воспользоваться
-          опционом пут, чтобы застраховать вложения от возможных убытков.
-        </p>
-        <img className={s.image} src={Course17} alt="courseImg" />
-        <p className={s.text}>
-          Оба этих вида опционов можно комбинировать различными способами.
-          Покупая и продавая опционы, инвесторы могут зарабатывать деньги, когда
-          рынок движется в разные стороны.
-        </p>
-      </section>
-    </div>
-  </>
-)
+export const Course1 = () => {
+  const [t] = useTranslation('course1')
+
+  return (
+    <>
+      <Course1Sidebar />
+      <div className={s.course1}>
+        <img className={s.courseImg} src={Course1Img} alt="course" />
+        <section className={s.whatIsOption} id="whatIsOption">
+          <TitleSection
+            title={t('whatIsOption.title')}
+            label={t('whatIsOption.label')}
+          />
+          <p className={s.text}>{t('whatIsOption.text1')}</p>
+          <p className={s.text}>{t('whatIsOption.text2')}</p>
+          <img className={s.image} src={Course11} alt="courseImg" />
+          <p className={s.text}>{t('whatIsOption.text3')}</p>
+          <p className={s.text}>
+            <span> {t('whatIsOption.text4Bold')}</span> —
+            {t('whatIsOption.text4')}
+          </p>
+          <p className={s.text}>{t('whatIsOption.text5')}</p>
+          <p className={s.text}>
+            <span> {t('whatIsOption.text6Bold')}</span>{' '}
+            {t('whatIsOption.text6')}
+          </p>
+        </section>
+        <section className={s.howWorkOption} id="howWorkOption">
+          <TitleSection
+            title={t('howWorkOption.title')}
+            label={t('howWorkOption.label')}
+          />
+          <p className={s.text}>title={t('howWorkOption.text1')}</p>
+          <p className={s.text}>title={t('howWorkOption.text2')}</p>
+          <p className={s.text}>title={t('howWorkOption.text3')}</p>
+          <img className={s.image} src={Course12} alt="courseImg" />
+          <p className={s.text}>title={t('howWorkOption.text4')}</p>
+        </section>
+        <section className={s.call} id="call">
+          <TitleSection title={t('call.title')} label={t('call.label')} />
+          <p className={s.text}>{t('call.text1')}</p>
+          <ul>
+            <li className={s.list}>{t('call.list1.item1')}</li>
+            <li className={s.list}>{t('call.list1.item2')}</li>
+            <li className={s.list}>{t('call.list1.item3')}</li>
+          </ul>
+          <img className={s.image} src={Course13} alt="courseImg" />
+          <p className={s.text}>
+            {t('call.text2')} <span>{t('call.text2Bold')}</span> В
+            {t('call.text3')}
+          </p>
+          <p className={s.text}>
+            <span>{t('call.text4Bold')}</span> {t('call.text4')}
+          </p>
+          <p className={s.text}>
+            {t('call.tex5')} <span>{t('call.text5Bold')}</span>
+            {t('call.text6')}
+          </p>
+          <p className={s.text}>
+            <span>{t('call.text7Bold')}</span> {t('call.text7')}
+          </p>
+          <p className={s.text}>{t('call.text8')}</p>
+          <p className={s.text}>
+            <span>{t('call.text9Bold')}</span>
+          </p>
+          <p className={s.text}>{t('call.text9')}</p>
+          <img className={s.image} src={Course14} alt="courseImg" />
+          <p className={s.text}>{t('call.text10')}</p>
+          <p className={s.text}>{t('call.text11')}</p>
+          <p className={s.text}>
+            <span>{t('call.text12Bold')}</span>
+          </p>
+          <p className={s.text}>{t('call.text12')}</p>
+          <p className={s.text}>{t('call.text13')}</p>
+          <p className={s.text}>
+            <span>{t('call.text14Bold')}</span> —{t('call.text14')}
+          </p>
+          <p className={s.text}>{t('call.text15')}</p>
+          <img className={s.image} src={Course15} alt="courseImg" />
+          <p className={s.text}>{t('call.text16')}</p>
+        </section>
+        <section className={s.premium} id="premium">
+          <TitleSection title={t('premium.title')} label={t('premium.label')} />
+          <p className={s.text}>label={t('premium.text1')}</p>
+          <img className={s.image} src={Course16} alt="courseImg" />
+          <p className={s.text}>label={t('premium.text2')}</p>
+        </section>
+        <section className={s.put} id="put">
+          <TitleSection title={t('put.title')} label={t('put.label')} />
+          <p className={s.text}>{t('put.text1')}</p>
+          <p className={s.text}>{t('put.text2')}</p>
+          <p className={s.text}>{t('put.text3')}</p>
+          <p className={s.text}>{t('put.text4')}</p>
+          <ul>
+            <li className={s.list}>{t('put.list1.item1')}</li>
+            <li className={s.list}>{t('put.list1.item2')}</li>
+            <li className={s.list}>{t('put.list1.item3')}</li>
+          </ul>
+          <p className={s.text}>
+            {t('put.text5')} <span>{t('put.text5Bold')}</span>
+            {t('put.text6')}
+          </p>
+          <p className={s.text}>
+            <span>{t('put.text7Bold')}</span> {t('put.text7')}
+          </p>
+        </section>
+        <section className={s.trade} id="trade">
+          <TitleSection title={t('trade.title')} label={t('trade.label')} />
+          <p className={s.text}>{t('trade.text1')}</p>
+          <p className={s.text}>{t('trade.text2')}</p>
+          <p className={s.text}>{t('trade.text3')}</p>
+          <img className={s.image} src={Course17} alt="courseImg" />
+          <p className={s.text}>{t('trade.text4')}</p>
+        </section>
+      </div>
+    </>
+  )
+}
