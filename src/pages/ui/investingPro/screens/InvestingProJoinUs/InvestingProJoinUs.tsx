@@ -29,7 +29,7 @@ export const InvestingProJoinUs = () => {
           <p className={s.text}>
             {t('joinUs.text')}
           </p>
-          <a className={s.joinUs_titleButton} href="#">
+          <a className={s.joinUs_titleButton} href="/login">
             {t('joinUs.joinButton')}
             <svg
               width="26"
@@ -215,7 +215,7 @@ export const InvestingProJoinUs = () => {
               .
             </p>
           </div>
-          <a className={s.analitic_button} href="#">
+          <a className={s.analitic_button} href="/trends">
             {t('joinUs.moreButton')}
             <svg
               xmlns="http://www.w3.org/2000/svg"
