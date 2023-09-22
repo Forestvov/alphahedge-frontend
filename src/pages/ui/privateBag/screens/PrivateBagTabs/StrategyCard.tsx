@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import s from './PrivateBagTabs.module.scss'
 
 interface StrategyCardProps {
@@ -12,6 +13,7 @@ interface StrategyCardProps {
 
 export const StrategyCard = ({ card }: StrategyCardProps) => {
   const { title, text, stock, bonds, stockWidth } = card
+  const [t] = useTranslation('privateBagPage')
 
   return (
     <div className={s.strategy_card}>
@@ -32,13 +34,13 @@ export const StrategyCard = ({ card }: StrategyCardProps) => {
         {stock && (
           <div className={s.strategy_label}>
             <div className={s.yellow} />
-            Акции
+            {t('tabs.tab2Stock')}
           </div>
         )}
         {bonds && (
           <div className={s.strategy_label}>
             <div className={s.orange} />
-            Облигации
+            {t('tabs.tab2Bonds')}
           </div>
         )}
       </div>
