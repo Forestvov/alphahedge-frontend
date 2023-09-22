@@ -12,6 +12,6 @@ export default class ReferalService {
   static async geReferal(
     data: ISort,
   ): Promise<AxiosResponse<IReferalResponse>> {
-    return $api.get<IReferalResponse>(`/referal/my?$${queryPhp(data)}`)
+    return $api.get<IReferalResponse>(`/referal/my?${queryPhp(data)}`)
   }
 }

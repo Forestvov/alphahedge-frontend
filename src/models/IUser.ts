@@ -13,6 +13,6 @@ export interface IUser {
   status: StatusAccountType
   verifiedStatus: string
   referalAccountFio: string
-  referalAccountId: string
+  referalAccountId: number
   referalAccountUsername: string
 }

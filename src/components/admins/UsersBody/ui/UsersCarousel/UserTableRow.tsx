@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import useGetMainInfo from 'hooks/useGetMainInfo'
+
 import { floorPrice } from 'helpers/floorPrice'
 
 import { IUser } from 'models/IUser'
@@ -24,6 +26,18 @@ export const UserTableRow = (props: IUser) => {
     referalAccountUsername,
   } = props
 
+  const getUser = useGetMainInfo()
+
+  const setUserId = async (id: number) => {
+    try {
+      await localStorage.setItem('Account-Id', id.toString())
+      await localStorage.setItem('editor', '1')
+      await getUser()
+    } catch (e) {
+      console.log('Error fetch user', e)
+    }
+  }
+
   return (
     <TableRow className={s.row}>
       <TableCell className={s.first}>
@@ -31,7 +45,10 @@ export const UserTableRow = (props: IUser) => {
         {referalAccountId && (
           <div className={s.referal}>
             Зарегистрировался по реф. ссылке от:{' '}
-            <Link to={`/admin/user/${referalAccountId}/dashboard`}>
+            <Link
+              to={`/admin/user/${referalAccountId}/dashboard`}
+              onClick={() => setUserId(referalAccountId)}
+            >
               {referalAccountUsername}
             </Link>
           </div>
