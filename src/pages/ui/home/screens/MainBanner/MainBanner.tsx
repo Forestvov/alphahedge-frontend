@@ -51,7 +51,7 @@ export const MainBanner: FC = () => {
             <span className={s.typed} ref={el} />
           </h1>
           <p className={s.text}>{t('bannerText')}</p>
-          <a className={s.link} href="/">
+          <a className={s.link} href="/login">
             {t('bannerBtn')}
             <img className={s.arrow} src={ArrowLinkWhite} alt="logo" />
           </a>
