@@ -32,7 +32,7 @@ export const Contacts = () => {
     {
       title: t('card2.title'),
       text: t('card2.text'),
-      link: 'ah-support@gmail.com',
+      link: 'alphahedgeholdings@gmail.com',
       type: 'mail',
     },
     {
