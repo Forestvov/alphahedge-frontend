@@ -32,7 +32,7 @@ import s from './TransactionForm.module.scss'
 
 const { getCoinPrice, addTransaction } = TransactionServices
 const { getProfileTokens } = AccountServices
-const { getTokens } = TransactionServices
+// const { getTokens } = TransactionServices
 
 export const TransactionForm = (props: ITransactionForm) => {
   const { className, type, fetch } = props
