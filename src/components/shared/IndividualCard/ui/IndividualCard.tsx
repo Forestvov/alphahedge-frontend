@@ -84,7 +84,7 @@ export const IndividualCard = (props: IIndividualCard) => {
 
           {isOpen && (
             <div className={s.totalAmount}>
-              <div className={s.amount}>{formatPrice(amount)}</div>{' '}
+              <div className={s.amount}>$ {formatPrice(amount)}</div>{' '}
               <span>{p('totalInvest')}</span>
             </div>
           )}

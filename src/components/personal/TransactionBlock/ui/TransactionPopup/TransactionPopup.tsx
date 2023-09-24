@@ -32,8 +32,9 @@ const coins: any = {
   Payeer: 'USD',
 }
 
-const coinPrice = (value: number, rad: number = 100): number =>
-  value > 1 ? parseInt(String(value * 100), 10) / rad : value
+function coinPrice(e: number) {
+  return e % 1 === 0 ? e.toFixed(0) : e.toFixed(6)
+}
 
 export const TransactionPopup = (props: ITransactionPopup) => {
   const { transactionId, body } = props
@@ -103,7 +104,7 @@ export const TransactionPopup = (props: ITransactionPopup) => {
 
             <div className={s.row}>
               <div className={s.value}>
-                <span>{coinPrice(Number(total), 1000000)}</span>{' '}
+                <span>{coinPrice(Number(total))}</span>{' '}
                 {coins[data.currencyToken]}
               </div>
               <div className={s.notification}>
@@ -125,7 +126,7 @@ export const TransactionPopup = (props: ITransactionPopup) => {
                 www.alphahedge-holdings.com {floorPrice(data.amount)} USD
               </div>
               <div className={s.total}>
-                {coinPrice(Number(total), 1000000)} {coins[data.currencyToken]}
+                {coinPrice(Number(total))} {coins[data.currencyToken]}
               </div>
             </div>
             <div className={s.right}>
