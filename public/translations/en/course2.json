@@ -57,5 +57,30 @@
       "item2": "what and how to invest in,",
       "item3": "how to build and manage your portfolio."
     }
+  },
+  "sidebar": {
+    "lesson1": {
+      "header": "Lesson 1: Why is it important to invest?",
+      "title1": "Why is it important to invest?",
+      "title2": "Money is an important resource, it influences our lives",
+      "title3": "Inflation is an increase in prices and a decrease in the purchasing power of money.",
+      "title4": "Investments will help beat inflation and earn money",
+      "title5": "The magic of compound interest increases investments"
+    },
+    "lesson2": {
+      "header": "Lesson 2. What and how to invest in"
+    },
+    "lesson3": {
+      "header": "Lesson 3. Shares: how to invest in business?"
+    },
+    "lesson4": {
+      "header": "Lesson 4. Bonds: how to lend to a company or state?"
+    },
+    "lesson5": {
+      "header": "Lesson 5. ETF: how to invest in several companies at once"
+    },
+    "lesson6": {
+      "header": "Lesson 6. Portfolio: How to Achieve Your Investment Goals"
+    }
   }
 }

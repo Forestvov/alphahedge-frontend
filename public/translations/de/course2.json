@@ -57,5 +57,30 @@
       "item2": "in was und wie man investiert,",
       "item3": "wie Sie Ihr Portfolio aufbauen und verwalten."
     }
+  },
+  "sidebar": {
+    "lesson1": {
+      "header": "Lektion 1: Warum ist es wichtig zu investieren?",
+      "title1": "Warum ist es wichtig zu investieren?",
+      "title2": "Geld ist eine wichtige Ressource, es beeinflusst unser Leben",
+      "title3": "Unter Inflation versteht man einen Anstieg der Preise und einen Rückgang der Kaufkraft des Geldes.",
+      "title4": "Investitionen werden dazu beitragen, die Inflation zu bekämpfen und Geld zu verdienen",
+      "title5": "Der Zauber des Zinseszinses erhöht die Investitionen"
+    },
+    "lesson2": {
+      "header": "Lektion 2. Worin und wie man investiert"
+    },
+    "lesson3": {
+      "header": "Lektion 3. Aktien: Wie investiert man in Unternehmen?"
+    },
+    "lesson4": {
+      "header": "Lektion 4. Anleihen: Wie kann man einem Unternehmen oder einem Staat Kredite gewähren?"
+    },
+    "lesson5": {
+      "header": "Lektion 5. ETF: So investieren Sie in mehrere Unternehmen gleichzeitig"
+    },
+    "lesson6": {
+      "header": "Lektion 6. Portfolio: So erreichen Sie Ihre Anlageziele"
+    }
   }
 }

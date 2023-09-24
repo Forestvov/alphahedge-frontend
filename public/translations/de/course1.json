@@ -82,5 +82,31 @@
     "text2": "Wenn erwartet wird, dass die Aktie steigt, können Sie eine Call-Option nutzen. ",
     "text3": "Wenn ein Rückgang der Kurse des Basiswerts zu erwarten ist, können Sie eine Put-Option nutzen, um Ihre Anlage gegen mögliche Verluste abzusichern.",
     "text4": "Beide Möglichkeiten können auf unterschiedliche Art und Weise kombiniert werden. "
+  },
+  "sidebar": {
+    "lesson1": {
+      "header": "Lektion 1. Optionshandel, Forex.",
+      "title1": "Welche Optionen gibt es?",
+      "title2": "Wie funktioniert eine Option?",
+      "title3": "Was ist eine Anrufoption?",
+      "title4": "Wie wird die Prämienhöhe ermittelt?",
+      "title5": "Was ist eine Put-Option?",
+      "title6": "Was Sie beim Handel mit Optionen beachten sollten"
+    },
+    "lesson2": {
+      "header": "Lektion 2. Forex"
+    },
+    "lesson3": {
+      "header": "Lektion 3. Positionsmanagement üben"
+    },
+    "lesson4": {
+      "header": "Lektion 4. Smart Money-Konzept"
+    },
+    "lesson5": {
+      "header": "Lektion 5. Handelsstrategien"
+    },
+    "lesson6": {
+      "header": "Lektion 6. Live-Handel"
+    }
   }
 }

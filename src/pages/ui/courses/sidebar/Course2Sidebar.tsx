@@ -1,40 +1,15 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useWindowSize } from 'hooks/useWindowSize'
 import { ArrowAccordionIcon, LockIcon } from 'assets/icons'
 import { SidebarAccordion } from './SidebarAccordion'
 import s from './Sidebar.module.scss'
 
-const sidebarCourse2Data = {
-  header: 'Урок 1. Почему важно инвестировать?  ',
-  titles: [
-    {
-      label: 'Почему важно инвестировать?',
-      value: 'importantInvest',
-    },
-    {
-      label: 'Деньги — это важный ресурс, они влияют на нашу жизнь',
-      value: 'money',
-    },
-    {
-      label:
-        'Инфляция — это рост цен и снижение покупательной способности денег.',
-      value: 'inflation',
-    },
-    {
-      label: 'Инвестиции помогут победить инфляцию и заработать',
-      value: 'investWin',
-    },
-    {
-      label: 'Магия сложного процента увеличивает вложения',
-      value: 'magic',
-    },
-  ],
-}
-
 export const Course2Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true)
   const [showSidebar, setShowSidebar] = useState(true)
   const { width } = useWindowSize()
+  const [t] = useTranslation('course2')
 
   useEffect(() => {
     if (width < 1500) {
@@ -50,6 +25,32 @@ export const Course2Sidebar = () => {
 
   const onToggle = () => {
     setIsOpen((prevState) => !prevState)
+  }
+
+  const sidebarCourse2Data = {
+    header: t('sidebar.lesson1.header'),
+    titles: [
+      {
+        label: t('sidebar.lesson1.title1'),
+        value: 'importantInvest',
+      },
+      {
+        label: t('sidebar.lesson1.title2'),
+        value: 'money',
+      },
+      {
+        label: t('sidebar.lesson1.title3'),
+        value: 'inflation',
+      },
+      {
+        label: t('sidebar.lesson1.title4'),
+        value: 'investWin',
+      },
+      {
+        label: t('sidebar.lesson1.title5'),
+        value: 'magic',
+      },
+    ],
   }
 
   return (
@@ -74,7 +75,7 @@ export const Course2Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 2. Во что и как инвестировать
+          {t('sidebar.lesson2.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -82,7 +83,7 @@ export const Course2Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 3. Акции: как инвестировать в бизнес?
+          {t('sidebar.lesson3.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -90,7 +91,7 @@ export const Course2Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 4. Облигации: как дать в долг компании или государству?
+          {t('sidebar.lesson4.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -98,7 +99,7 @@ export const Course2Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 5. ETF: как инвестировать сразу в несколько компаний
+          {t('sidebar.lesson5.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -106,7 +107,7 @@ export const Course2Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 6. Портфель: как достичь инвестиционных целей
+          {t('sidebar.lesson6.header')}
         <img src={LockIcon} alt="lock" />
       </button>
     </div>
