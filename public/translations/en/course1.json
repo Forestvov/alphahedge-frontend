@@ -82,5 +82,31 @@
     "text2": "If the stock is expected to rise, you can use a call option. ",
     "text3": "If the quotes of the underlying asset are expected to decline, you can use a put option to insure your investment against possible losses.",
     "text4": "Both of these types of options can be combined in various ways. "
+  },
+  "sidebar": {
+    "lesson1": {
+      "header": "Lesson 1. Options trading, Forex.",
+      "title1": "What are options",
+      "title2": "How does an option work?",
+      "title3": "What is a call option",
+      "title4": "How is the premium amount determined?",
+      "title5": "What is a put option",
+      "title6": "What to Remember When Trading Options"
+    },
+    "lesson2": {
+      "header": "Lesson 2. Forex"
+    },
+    "lesson3": {
+      "header": "Lesson 3. Practice position management"
+    },
+    "lesson4": {
+      "header": "Lesson 4. Smart Money concept"
+    },
+    "lesson5": {
+      "header": "Lesson 5. Trading strategies"
+    },
+    "lesson6": {
+      "header": "Lesson 6. Live trading"
+    }
   }
 }

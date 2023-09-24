@@ -1,43 +1,15 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useWindowSize } from 'hooks/useWindowSize'
 import { ArrowAccordionIcon, LockIcon } from 'assets/icons'
 import { SidebarAccordion } from './SidebarAccordion'
 import s from './Sidebar.module.scss'
 
-const sidebarCourse1Data = {
-  header: 'Урок 1. Торговля опционами, форекс.',
-  titles: [
-    {
-      label: 'Что такое опционы',
-      value: 'whatIsOption',
-    },
-    {
-      label: 'Как работает опцион',
-      value: 'howWorkOption',
-    },
-    {
-      label: 'Что такое опцион колл',
-      value: 'call',
-    },
-    {
-      label: 'Как формируется размер премии',
-      value: 'premium',
-    },
-    {
-      label: 'Что такое опцион пут',
-      value: 'put',
-    },
-    {
-      label: 'Что следует помнить при торговле опционами',
-      value: 'trade',
-    },
-  ],
-}
-
 export const Course1Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true)
   const [showSidebar, setShowSidebar] = useState(true)
   const { width } = useWindowSize()
+  const [t] = useTranslation('course1')
 
   useEffect(() => {
     if (width < 1500) {
@@ -53,6 +25,36 @@ export const Course1Sidebar = () => {
 
   const onToggle = () => {
     setIsOpen((prevState) => !prevState)
+  }
+
+  const sidebarCourse1Data = {
+    header: t('sidebar.lesson1.header'),
+    titles: [
+      {
+        label: t('sidebar.lesson1.title1'),
+        value: 'whatIsOption',
+      },
+      {
+        label: t('sidebar.lesson1.title2'),
+        value: 'howWorkOption',
+      },
+      {
+        label: t('sidebar.lesson1.title3'),
+        value: 'call',
+      },
+      {
+        label: t('sidebar.lesson1.title4'),
+        value: 'premium',
+      },
+      {
+        label: t('sidebar.lesson1.title5'),
+        value: 'put',
+      },
+      {
+        label: t('sidebar.lesson1.title6'),
+        value: 'trade',
+      },
+    ],
   }
 
   return (
@@ -77,7 +79,7 @@ export const Course1Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 2. Форекс
+        {t('sidebar.lesson2.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -85,7 +87,7 @@ export const Course1Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 3. Практика управление позиций
+        {t('sidebar.lesson3.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -93,7 +95,7 @@ export const Course1Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 4. Концепт смарт-Мани
+        {t('sidebar.lesson4.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -101,7 +103,7 @@ export const Course1Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 5. Торговые стратегии
+        {t('sidebar.lesson5.header')}
         <img src={LockIcon} alt="lock" />
       </button>
       <button
@@ -109,7 +111,7 @@ export const Course1Sidebar = () => {
         disabled
         type="button"
       >
-        Урок 6. Лайв торговля
+        {t('sidebar.lesson6.header')}
         <img src={LockIcon} alt="lock" />
       </button>
     </div>
