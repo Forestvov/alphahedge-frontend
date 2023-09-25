@@ -15,7 +15,13 @@ export const WelcomeHeader = () => {
 
   const getCurrentTime = (): string => {
     const date = new Date()
-    const currentTime = `${date.getHours()}:${date.getMinutes()}`
+
+    const hours = date.getHours()
+    const minutes = date.getMinutes()
+
+    const currentTime = `${hours > 9 ? hours : `0${hours}`}:${
+      minutes > 9 ? minutes : `0${minutes}`
+    }`
 
     return `${currentTime}`
   }
@@ -43,7 +49,7 @@ export const WelcomeHeader = () => {
     const month = now.getMonth()
     const year = now.getFullYear()
 
-    return `${day} ${monthsString[month]} ${year}`
+    return `${day > 9 ? day : `0${day}`} ${monthsString[month]} ${year}`
   }
 
   return (

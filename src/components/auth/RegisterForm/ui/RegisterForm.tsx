@@ -77,9 +77,9 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
       await navigator('/verify')
     } catch (e) {
       // @ts-ignore
-      const {message} = e.response.data
+      const { message } = e.response.data
 
-      if (message === 'Email already existed') {
+      if (message === 'Email or username are already existed') {
         notifyError()
       }
     } finally {

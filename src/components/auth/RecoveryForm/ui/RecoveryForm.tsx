@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { FormProvider, useForm } from 'react-hook-form'
 import axios from 'axios'
@@ -37,12 +37,6 @@ export const RecoveryForm = ({ checkToken }: { checkToken: boolean }) => {
   // @ts-ignore
   const methods = useForm<IFields>({ resolver })
 
-  useEffect(() => {
-    if (checkToken && code) {
-      console.log(checkToken)
-    }
-  }, [checkToken])
-
   const { handleSubmit, setValue, reset } = methods
 
   const notifyError = () => toast.error(n('errorMessage'))
@@ -79,7 +73,7 @@ export const RecoveryForm = ({ checkToken }: { checkToken: boolean }) => {
     try {
       await axios.request<IAuthResponse>(config)
       notifySuccess(
-        checkToken && code ? n('changePassword') : n('sendLinkFromEmail'),
+        checkToken && code ? t('changePassword') : t('sendLinkFromEmail'),
       )
 
       if (checkToken && code) {
@@ -110,10 +104,10 @@ export const RecoveryForm = ({ checkToken }: { checkToken: boolean }) => {
               />
             </div>
             <div className={s.row}>
-              <div className={s.label}>{f('repeatPassowrd')}</div>
+              <div className={s.label}>{t('repeatPassowrd')}</div>
               <Input
                 className={s.input}
-                placeholder={f('repeatPassowrd')}
+                placeholder={t('repeatPassowrd')}
                 type="password"
                 name="repeat_password"
               />
