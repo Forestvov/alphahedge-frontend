@@ -43,7 +43,7 @@ export const WelcomeHeader = () => {
     const month = now.getMonth()
     const year = now.getFullYear()
 
-    return `${day} ${monthsString[month - 1]} ${year}`
+    return `${day} ${monthsString[month]} ${year}`
   }
 
   return (
