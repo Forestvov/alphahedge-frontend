@@ -12,13 +12,13 @@
     "title": "Liste der Kurse",
     "card1": {
       "title": "Optionshandel, Forex.",
-      "label": "Also",
-      "description": "Der Optionshandelskurs richtet sich an erfahrenere Anleger, die ihre Fähigkeiten erweitern und die Effizienz ihrer Investitionen steigern möchten. "
+      "label": "Kurs Nr. 1",
+      "description": "Der Optionshandelskurs richtet sich an erfahrenere Anleger, die ihre Fähigkeiten erweitern und die Effizienz ihrer Investitionen steigern möchten. Wir werden uns anhand konkreter Beispiele verschiedene Optionshandelsstrategien und Merkmale des Optionspositionsmanagements ansehen."
     },
     "card2": {
-      "label": "Also",
+      "label": "Kurs Nr. 2",
       "title": "Anlagegrundlagen.",
-      "description": "Anlage-Grundlagenkurs für Einsteiger. "
+      "description": "Anlage-Grundlagenkurs für Einsteiger. Wenn Sie keine Ahnung vom Investieren haben, ist dieser Kurs genau das Richtige für Sie. Wir erklären Ihnen, was Wertpapiere sind, wo Sie sie kaufen können und wie Sie mit Bedacht ein Anlageportfolio aufbauen, um maximale Erträge bei geringstem Risiko zu erzielen."
     },
     "button": "Beginne zu trainieren"
   },
@@ -57,7 +57,7 @@
     },
     "card7": {
       "title": "Praktische Erfahrung",
-      "desc": "Bei uns steht die Praxiserfahrung im Vordergrund. "
+      "desc": "Bei uns steht die Praxiserfahrung im Vordergrund. Während der Schulung arbeiten Sie mit realen Daten und Trades und entwickeln und testen Ihre Strategien."
     }
   }
 }

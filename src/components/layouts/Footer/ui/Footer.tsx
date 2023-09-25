@@ -50,7 +50,7 @@ export const Footer = () => {
                   <Link to="/trends">{l('trendsLink')}</Link>
                 </li>
                 <li>
-                  <Link to="/">IvestingPro</Link>
+                  <Link to="/investingPro">IvestingPro</Link>
                 </li>
                 <li>
                   <Link to="/login">{l('account')}</Link>

@@ -12,13 +12,13 @@
     "title": "List of courses",
     "card1": {
       "title": "Options trading, Forex.",
-      "label": "Well",
-      "description": "The Options Trading course is designed for more experienced investors who want to expand their capabilities and increase the efficiency of their investments. "
+      "label": "Course #1",
+      "description": "The Options Trading course is designed for more experienced investors who want to expand their capabilities and increase the efficiency of their investments. We will look at various options trading strategies and features of option position management using specific examples."
     },
     "card2": {
-      "label": "Well",
+      "label": "Course #2",
       "title": "Investment Basics.",
-      "description": "Investment Fundamentals course for beginners. "
+      "description": "Investment Fundamentals course for beginners. If you don't know anything about investing, this course is for you. We'll tell you what securities are, where you can buy them, and how to wisely build an investment portfolio to get maximum income with the least risk. "
     },
     "button": "Start training"
   },
@@ -57,7 +57,7 @@
     },
     "card7": {
       "title": "Practical experience",
-      "desc": "We focus on practical experience. "
+      "desc": "We focus on practical experience. During the training, you will work with real data and trades, developing and backtesting your strategies."
     }
   }
 }

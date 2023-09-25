@@ -31,23 +31,23 @@
     },
     "tab2Card1": {
       "title": "Aggressive growth strategy",
-      "text": "The goal of this strategy is to achieve maximum returns in the long term through diversified investments in equity securities (stocks). "
+      "text": "The goal of this strategy is to achieve maximum returns in the long term through diversified investments in equity securities (stocks). The strategy's assets are 100% invested in equity securities; however, depending on the market situation and to better achieve the strategy's goals, the share of investments in equity securities can be increased or decreased ranging from 70% to 100% of assets strategy portfolio.This strategy is suitable for investors who want to invest for a period of at least 10 years."
     },
     "tab2Card2": {
       "title": "Growth strategy",
-      "text": "The goal of this strategy is to increase the value of invested assets through investments with increased risk for a medium to long term. "
+      "text": "The goal of this strategy is to increase the value of invested assets through investments with increased risk for a medium to long term. The goal is expected to be achieved through diversified investments in equity securities (stocks) and fixed income securities, including money market instruments. 75% of the strategy's assets are invested in equity securities. Depending on the market situation and to more successfully achieve the strategy’s goals, the share of investments in equity securities can be increased or decreased in the range from 60% to 90% of the assets of the strategy portfolio. This strategy is suitable for investors who are willing to take on higher risk and want to invest for a period of at least 7 years."
     },
     "tab2Card3": {
       "title": "Balanced strategy",
-      "text": "The goal of this strategy is a medium-term increase in the value of assets through investments with moderate risk. "
+      "text": "The goal of this strategy is a medium-term increase in the value of assets through investments with moderate risk. The goal is expected to be achieved through diversified investments in equity securities (stocks) and fixed income securities, including money market instruments. The strategy's assets in the amount of 40% are invested in equity securities. Depending on the market situation and to more successfully achieve the goal of the Strategy, the share of investments in equity securities can be increased or decreased in the range from 25% to 55% of the assets of the strategy portfolio.This strategy is suitable for investors with a medium-term investment period (at least 5 years)."
     },
     "tab2Card4": {
       "title": "Real Value Strategy",
-      "text": "The goal of this strategy is a moderate increase in asset value through low-risk investments. "
+      "text": "The goal of this strategy is a moderate increase in asset value through low-risk investments. Assets are primarily invested in bonds, including money market instruments. On average, 10% of the strategy's assets are invested in equity securities (stocks) to diversify investment risk and improve return potential. Depending on the market situation and to more successfully achieve the strategy’s goals, the share of investments in equity securities can be increased or decreased in the range from 0% to 20% of the assets of the strategy portfolio.The strategy is suitable for investors who are less experienced in financial markets and want to hold their investment portfolio for at least three years."
     },
     "tab2Card5": {
       "title": "Conservative strategy",
-      "text": "The goal of this strategy is to preserve asset value through diversified bond investments. "
+      "text": "The goal of this strategy is to preserve asset value through diversified bond investments. Up to 100% of the strategy's assets are invested in bonds, including money market instruments.This strategy is suitable for investors who want to avoid large fluctuations in the value of their investments over a period of one year or longer."
     },
     "tab2Stock": "Stock",
     "tab2Bonds": "Bonds"
