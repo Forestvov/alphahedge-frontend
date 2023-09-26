@@ -20,11 +20,11 @@
   },
   "knowledge": {
     "title": "Investing in Knowledge and Social Responsibility",
-    "text": "The company has gained experience in various financial sectors and expanded the geography of its activities. ",
+    "text": "The company has gained experience in various financial sectors and expanded the geography of its activities.",
     "numberLabel": "Charity projects",
     "card1": {
       "title": "Employees",
-      "text": "The foundation also invested heavily in the education of its employees. "
+      "text": "The foundation also invested heavily in the education of its employees."
     },
     "card2": {
       "title": "Research",
@@ -32,7 +32,7 @@
     },
     "card3": {
       "title": "Charity",
-      "text": "The Foundation also attached importance to social responsibility. "
+      "text": "The Foundation also attached importance to social responsibility."
     }
   }
 }
