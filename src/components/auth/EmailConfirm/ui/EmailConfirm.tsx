@@ -17,7 +17,8 @@ export const EmailConfirm = () => {
 
   const [loader, setLoader] = useState(false)
   const [success, setSuccess] = useState(false)
-  const [errorConfirm, setErrorConfirm] = useState(false)
+  const [successConfirm, setSuccessConfirm] = useState(false)
+
   const navigate = useNavigate()
   const { id } = useParams()
 
@@ -61,8 +62,9 @@ export const EmailConfirm = () => {
       }
       await axios.request<IAuthResponse>(config)
     } catch (e) {
-      setErrorConfirm(true)
       console.log(e)
+    } finally {
+      setSuccessConfirm(true)
     }
   }
 
@@ -72,7 +74,7 @@ export const EmailConfirm = () => {
     if (id) {
       verifyEmail()
     }
-  }, [])
+  }, [id])
 
   const onSubmit = (data: any) => {
     if (!currentEmail) {
@@ -88,28 +90,30 @@ export const EmailConfirm = () => {
     <FormProvider {...methods}>
       <form className={s.wrapper} onSubmit={methods.handleSubmit(onSubmit)}>
         <h1 className={s.title}>
-          {errorConfirm ? a('isConfirmEmail') : a('isNotConfirmEmail')}
+          {successConfirm ? a('isConfirmEmail') : a('isNotConfirmEmail')}
         </h1>
-        {errorConfirm ? (
+        {successConfirm ? (
           <p className={s.text}>{a('isConfirmEmailText')}</p>
         ) : (
           <p className={s.text}>{a('isNotConfirmEmailText')}</p>
         )}
-        <div className={s.links}>
-          {currentEmail ? (
-            <span className={s.email}>
-              {localStorage.getItem('acceptEmail')}
-            </span>
-          ) : (
-            <Input
-              placeholder={a('repeatEmail')}
-              disabled={success}
-              type="email"
-              name="email"
-            />
-          )}
-        </div>
-        {!errorConfirm ? (
+        {!successConfirm && (
+          <div className={s.links}>
+            {currentEmail ? (
+              <span className={s.email}>
+                {localStorage.getItem('acceptEmail')}
+              </span>
+            ) : (
+              <Input
+                placeholder={a('repeatEmail')}
+                disabled={success}
+                type="email"
+                name="email"
+              />
+            )}
+          </div>
+        )}
+        {!successConfirm ? (
           <button
             className={s.submit}
             disabled={loader || success}
@@ -128,7 +132,7 @@ export const EmailConfirm = () => {
           </button>
         )}
         {success && <div className={s.description}>{a('isSendEmail')}</div>}
-        {!errorConfirm && (
+        {!successConfirm && (
           <button
             className={s.after}
             onClick={() => navigate('/')}

@@ -104,7 +104,7 @@ export const TransactionForm = (props: ITransactionForm) => {
       }
 
       const validateToken =
-        tokenName.label === 'TRC20' ? 'Tether' : tokenName.label
+        tokenName.label === 'TRC20' ? 'Tron' : tokenName.label
 
       if (!paymentCart[tokenName.label]) {
         if (!WAValidator.validate(_data.contact, validateToken)) {
