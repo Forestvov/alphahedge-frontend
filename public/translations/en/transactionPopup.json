@@ -5,5 +5,5 @@
   "amount": "Amount",
   "selected": "Selected network",
   "address": "Address",
-  "transaction": "Transaction sent from an exchange might fail."
+  "transaction": "The transaction may take several hours to process."
 }

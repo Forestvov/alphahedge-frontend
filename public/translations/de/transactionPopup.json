@@ -2,8 +2,8 @@
   "title": "Übertragen Sie es",
   "subTitle": "Bestellen",
   "text": "Bitte schließen Sie die Bestellung innerhalb der vereinbarten Frist ab und schließen Sie sie am Ende ab.",
-  "amount": "Количество",
-  "selected": "Выбранная сеть",
+  "amount": "Menge",
+  "selected": "Ausgewähltes Netzwerk",
   "address": "Adresse",
-  "transaction": "Die Übersetzung, die mit Vögeln durchgeführt wurde, kann möglicherweise nicht abgeschlossen werden."
+  "transaction": "Die Bearbeitung der Transaktion kann mehrere Stunden dauern."
 }
