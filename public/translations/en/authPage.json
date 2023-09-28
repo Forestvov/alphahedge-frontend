@@ -21,6 +21,7 @@
   "repeat": "Send again",
   "after": "Confirm later",
   "errorLogin": "Email or password entered incorrectly",
+  "errorAuth": "Email not confirmed",
   "repeatPassowrd": "Confirm the password",
   "changePassword": "You have successfully changed your password",
   "sendLinkFromEmail": "A link to reset your password has been sent to your email.",

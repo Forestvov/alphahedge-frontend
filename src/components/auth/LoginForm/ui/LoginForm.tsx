@@ -25,7 +25,7 @@ export const LoginForm = () => {
   const [f] = useTranslation('form')
 
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
+  const [error, setError] = useState<'errorLogin' | 'errorAuth' | null>(null)
 
   const navigate = useNavigate()
 
@@ -59,8 +59,10 @@ export const LoginForm = () => {
 
     try {
       const response = await axios.request<IAuthResponse>(config)
+
       localStorage.setItem('token', response.data.acceptToken)
       localStorage.setItem('refresh', response.data.refreshToken)
+
       const resProfile = await getProfile()
       const resBalance = await getBalance()
       setPayload({
@@ -72,15 +74,21 @@ export const LoginForm = () => {
         balance: resBalance.data,
       })
       localStorage.setItem('user-type', resProfile.data.role)
+
       if (resProfile.data.role === 'User') {
         await navigate('/personal/dashboard')
       } else {
         await navigate('/admin/dashboard')
       }
-    } catch (e) {
-      setError(true)
-      setValue('email', '')
-      setValue('password', '')
+      setError(null)
+    } catch (e: any) {
+      if (e?.response?.data.message === 'Not verified') {
+        setError('errorAuth')
+      } else {
+        setError('errorLogin')
+        setValue('email', '')
+        setValue('password', '')
+      }
     } finally {
       setLoading(false)
     }
@@ -109,7 +117,7 @@ export const LoginForm = () => {
               name="password"
             />
           </div>
-          {error && <div className={s.error}>{a('errorLogin')}</div>}
+          {error && <div className={s.error}>{a(error)}</div>}
           <Link className={s.link} to="/recovery">
             {a('recovery')}
           </Link>
