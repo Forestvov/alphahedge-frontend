@@ -22,6 +22,7 @@
   "after": "Bestätigen Sie später",
   "errorLogin": "E-Mail oder Passwort falsch eingegeben",
   "errorAuth": "E-Mail nicht bestätigt",
+  "verification": "Verifizieren",
   "repeatPassowrd": "Bestätigen Sie das Passwort",
   "changePassword": "Sie haben Ihr Passwort erfolgreich geändert",
   "sendLinkFromEmail": "Ein Link zum Zurücksetzen Ihres Passworts wurde an Ihre E-Mail-Adresse gesendet.",

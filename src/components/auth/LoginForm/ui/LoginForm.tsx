@@ -41,10 +41,39 @@ export const LoginForm = () => {
 
   const { handleSubmit, clearErrors, setValue } = methods
 
+  const resendMail = async (email: string) => {
+    const config = {
+      method: 'put',
+      maxBodyLength: Infinity,
+      url: `${API_URL}/auth/send-verify/${email}`,
+      headers: {
+        'Content-Type': 'application/json',
+        withCredentials: true,
+      },
+    }
+
+    try {
+      await axios.request<IAuthResponse>(config)
+      localStorage.setItem('acceptEmail', email)
+      await navigate('/verify')
+    } catch (e: any) {
+      console.log('e')
+    }
+  }
+
   const onSubmit = async (data: ILoginRequest) => {
     setLoading(true)
     const body = JSON.stringify(data)
     clearErrors('isError')
+
+    if (error === 'errorAuth') {
+      try {
+        await resendMail(data.email)
+      } catch (e) {
+        console.log('e')
+      }
+      return
+    }
 
     const config = {
       method: 'post',
@@ -87,7 +116,6 @@ export const LoginForm = () => {
       } else {
         setError('errorLogin')
         setValue('email', '')
-        setValue('password', '')
       }
     } finally {
       setLoading(false)
@@ -121,9 +149,15 @@ export const LoginForm = () => {
           <Link className={s.link} to="/recovery">
             {a('recovery')}
           </Link>
-          <button className={s.submit} disabled={loading} type="submit">
-            {a('in')}
-          </button>
+          {error === 'errorAuth' ? (
+            <button className={s.submit} disabled={loading} type="submit">
+              {a('verification')}
+            </button>
+          ) : (
+            <button className={s.submit} disabled={loading} type="submit">
+              {a('in')}
+            </button>
+          )}
         </form>
       </FormProvider>
       <div className={s.links}>

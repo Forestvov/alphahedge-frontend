@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import cn from 'classnames'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import WAValidator from 'vm-multicoin-address-validator'
 import { toast } from 'react-toastify'
 import { useTranslation } from 'react-i18next'
 
@@ -103,16 +102,16 @@ export const TransactionForm = (props: ITransactionForm) => {
         return
       }
 
-      const validateToken =
-        tokenName.label === 'TRC20' ? 'Tron' : tokenName.label
-
-      if (!paymentCart[tokenName.label]) {
-        if (!WAValidator.validate(_data.contact, validateToken)) {
-          setStatus('error')
-          notifyAddress()
-          return
-        }
-      }
+      // this validate address token
+      // const validateToken =
+      //   tokenName.label === 'TRC20' ? 'Tron' : tokenName.label
+      // if (!paymentCart[tokenName.label]) {
+      //   if (!WAValidator.validate(_data.contact, validateToken)) {
+      //     setStatus('error')
+      //     notifyAddress()
+      //     return
+      //   }
+      // }
 
       body = {
         amountOut: (Number(_data.deposit) / Number(coinPrice)).toString(),
