@@ -10,5 +10,6 @@
   "successRequestAdvanced": "You have successfully submitted your application to open individual introductions.",
   "textRequestAdvanced": "To open individual introductions, you need to send a request to the support service.",
   "emailAlready": "The specified email or username is already in use.",
-  "successVerify": "Application sent successfully"
+  "successVerify": "Application sent successfully",
+  "successOut": "Your withdrawal request is being processed"
 }

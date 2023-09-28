@@ -10,5 +10,6 @@
   "successRequestAdvanced": "Sie haben Ihre Bewerbung zur Eröffnung individueller Vorstellungen erfolgreich eingereicht.",
   "textRequestAdvanced": "Um einzelne Einführungen zu öffnen, müssen Sie eine Anfrage an den Support-Service senden.",
   "emailAlready": "Die angegebene E-Mail-Adresse oder der angegebene Benutzername wird bereits verwendet.",
-  "successVerify": "Bewerbung erfolgreich versendet"
+  "successVerify": "Bewerbung erfolgreich versendet",
+  "successOut": "Ihr Auszahlungsantrag wird bearbeitet"
 }

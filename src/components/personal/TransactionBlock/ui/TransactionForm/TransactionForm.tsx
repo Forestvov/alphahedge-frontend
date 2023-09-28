@@ -53,6 +53,7 @@ export const TransactionForm = (props: ITransactionForm) => {
 
   const notifyToken = () => toast.error(n('tokenExit'))
   const notifyAddress = () => toast.error(n('addressExit'))
+  const successOut = () => toast.success(n('successOut'))
 
   const methods = useForm({
     resolver: yupResolver(transactionForm),
@@ -130,6 +131,10 @@ export const TransactionForm = (props: ITransactionForm) => {
 
       if (type === 'In') {
         setOpenPopup(true)
+      }
+
+      if (type === 'Out') {
+        successOut()
       }
 
       setStatus('success')
