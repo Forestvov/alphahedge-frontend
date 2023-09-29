@@ -3,6 +3,7 @@ import cn from 'classnames'
 
 import { clearDate } from 'helpers/clearDate'
 import { floorPrice } from 'helpers/floorPrice'
+import { disableWeekend } from 'helpers/disableWeekend'
 
 import { IResponseHistory } from 'models/response/ActionResponse'
 
@@ -193,7 +194,12 @@ export const ActiveTableActions = (props: IActiveTableActions) => {
         </Modal>
       </TableCell>
       <TableCell className={cn(s.action, { [s.isOpen]: isOpen })}>
-        <Button className={s.button} type="button" onClick={changeCounter}>
+        <Button
+          className={s.button}
+          type="button"
+          disabled={disableWeekend()}
+          onClick={changeCounter}
+        >
           {isOpen ? 'Подтвердить' : 'Продать'}
         </Button>
       </TableCell>

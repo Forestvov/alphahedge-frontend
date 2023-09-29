@@ -52,7 +52,7 @@ export const TransactionForm = (props: ITransactionForm) => {
   const [myTokens, setMyTokens] = useState<IProfileToken[]>()
 
   const notifyToken = () => toast.error(n('tokenExit'))
-  const notifyAddress = () => toast.error(n('addressExit'))
+  // const notifyAddress = () => toast.error(n('addressExit'))
   const successOut = () => toast.success(n('successOut'))
 
   const methods = useForm({
