@@ -41,6 +41,7 @@ export const ActiveTableRow = (props: IActiveTableRow) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const notifySuccess = () => toast.success(n('sellAction'))
+  const notifyError = () => toast.error(n('errorInvest'))
 
   const updateUser = useGetMainInfo()
 
@@ -55,8 +56,10 @@ export const ActiveTableRow = (props: IActiveTableRow) => {
       await updateData()
       await updateUser()
       notifySuccess()
-    } catch (e) {
-      console.log('Error sell action', e)
+    } catch (e: any) {
+      if (e.response.data.message === 'The exchange is closed on weekends') {
+        notifyError()
+      }
     }
   }
 

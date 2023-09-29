@@ -11,5 +11,6 @@
   "textRequestAdvanced": "Um einzelne Einführungen zu öffnen, müssen Sie eine Anfrage an den Support-Service senden.",
   "emailAlready": "Die angegebene E-Mail-Adresse oder der angegebene Benutzername wird bereits verwendet.",
   "successVerify": "Bewerbung erfolgreich versendet",
-  "successOut": "Ihr Auszahlungsantrag wird bearbeitet"
+  "successOut": "Ihr Auszahlungsantrag wird bearbeitet",
+  "errorInvest": "An Wochenenden ist es nicht möglich, Aktien zu verkaufen oder zu kaufen"
 }

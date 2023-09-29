@@ -11,5 +11,6 @@
   "textRequestAdvanced": "To open individual introductions, you need to send a request to the support service.",
   "emailAlready": "The specified email or username is already in use.",
   "successVerify": "Application sent successfully",
-  "successOut": "Your withdrawal request is being processed"
+  "successOut": "Your withdrawal request is being processed",
+  "errorInvest": "It is impossible to sell or buy shares on weekends"
 }
