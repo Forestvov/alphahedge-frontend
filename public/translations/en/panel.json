@@ -63,5 +63,7 @@
   "referalAmount": "Number of Referrals",
   "referalLink": "Referral Link",
   "totalInvest": "Investment Amount",
-  "minInvest": "Min. Investment size"
+  "minInvest": "Min. Investment size",
+  "titleApiKey": "API Keys",
+  "placeholderApiKey": "For stocks"
 }

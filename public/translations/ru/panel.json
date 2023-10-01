@@ -63,5 +63,7 @@
   "referalAmount": "Кол-Во Рефералов",
   "referalLink": "Реферальная Ссылка",
   "totalInvest": "Сумма Вложений",
-  "minInvest": "Мин. Объем инвестиций"
+  "minInvest": "Мин. Объем инвестиций",
+  "titleApiKey": "API Ключи",
+  "placeholderApiKey": "Для акций"
 }

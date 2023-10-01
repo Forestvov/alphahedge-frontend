@@ -63,5 +63,7 @@
   "referalAmount": "Anzahl der Empfehlungen",
   "referalLink": "Empfehlungslink",
   "totalInvest": "Anlagebetrag",
-  "minInvest": "Mindest. Investitionsgröße"
+  "minInvest": "Mindest. Investitionsgröße",
+  "titleApiKey": "API-Schlüssel",
+  "placeholderApiKey": "Für Aktien"
 }
