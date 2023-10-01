@@ -14,3 +14,8 @@ export interface ISaveTokenRequest {
   qrCode?: string
   value: string
 }
+
+export interface IApiKey {
+  settingCode: string
+  settingValue: string
+}

@@ -8,7 +8,7 @@ import {
 } from 'models/response/AdminResponse'
 
 import { AdminGainSetRequest, AdminRequest } from 'models/request/AdminRequest'
-import { ISaveTokenRequest } from 'models/request/AccountRequest'
+import { IApiKey, ISaveTokenRequest } from 'models/request/AccountRequest'
 
 import $api from '../http'
 
@@ -120,5 +120,13 @@ export default class AdminService {
       `/transaction/save-system-token-list`,
       data,
     )
+  }
+
+  static async getApiKey(): Promise<AxiosResponse<IApiKey>> {
+    return $api.get<IApiKey>(`/setting/code/action.api.key`)
+  }
+
+  static async setApiKey(data: IApiKey): Promise<AxiosResponse> {
+    return $api.put(`/setting`, data)
   }
 }
