@@ -12,11 +12,20 @@
   }
 }
 
+.content {
+  position: relative;
+  z-index: 1;
+}
+
 .image {
   position: absolute;
   right: 0;
   top: 120px;
   max-width: 100%;
+
+  @include utils.media-max-width(1770) {
+    width: 55%;
+  }
 
   @include utils.media-max-width(1500) {
     display: none;
