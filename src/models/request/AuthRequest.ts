@@ -12,6 +12,7 @@ export interface IRegisterRequest {
   userName: string
   phoneNumber: string
   password: string
+  repeat_password: string
   country: string
   inviteCode?: string
 }

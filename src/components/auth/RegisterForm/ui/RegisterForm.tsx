@@ -42,6 +42,7 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
     defaultValues: {
       fam: '',
       password: '',
+      repeat_password: '',
       im: '',
       userName: '',
       ot: '',
@@ -167,6 +168,16 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
                 placeholder={f('passwordPlaceholder')}
                 type="password"
                 name="password"
+              />
+            </div>
+
+            <div className={s.cell}>
+              <div className={s.label}>{f('confirmPass')}</div>
+              <Input
+                className={s.input}
+                placeholder={f('confirmPass')}
+                type="password"
+                name="repeat_password"
               />
             </div>
 

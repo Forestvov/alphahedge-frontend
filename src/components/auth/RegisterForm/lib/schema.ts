@@ -10,5 +10,6 @@ export const registrationSchema = yup.object().shape({
   userName: schema.username,
   phoneNumber: schema.phone,
   password: schema.password,
+  repeat_password: schema.confirmPassword,
   country: schema.country,
 })
