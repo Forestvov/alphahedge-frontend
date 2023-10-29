@@ -26,8 +26,8 @@
   "selectSystemPay": "Wählen Sie Zahlungssystem",
   "priceIn": "Geben Sie den Aufladebetrag ein",
   "priceOut": "Geben Sie den Auszahlungsbetrag ein",
-  "priceWriteIn": "Geben Sie den aufzuladenden Betrag an",
-  "priceWriteOut": "Geben Sie den abzuhebenden Betrag an",
+  "priceWriteIn": "Geben Sie den Aufladebetrag in Dollar ein",
+  "priceWriteOut": "Geben Sie den abzuhebenden Betrag in Dollar ein",
   "addressPlaceholder": "Geben Sie die Wallet-Adresse ein",
   "addressLabel": "Ausgabeadresse",
   "sendRequest": "Einen Antrag stellen"

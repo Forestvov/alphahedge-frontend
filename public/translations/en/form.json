@@ -26,8 +26,8 @@
   "selectSystemPay": "Select Payment System",
   "priceIn": "Enter the top-up amount",
   "priceOut": "Enter withdrawal amount",
-  "priceWriteIn": "Specify the amount to top up",
-  "priceWriteOut": "Specify the amount to withdraw",
+  "priceWriteIn": "Enter the top-up amount in dollars",
+  "priceWriteOut": "Enter the amount to withdraw in dollars",
   "addressPlaceholder": "Enter wallet address",
   "addressLabel": "output address",
   "sendRequest": "Submit an application"
