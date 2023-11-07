@@ -63,7 +63,12 @@ export const Footer = () => {
             <div className={s.row}>
               {l('addressLabel')}:{' '}
               <span>Travessera de Gràcia, 21, 08021 {l('address')}</span>{' '}
-              <Link to="/cart">{l('mapLink')}</Link>
+              <Link
+                to="https://www.google.com/maps/place/Travessera+de+Gr%C3%A0cia,+21,+08021+Barcelona,+%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F/@41.3942089,2.1441515,17z/data=!3m1!4b1!4m6!3m5!1s0x12a4a29da35c5e13:0x88762a4cc31c712e!8m2!3d41.3942049!4d2.1467264!16s%2Fg%2F11csm0k0d2?entry=ttu"
+                target="_blank"
+              >
+                {l('mapLink')}
+              </Link>
             </div>
             <div className={s.row}>
               {l('reg')} <span>B72753833</span>{' '}
