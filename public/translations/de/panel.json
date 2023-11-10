@@ -65,5 +65,6 @@
   "totalInvest": "Anlagebetrag",
   "minInvest": "Mindest. Investitionsgröße",
   "titleApiKey": "API-Schlüssel",
-  "placeholderApiKey": "Für Aktien"
+  "placeholderApiKey": "Für Aktien",
+  "linkCoped": "Link zur Zwischenablage hinzugefügt"
 }

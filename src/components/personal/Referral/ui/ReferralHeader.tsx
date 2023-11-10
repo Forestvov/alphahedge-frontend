@@ -17,8 +17,7 @@ export const ReferralHeader = (props: IReferalHeader) => {
 
   const [isCopy, setIsCopy] = useState(false)
 
-  const notifySuccess = () =>
-    toast.success('Ссылка была добавлен в буфер обмена')
+  const notifySuccess = () => toast.success(t('linkCoped'))
 
   const copyHandler = (text: string) => {
     navigator.clipboard.writeText(text)

@@ -28,6 +28,53 @@
   }
 }
 
+.contact {
+  width: 95px;
+  font-size: 16px !important;
+  display: inline-block;
+  position: relative;
+
+  span {
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    @include utils.line-clamp(1);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      flex: 0 0 auto;
+    }
+  }
+
+  &:hover .hover {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.hover {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: 400ms;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  left: -10px;
+  bottom: 100%;
+  -webkit-box-shadow: 4px 4px 12px -5px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 12px -5px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 12px -5px rgba(34, 60, 80, 0.2);
+  font-size: 14px;
+}
+
 .date {
   width: 20%;
   span {
@@ -72,7 +119,7 @@
 }
 
 .username {
-  width: 15%;
+  width: 10%;
 }
 
 .type {

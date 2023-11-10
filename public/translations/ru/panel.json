@@ -65,5 +65,6 @@
   "totalInvest": "Сумма Вложений",
   "minInvest": "Мин. Объем инвестиций",
   "titleApiKey": "API Ключи",
-  "placeholderApiKey": "Для акций"
+  "placeholderApiKey": "Для акций",
+  "linkCoped": "Ссылка была добавлен в буфер обмена"
 }

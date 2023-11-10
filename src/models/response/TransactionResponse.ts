@@ -3,6 +3,7 @@ import { Pageable } from 'models/IPageable'
 export interface ITransaction {
   accountId: number
   transactionId: number
+  contact: string
   transactionType: string
   transactionStatus: string
   transactionDate: string

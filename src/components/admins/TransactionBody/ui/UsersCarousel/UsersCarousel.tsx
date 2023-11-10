@@ -23,6 +23,7 @@ export const UsersCarousel = (props: IUsersCarousel) => {
       tableTitles={[
         { title: 'ФИО Пользователя' },
         { title: 'Username' },
+        { title: 'Кошелек' },
         { title: 'Дата', sortField: 'transactionDate' },
         { title: 'Сеть' },
         { title: 'Сумма' },

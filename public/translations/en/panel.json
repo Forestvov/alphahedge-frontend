@@ -65,5 +65,6 @@
   "totalInvest": "Investment Amount",
   "minInvest": "Min. Investment size",
   "titleApiKey": "API Keys",
-  "placeholderApiKey": "For stocks"
+  "placeholderApiKey": "For stocks",
+  "linkCoped": "The link has been added to the clipboard"
 }
