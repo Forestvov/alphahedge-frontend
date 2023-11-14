@@ -43,7 +43,7 @@ export const UserTableRow = (props: IUserTableRow) => {
         showType="username"
       />
       <TableCell className={s.photo}>
-        {files.map((item) => (
+        {files.slice(-2).map((item) => (
           <Modal className={s.inner} textButton="Ссылка" key={item.fileId}>
             <div className={s.body}>
               <img src={item.file} alt={item.fileType} />
@@ -60,7 +60,7 @@ export const UserTableRow = (props: IUserTableRow) => {
           updateData={updateData}
           processKey="Process"
           successKey="Verified"
-          cancelKey="Cancel"
+          cancelKey="Canceled"
           notVerifiedEmail="Not verified email"
           notVerifiedYC="Not verified YC"
         />

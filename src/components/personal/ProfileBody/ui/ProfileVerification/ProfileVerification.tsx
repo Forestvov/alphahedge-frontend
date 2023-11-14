@@ -78,17 +78,28 @@ export const ProfileVerification = ({ status }: { status: string }) => {
               s.status,
               { [s.pending]: status === VerificationEnum.PENDING },
               { [s.success]: status === VerificationEnum.SUCCESS },
-              { [s.cancel]: status === VerificationEnum.NOT_STARTED },
+              {
+                [s.cancel]:
+                  status === VerificationEnum.NOT_STARTED ||
+                  status === VerificationEnum.CANCELED,
+              },
             )}
           >
             {status === VerificationEnum.NOT_STARTED && p('Verify_NOT_STARTED')}
             {status === VerificationEnum.PENDING && p('Verify_PENDING')}
             {status === VerificationEnum.SUCCESS && p('Verify_SUCCESS')}
+            {status === VerificationEnum.CANCELED && p('Verify_CANCELED')}
           </span>
         </div>
-        <div className={s.info__text}>{p('verify_text')}</div>
+        {status === VerificationEnum.CANCELED && (
+          <div className={s.info__text}>{p('canceled_text')}</div>
+        )}
+        {status !== VerificationEnum.CANCELED && (
+          <div className={s.info__text}>{p('verify_text')}</div>
+        )}
       </div>
-      {status === VerificationEnum.NOT_STARTED && <ProfileVerificationModal />}
+      {(status === VerificationEnum.NOT_STARTED ||
+        status === VerificationEnum.CANCELED) && <ProfileVerificationModal />}
     </div>
   )
 }

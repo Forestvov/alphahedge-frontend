@@ -5,6 +5,8 @@
   "Verify_NOT_STARTED": "FEHLGESCHLAGEN",
   "Verify_PENDING": "GESTARTET",
   "Verify_SUCCESS": "BESTANDEN",
+  "Verify_CANCELED": "ABGESAGT",
+  "canceled_text": "Bitte laden Sie Ihr Foto erneut hoch, um Zugriff auf alle Plattformfunktionen zu erhalten. Die Anfrage wird derzeit abgelehnt!",
   "verify_text": "Bestätigen Sie Ihre Identität, um Zugriff auf alle Funktionen der Plattform zu erhalten!",
   "verify_popup": "Ein Foto eines Reisepasses mit einem Foto seines Besitzers oder der Vorderseite eines Personalausweises.",
   "verify_title": "Überprüfung",
