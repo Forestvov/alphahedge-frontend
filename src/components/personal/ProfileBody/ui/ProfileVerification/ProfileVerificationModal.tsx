@@ -29,11 +29,12 @@ export const ProfileVerificationModal = () => {
   const [fileBack, setFileBack] = useState<File | null>(null)
 
   const onChangeFile = (event: FileList | null, type: 'MAIN' | 'BACK') => {
-    if (type === 'MAIN' && event && event[0].size <= 5242880) {
+    // 10mb > bite = 10 * 1024 * 1024 = 10485760
+    if (type === 'MAIN' && event && event[0].size <= 10485760) {
       setFileMain(event[0])
     }
 
-    if (type === 'BACK' && event && event[0].size <= 5242880) {
+    if (type === 'BACK' && event && event[0].size <= 10485760) {
       setFileBack(event[0])
     }
   }

@@ -12,7 +12,7 @@
   "verify_title": "Überprüfung",
   "verify_open": "Verifizierungsformular öffnen",
   "load_file": "Datei hochladen",
-  "max_size": "Akzeptable Auflösungen: jpg, png, pdf. ",
+  "max_size": "Akzeptable Auflösungen: jpg, png, pdf. Maximale Größe 10 MB",
   "photo1": "Foto der Rückseite Ihres Reisepasses oder der Rückseite Ihres Personalausweises.",
   "send": "Zur Überprüfung einreichen",
   "accordions": [

@@ -12,7 +12,7 @@
   "verify_title": "Verification",
   "verify_open": "Open verification form",
   "load_file": "Upload file",
-  "max_size": "Acceptable resolutions: jpg, png, pdf. ",
+  "max_size": "Acceptable resolutions: jpg, png, pdf. Maximum size 10 MB.",
   "photo1": "Photo of the back of your passport or the back of your ID card.",
   "send": "Submit for review",
   "accordions": [
