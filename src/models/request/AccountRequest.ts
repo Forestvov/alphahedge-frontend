@@ -19,3 +19,11 @@ export interface IApiKey {
   settingCode: string
   settingValue: string
 }
+
+export interface IGetPhoto {
+  fileId: number
+}
+
+export interface IGetPhotoResponse {
+  file: string
+}

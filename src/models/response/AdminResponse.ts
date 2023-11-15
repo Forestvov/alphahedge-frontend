@@ -41,12 +41,6 @@ export interface IAdvance {
   briefcaseAccountOrderToCloseStatus: string
 }
 
-export interface IFile {
-  fileId: number
-  fileType: string
-  file: string
-}
-
 export interface IVerification {
   accountId: number
   idNumber: any
@@ -58,7 +52,7 @@ export interface IVerification {
   role: string
   status: string
   verifiedStatus: string
-  files: IFile[]
+  files: number[]
 }
 
 export interface VerificationList {

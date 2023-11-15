@@ -8,7 +8,12 @@ import {
 } from 'models/response/AdminResponse'
 
 import { AdminGainSetRequest, AdminRequest } from 'models/request/AdminRequest'
-import { IApiKey, ISaveTokenRequest } from 'models/request/AccountRequest'
+import {
+  IApiKey,
+  IGetPhoto,
+  IGetPhotoResponse,
+  ISaveTokenRequest,
+} from 'models/request/AccountRequest'
 
 import $api from '../http'
 
@@ -128,5 +133,13 @@ export default class AdminService {
 
   static async setApiKey(data: IApiKey): Promise<AxiosResponse> {
     return $api.put(`/setting`, data)
+  }
+
+  static async getUserPhoto(
+    data: IGetPhoto,
+  ): Promise<AxiosResponse<IGetPhotoResponse>> {
+    return $api.get<IGetPhotoResponse>(
+      `/account/verification/file/${data.fileId}`,
+    )
   }
 }

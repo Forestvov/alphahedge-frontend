@@ -7,7 +7,8 @@ import { clearDate } from 'helpers/clearDate'
 import { TableCell, TableRow } from 'components/shared/table'
 import { TableNameUser } from 'components/admins/TableNameUser'
 import { ChangeStatus } from 'components/admins/ChangeStatus'
-import { Modal } from 'components/shared/Modal'
+
+import { UserTableRowImage } from './UserTableRowImage'
 
 import s from './UsersCarousel.module.scss'
 
@@ -44,11 +45,7 @@ export const UserTableRow = (props: IUserTableRow) => {
       />
       <TableCell className={s.photo}>
         {files.slice(-2).map((item) => (
-          <Modal className={s.inner} textButton="Ссылка" key={item.fileId}>
-            <div className={s.body}>
-              <img src={item.file} alt={item.fileType} />
-            </div>
-          </Modal>
+          <UserTableRowImage id={item} key={item} />
         ))}
       </TableCell>
       <TableCell className={s.date}>{clearDate(registeredDate)}</TableCell>
