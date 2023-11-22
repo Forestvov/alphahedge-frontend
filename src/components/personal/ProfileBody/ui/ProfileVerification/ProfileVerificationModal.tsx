@@ -45,10 +45,12 @@ export const ProfileVerificationModal = () => {
 
     if (fileMain && fileBack && pending !== 'pending') {
       try {
-        const firstFile: string = await toBase64(fileMain)
-        const secondFile: string = await toBase64(fileBack)
-        await sendIdPhoto({ file: firstFile, typeFile: 'MAIN' })
-        await sendIdPhoto({ file: secondFile, typeFile: 'BACK' })
+        toBase64(fileMain).then((data) =>
+          sendIdPhoto({ file: data, typeFile: 'MAIN' }),
+        )
+        toBase64(fileBack).then((data) =>
+          sendIdPhoto({ file: data, typeFile: 'BACK' }),
+        )
 
         if (payload.profile) {
           setPayload({
