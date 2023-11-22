@@ -28,7 +28,7 @@ export default class AccountServices {
   }
 
   static async sendIdPhoto(data: IPhotoRequest): Promise<AxiosResponse> {
-    return $api.post('/account/file3123', data)
+    return $api.post('/account/file', data)
   }
 
   static async saveTokens(data: ISaveTokenRequest[]): Promise<AxiosResponse> {
