@@ -28,7 +28,6 @@ export default class AccountServices {
 
   static async sendIdPhoto(data: any): Promise<AxiosResponse> {
     return $api.post('/account/file', data, {
-      baseURL: 'http://185.215.187.179:8080/api/v1',
       headers: {
         'Content-Type': 'multipart/form-data',
       },
