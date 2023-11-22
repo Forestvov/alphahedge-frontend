@@ -7,7 +7,6 @@ import {
   IResponseProfile,
 } from 'models/response/AccountResponse'
 import {
-  IPhotoRequest,
   ISaveTokenRequest,
   ISettingProfileRequest,
 } from 'models/request/AccountRequest'
@@ -27,8 +26,12 @@ export default class AccountServices {
     return $api.put('/account/me', data)
   }
 
-  static async sendIdPhoto(data: IPhotoRequest): Promise<AxiosResponse> {
-    return $api.post('/account/file', data)
+  static async sendIdPhoto(data: any): Promise<AxiosResponse> {
+    return $api.post('/account/file', data, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
   }
 
   static async saveTokens(data: ISaveTokenRequest[]): Promise<AxiosResponse> {

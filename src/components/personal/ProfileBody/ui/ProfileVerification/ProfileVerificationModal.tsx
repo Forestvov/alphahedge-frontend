@@ -1,8 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'react-toastify'
-
-import { toBase64 } from 'helpers/toBase64'
 import useProfile from 'hooks/context/useProfile'
 
 import AccountServices from 'services/AccountServices'
@@ -43,14 +41,18 @@ export const ProfileVerificationModal = () => {
     event.preventDefault()
     setPending('pending')
 
+    const formMainData = new FormData()
+    const formBackData = new FormData()
+
     if (fileMain && fileBack && pending !== 'pending') {
       try {
-        toBase64(fileMain).then((data) =>
-          sendIdPhoto({ file: data, typeFile: 'MAIN' }),
-        )
-        toBase64(fileBack).then((data) =>
-          sendIdPhoto({ file: data, typeFile: 'BACK' }),
-        )
+        formMainData.append('file', fileMain)
+        formMainData.append('typeFile', 'MAIN')
+        formBackData.append('file', fileBack)
+        formBackData.append('typeFile', 'BACK')
+
+        await sendIdPhoto(formMainData)
+        await sendIdPhoto(formBackData)
 
         if (payload.profile) {
           setPayload({

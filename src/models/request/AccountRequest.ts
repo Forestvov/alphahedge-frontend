@@ -1,5 +1,5 @@
 export interface IPhotoRequest {
-  file: string
+  file: File
   typeFile: 'MAIN' | 'BACK'
 }
 
