@@ -7,6 +7,7 @@ import AccountServices from 'services/AccountServices'
 import { FetchStatusType } from 'models/FetchStatusType'
 
 import { Modal } from 'components/shared/Modal'
+import { Loader } from 'components/shared/Loader'
 
 import s from './ProfileVerification.module.scss'
 
@@ -75,6 +76,11 @@ export const ProfileVerificationModal = () => {
   return (
     <Modal classNameButton={s.open} textButton={p('verify_open')}>
       <form className={s.modal} onSubmit={onFormSubmit}>
+        {pending === 'pending' ? (
+          <div className={s.loader}>
+            <Loader />
+          </div>
+        ) : null}
         <div className={s.title}>{p('verify_title')}</div>
         <div className={s.field}>
           <div className={s.label}>{p('verify_popup')}</div>
@@ -145,11 +151,7 @@ export const ProfileVerificationModal = () => {
           <p className={s.description}>{p('max_size')}</p>
         </div>
         {pending !== 'success' && (
-          <button
-            className={s.button}
-            disabled={pending === 'pending'}
-            type="submit"
-          >
+          <button className={s.button} type="submit">
             {p('send')}
           </button>
         )}
