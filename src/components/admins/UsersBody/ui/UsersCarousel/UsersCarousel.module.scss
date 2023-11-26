@@ -7,6 +7,7 @@
   position: relative;
   background-color: var(--gray-light);
   transition: 400ms;
+  transform: translateY(-5px);
 
   &:disabled {
     pointer-events: none;
@@ -34,12 +35,13 @@
 }
 
 .table {
-  min-width: 1200px;
+  min-width: 1370px;
 }
 
 .inner {
   overflow-x: auto;
   @include utils.customScroll(#000);
+
 }
 
 .row {
@@ -58,19 +60,30 @@
 }
 
 .username {
-  width: 15%;
+  width: 12%;
 }
 
 .email {
-  width: 25%;
+  width: 23%;
 }
 
 .type {
-  width: 15%;
+  width: 10%;
 }
 
 .switch {
-  width: 61px;
+  width: 200px;
+}
+
+.sendPassword {
+  font-size: 15px;
+  margin-left: 10px;
+  transition:  400ms;
+
+  &:disabled {
+    opacity: .6;
+    pointer-events: none;
+  }
 }
 
 .referal {

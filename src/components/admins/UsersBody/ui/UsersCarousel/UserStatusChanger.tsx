@@ -7,8 +7,6 @@ import AdminService from 'services/AdminService'
 import { StatusAccountType } from 'models/StatusAccountType'
 import { FetchStatusType } from 'models/FetchStatusType'
 
-import { TableCell } from 'components/shared/table'
-
 import s from './UsersCarousel.module.scss'
 
 interface IUserStatusChanger {
@@ -47,15 +45,13 @@ export const UserStatusChanger = (props: IUserStatusChanger) => {
   }
 
   return (
-    <TableCell className={s.switch}>
-      <button
-        className={cn(s.toggle, { [s.active]: statusAccount === 'Enable' })}
-        type="button"
-        onClick={toggleHandler}
-        disabled={fetchStatus === 'pending'}
-      >
-        <div className={s.overlay} />
-      </button>
-    </TableCell>
+    <button
+      className={cn(s.toggle, { [s.active]: statusAccount === 'Enable' })}
+      type="button"
+      onClick={toggleHandler}
+      disabled={fetchStatus === 'pending'}
+    >
+      <div className={s.overlay} />
+    </button>
   )
 }

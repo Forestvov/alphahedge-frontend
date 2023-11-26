@@ -10,6 +10,7 @@ import { TableCell, TableRow } from 'components/shared/table'
 import { TableNameUser } from 'components/admins/TableNameUser'
 
 import { UserStatusChanger } from './UserStatusChanger'
+import { UserSendPassword } from './UserSendPassword'
 
 import s from './UsersCarousel.module.scss'
 
@@ -63,7 +64,10 @@ export const UserTableRow = (props: IUser) => {
       <TableCell className={s.email}>{email}</TableCell>
       <TableCell className={s.type}>{role}</TableCell>
       <TableCell>${floorPrice(balance)}</TableCell>
-      <UserStatusChanger accountId={accountId} status={status} />
+      <TableCell className={s.switch}>
+        <UserStatusChanger accountId={accountId} status={status} />
+        <UserSendPassword email={email} />
+      </TableCell>
     </TableRow>
   )
 }

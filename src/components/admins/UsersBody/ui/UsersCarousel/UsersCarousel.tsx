@@ -30,6 +30,7 @@ export const UsersCarousel = (props: IUsersCarousel) => {
           title: 'Баланс',
           sortField: 'balance',
         },
+        { title: 'Действия' },
       ]}
       currentPage={number}
       total={totalPages}

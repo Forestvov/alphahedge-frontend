@@ -5,6 +5,10 @@ export interface AdminRequest {
   status: StatusAccountType
 }
 
+export interface UserEmailRequest {
+  email: string
+}
+
 export interface AdminGainSetRequest {
   briefcaseAccountId: string
   amount: string

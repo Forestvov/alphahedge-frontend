@@ -7,7 +7,11 @@ import {
   VerificationList,
 } from 'models/response/AdminResponse'
 
-import { AdminGainSetRequest, AdminRequest } from 'models/request/AdminRequest'
+import {
+  AdminGainSetRequest,
+  AdminRequest,
+  UserEmailRequest,
+} from 'models/request/AdminRequest'
 import {
   IApiKey,
   IGetPhoto,
@@ -26,6 +30,12 @@ export default class AdminService {
     data: AdminRequest,
   ): Promise<AxiosResponse<IUsersResponse>> {
     return $api.put<IUsersResponse>('/account/update', data)
+  }
+
+  static async sendPasswordToEmail(
+    data: UserEmailRequest,
+  ): Promise<AxiosResponse> {
+    return $api.post(`/account/notification/email/${data.email}`, data)
   }
 
   static async updateBriefcaseOrder(
