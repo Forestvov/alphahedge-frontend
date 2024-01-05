@@ -33,7 +33,7 @@ export const TrendsList = () => {
     const config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: `https://api.marketaux.com/v1/news/all?symbols=TSLA%2CAMZN%2CMSFT&filter_entities=true&language=${i18n.language}&api_token=4jcRfnMYU3S0ISTCwVYaOqrEyJnqkzeORxn9oZ5x&countries=us,de,ru&page=${page}`,
+      url: `https://api.marketaux.com/v1/news/all?exclude_domains=psm7.com&symbols=TSLA%2CAMZN%2CMSFT&filter_entities=true&language=${i18n.language}&api_token=4jcRfnMYU3S0ISTCwVYaOqrEyJnqkzeORxn9oZ5x&countries=us,de,ru&page=${page}`,
       headers: {
         'Content-Type': 'application/json',
       },

@@ -12,7 +12,12 @@ export const TrendsCard = (props: ITrendCard) => {
       <div className={s.image}>
         <img src={image_url} alt="img" />
       </div>
-      <a className={s.type} href={source}>
+      <a
+        className={s.type}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {source}
       </a>
       <a
