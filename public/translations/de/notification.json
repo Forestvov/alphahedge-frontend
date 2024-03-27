@@ -10,6 +10,7 @@
   "successRequestAdvanced": "Sie haben Ihre Bewerbung zur Eröffnung individueller Vorstellungen erfolgreich eingereicht.",
   "textRequestAdvanced": "Um einzelne Einführungen zu öffnen, müssen Sie eine Anfrage an den Support-Service senden.",
   "emailAlready": "Die angegebene E-Mail-Adresse oder der angegebene Benutzername wird bereits verwendet.",
+  "timeOut": "Auf dem Alphahedge-Holdings-Server sind technische Arbeiten im Gange. Bitte versuchen Sie es später noch einmal.",
   "successVerify": "Bewerbung erfolgreich versendet",
   "successOut": "Ihr Auszahlungsantrag wird bearbeitet",
   "errorInvest": "An Wochenenden ist es nicht möglich, Aktien zu verkaufen oder zu kaufen"

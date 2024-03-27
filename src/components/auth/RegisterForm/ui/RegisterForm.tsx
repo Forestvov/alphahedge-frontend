@@ -53,6 +53,7 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
   })
 
   const notifyError = () => toast.error(n('emailAlready'))
+  const notifyTimeOutError = () => toast.error(n('timeOut'))
 
   const { handleSubmit, setValue } = methods
 
@@ -78,10 +79,21 @@ export const RegisterForm = ({ isInvite }: { isInvite: boolean }) => {
       await navigator('/verify')
     } catch (e) {
       // @ts-ignore
-      const { message } = e.response.data
-
-      if (message === 'Email or username are already existed') {
-        notifyError()
+      if(e?.message) {
+        // @ts-ignore
+        if(e.message === 'timeout exceeded') {
+          notifyTimeOutError()
+          return
+        }
+      }
+      // @ts-ignore
+      if(e?.response) {
+        // @ts-ignore
+        const { message } = e.response.data
+        if (message === 'Email or username are already existed') {
+          notifyError()
+          return
+        }
       }
     } finally {
       setLoading(false)
