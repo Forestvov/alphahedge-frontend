@@ -1,19 +1,20 @@
 pipeline {
 
     environment {
-        registry = "f-ksolutions"
+        registry = " alphahold-f"
         acPort = 1337
         dockerImage = ''
         }
 
-    agent {
-    node {
-     label 'alphahedgeHoldings_com','alphahedgeHoldings_ru'
-     }
-    }
+   agent none 
 
     stages {
-            stage('Delete old container') {
+            stage('Deploy on com node') {
+                 agent {
+                    node {
+                     label 'alphahedgeHoldings_com'
+                         }
+                        }
                         steps {
                             script {
                              try {
@@ -24,20 +25,21 @@ pipeline {
                                         } catch (err) {
                                             echo err.getMessage()
                                         }
+                         sh("docker build -t  alphahold-f . ")
+                         sh("docker run -td --restart unless-stopped --name alphahold-f -p 5000:3000 alphahold-f")
                             }
                          }
                     }
-            stage('Build docker image') {
+            stage('Deploy on ru node') {
+
+                agent {
+                    node {
+                         label 'alphahedgeHoldings_com'
+                         }
+                      }
                  steps {
                      script {
-                        sh("docker build -t  alphahold-f . ")
-                     }
-                  }
-             }
-            stage('Run docker container') {
-                 steps {
-                     script {
-                        sh("docker run -td --restart unless-stopped --name alphahold-f -p 5000:3000 alphahold-f")
+                         sh("java --version")
                      }
                   }
              }
