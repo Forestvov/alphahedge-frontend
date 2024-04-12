@@ -26,13 +26,13 @@ export const Contacts = () => {
       text: t('card3.text'),
       link: 'https://t.me/alphahedge_holding',
       type: 'link',
-    },
-    {
-      title: t('card4.title'),
-      text: t('card4.text'),
-      link: 'https://t.me/alphahedge_forex',
-      type: 'link',
-    },
+    }
+    // {
+    //   title: t('card4.title'),
+    //   text: t('card4.text'),
+    //   link: 'https://t.me/alphahedge_forex',
+    //   type: 'link',
+    // },
   ]
 
   return (
