@@ -34,7 +34,7 @@ pipeline {
 
                 agent {
                     node {
-                         label 'alphahedgeHoldings_com'
+                         label 'alphahedgeHoldings_ru'
                          }
                       }
                  steps {
